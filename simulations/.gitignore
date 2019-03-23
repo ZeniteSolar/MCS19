@@ -1,0 +1,7 @@
+# LTSPICE
+*.asy
+*.log
+*.raw
+*.op.raw
+*.plt
+*.net
