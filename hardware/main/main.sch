@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 7
+Sheet 1 8
 Title ""
 Date ""
 Rev ""
@@ -125,45 +126,45 @@ Wire Wire Line
 $Comp
 L Mechanical:MountingHole H104
 U 1 1 5BE9AF15
-P 1150 5500
-F 0 "H104" H 1250 5550 50  0000 L CNN
-F 1 "MountingHole" H 1250 5500 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 1150 5500 50  0001 C CNN
-F 3 "~" H 1150 5500 50  0001 C CNN
-	1    1150 5500
+P 950 3450
+F 0 "H104" H 1050 3500 50  0000 L CNN
+F 1 "MountingHole" H 1050 3450 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 950 3450 50  0001 C CNN
+F 3 "~" H 950 3450 50  0001 C CNN
+	1    950  3450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H103
 U 1 1 5BE9BC53
-P 1150 5300
-F 0 "H103" H 1250 5350 50  0000 L CNN
-F 1 "MountingHole" H 1250 5300 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 1150 5300 50  0001 C CNN
-F 3 "~" H 1150 5300 50  0001 C CNN
-	1    1150 5300
+P 950 3250
+F 0 "H103" H 1050 3300 50  0000 L CNN
+F 1 "MountingHole" H 1050 3250 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 950 3250 50  0001 C CNN
+F 3 "~" H 950 3250 50  0001 C CNN
+	1    950  3250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H102
 U 1 1 5BE9BC79
-P 1150 5100
-F 0 "H102" H 1250 5150 50  0000 L CNN
-F 1 "MountingHole" H 1250 5100 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 1150 5100 50  0001 C CNN
-F 3 "~" H 1150 5100 50  0001 C CNN
-	1    1150 5100
+P 950 3050
+F 0 "H102" H 1050 3100 50  0000 L CNN
+F 1 "MountingHole" H 1050 3050 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 950 3050 50  0001 C CNN
+F 3 "~" H 950 3050 50  0001 C CNN
+	1    950  3050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H101
 U 1 1 5BE9BC9F
-P 1150 4900
-F 0 "H101" H 1250 4950 50  0000 L CNN
-F 1 "MountingHole" H 1250 4900 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 1150 4900 50  0001 C CNN
-F 3 "~" H 1150 4900 50  0001 C CNN
-	1    1150 4900
+P 950 2850
+F 0 "H101" H 1050 2900 50  0000 L CNN
+F 1 "MountingHole" H 1050 2850 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 950 2850 50  0001 C CNN
+F 3 "~" H 950 2850 50  0001 C CNN
+	1    950  2850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -229,7 +230,8 @@ F2 "Charge" O R 3850 4900 50
 F3 "RL_ON" O R 3850 4800 50 
 F4 "RL_OFF" O R 3850 4700 50 
 F5 "Unfused_Bat+" I L 2650 4300 50 
-F6 "+CAP" O R 3850 4300 50 
+F6 "+CAP" O L 2650 4500 50 
+F7 "Bat+" O L 2650 4700 50 
 $EndSheet
 $Sheet
 S 9800 3050 600  450 
@@ -260,10 +262,10 @@ Wire Wire Line
 Wire Wire Line
 	7150 3150 9800 3150
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H1
 U 1 1 5CA207EA
 P 2250 4300
-F 0 "H?" V 2300 4500 50  0000 C CNN
+F 0 "H1" V 2300 4500 50  0000 C CNN
 F 1 "UnfusedBat+" V 2200 4650 50  0000 C CNN
 F 2 "" H 2250 4300 50  0001 C CNN
 F 3 "~" H 2250 4300 50  0001 C CNN
@@ -273,22 +275,142 @@ $EndComp
 Wire Wire Line
 	2350 4300 2650 4300
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H2
 U 1 1 5CA21785
-P 4250 4300
-F 0 "H?" V 4204 4450 50  0000 L CNN
-F 1 "CAP" V 4295 4450 50  0000 L CNN
-F 2 "" H 4250 4300 50  0001 C CNN
-F 3 "~" H 4250 4300 50  0001 C CNN
-	1    4250 4300
-	0    1    1    0   
+P 2250 4500
+F 0 "H2" V 2204 4650 50  0000 L CNN
+F 1 "CAP" V 2295 4650 50  0000 L CNN
+F 2 "" H 2250 4500 50  0001 C CNN
+F 3 "~" H 2250 4500 50  0001 C CNN
+	1    2250 4500
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4150 4300 3850 4300
+	2350 4500 2650 4500
 Wire Wire Line
 	3850 4900 4450 4900
 Wire Wire Line
 	3850 4800 4450 4800
 Wire Wire Line
 	3850 4700 4450 4700
+$Sheet
+S 2450 6100 750  550 
+U 5C9FC045
+F0 "analog" 39
+F1 "analog.sch" 39
+F2 "out1" I R 3200 6250 39 
+F3 "+5V" I R 3200 6150 39 
+F4 "GND" I R 3200 6600 39 
+F5 "in1-" I L 2450 6300 39 
+F6 "in1+" I L 2450 6200 39 
+F7 "out2" I R 3200 6500 39 
+F8 "in2-" I L 2450 6550 39 
+F9 "in2+" I L 2450 6450 39 
+$EndSheet
+Wire Wire Line
+	3200 6500 3850 6500
+Wire Wire Line
+	3850 6500 3850 6150
+Wire Wire Line
+	3850 6150 4450 6150
+Wire Wire Line
+	3200 6250 3550 6250
+Wire Wire Line
+	3550 6250 3550 6050
+Wire Wire Line
+	3550 6050 4450 6050
+$Comp
+L power:+5V #PWR0112
+U 1 1 5CA11BDD
+P 3300 5850
+F 0 "#PWR0112" H 3300 5700 50  0001 C CNN
+F 1 "+5V" H 3350 6050 50  0000 C CNN
+F 2 "" H 3300 5850 50  0001 C CNN
+F 3 "" H 3300 5850 50  0001 C CNN
+	1    3300 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6150 3200 6150
+$Comp
+L Device:Jumper_NC_Small JP3
+U 1 1 5CA139A8
+P 3300 6000
+F 0 "JP3" V 3254 6074 50  0000 L CNN
+F 1 "Jp_TEST" V 3345 6074 50  0000 L CNN
+F 2 "" H 3300 6000 50  0001 C CNN
+F 3 "~" H 3300 6000 50  0001 C CNN
+	1    3300 6000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 5900 3300 5850
+Wire Wire Line
+	3300 6100 3300 6150
+$Comp
+L power:GNDA #PWR0113
+U 1 1 5CA1583E
+P 2300 6300
+F 0 "#PWR0113" H 2300 6050 50  0001 C CNN
+F 1 "GNDA" H 2305 6127 50  0000 C CNN
+F 2 "" H 2300 6300 50  0001 C CNN
+F 3 "" H 2300 6300 50  0001 C CNN
+	1    2300 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 6300 2450 6300
+$Comp
+L power:GNDA #PWR0114
+U 1 1 5CA1785C
+P 2300 6550
+F 0 "#PWR0114" H 2300 6300 50  0001 C CNN
+F 1 "GNDA" H 2305 6377 50  0000 C CNN
+F 2 "" H 2300 6550 50  0001 C CNN
+F 3 "" H 2300 6550 50  0001 C CNN
+	1    2300 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 6550 2450 6550
+Text Label 2400 4500 0    39   ~ 0
++CAP
+Text Label 2400 4700 0    39   ~ 0
++BAT
+Wire Wire Line
+	2650 4700 2400 4700
+Text Label 2050 6450 0    39   ~ 0
++CAP
+Text Label 2050 6200 0    39   ~ 0
++BAT
+$Comp
+L Device:Jumper_NC_Small JP1
+U 1 1 5CA254C6
+P 2300 6200
+F 0 "JP1" H 2300 6412 50  0001 C CNN
+F 1 "Jp_TEST" H 2300 6321 50  0001 C CNN
+F 2 "" H 2300 6200 50  0001 C CNN
+F 3 "~" H 2300 6200 50  0001 C CNN
+	1    2300 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 6200 2200 6200
+Wire Wire Line
+	2400 6200 2450 6200
+$Comp
+L Device:Jumper_NC_Small JP2
+U 1 1 5CA2798A
+P 2300 6450
+F 0 "JP2" H 2300 6662 50  0001 C CNN
+F 1 "Jp_TEST" H 2300 6571 50  0001 C CNN
+F 2 "" H 2300 6450 50  0001 C CNN
+F 3 "~" H 2300 6450 50  0001 C CNN
+	1    2300 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 6450 2200 6450
+Wire Wire Line
+	2400 6450 2450 6450
 $EndSCHEMATC

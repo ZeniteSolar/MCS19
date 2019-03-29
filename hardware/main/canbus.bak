@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 7
+Sheet 2 8
 Title ""
 Date ""
 Rev ""
@@ -624,7 +625,7 @@ Wire Wire Line
 	5550 4150 5550 4300
 Connection ~ 5550 4300
 $Comp
-L MAB19-rescue:MCP2515-xSO-Interface_CAN_LIN U202
+L main-rescue:MCP2515-xSO-Interface_CAN_LIN-MAB19-rescue U202
 U 1 1 5BE69763
 P 4300 3700
 AR Path="/5BE69763" Ref="U202"  Part="1" 

@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 5 8
 Title ""
 Date ""
 Rev ""
@@ -195,10 +196,10 @@ CAN_L
 Text Label 7850 3700 0    60   ~ 0
 CAN_H
 $Comp
-L Connector:RJ45_Shielded J?
+L Connector:RJ45_Shielded J2
 U 1 1 5C9C7D3B
 P 8800 3400
-F 0 "J?" H 9000 3950 50  0000 C CNN
+F 0 "J2" H 9000 3950 50  0000 C CNN
 F 1 "RJ45" H 8650 3950 50  0000 C CNN
 F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 8800 3400 50  0001 C CNN
 F 3 "" H 8800 3400 50  0001 C CNN
@@ -247,10 +248,10 @@ CAN_L
 Text Label 6300 3700 0    60   ~ 0
 CAN_H
 $Comp
-L Connector:RJ45_Shielded J?
+L Connector:RJ45_Shielded J1
 U 1 1 5C9C7D58
 P 7250 3400
-F 0 "J?" H 7450 3950 50  0000 C CNN
+F 0 "J1" H 7450 3950 50  0000 C CNN
 F 1 "RJ45" H 7100 3950 50  0000 C CNN
 F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 7250 3400 50  0001 C CNN
 F 3 "" H 7250 3400 50  0001 C CNN
@@ -289,10 +290,10 @@ Wire Wire Line
 Connection ~ 7250 4500
 Connection ~ 7600 4500
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5C9C7D70
 P 6050 4600
-F 0 "#PWR?" H 6050 4350 50  0001 C CNN
+F 0 "#PWR0101" H 6050 4350 50  0001 C CNN
 F 1 "GND" H 6100 4400 50  0000 C CNN
 F 2 "" H 6050 4600 50  0001 C CNN
 F 3 "" H 6050 4600 50  0001 C CNN
