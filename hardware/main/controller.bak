@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 4 8
 Title ""
 Date ""
 Rev ""
@@ -41,7 +41,6 @@ F5 "VCC" I L 3600 4550 60
 F6 "GND" O L 3600 4750 60 
 F7 "SPI_SCK" O R 4750 4250 50 
 F8 "MCP_SS" O R 4750 4550 50 
-F9 "CAN_CTRL" O R 4750 3900 50 
 F10 "RL_OFF" O L 3600 3850 50 
 F11 "RL_ON" O L 3600 3950 50 
 F12 "CAP_SIG" I L 3600 5300 50 
@@ -58,7 +57,7 @@ F3 "+5V_OUT" O L 7000 3400 60
 F4 "+18V_IN" I R 8050 3300 60 
 $EndSheet
 $Sheet
-S 8800 3250 1250 600 
+S 8800 3250 1000 450 
 U 5CA5A5C7
 F0 "sheet5CA5A59F" 60
 F1 "canbus_connector.sch" 60
@@ -66,7 +65,6 @@ F2 "CAN_H" B L 8800 3500 60
 F3 "CAN_L" B L 8800 3600 60 
 F4 "CAN_18V" O L 8800 3300 60 
 F5 "CAN_GND" B L 8800 3400 60 
-F6 "CAN_18V_POS" O R 10050 3300 50 
 $EndSheet
 Wire Wire Line
 	5300 4650 4750 4650
@@ -106,20 +104,20 @@ Wire Wire Line
 Wire Wire Line
 	6800 4200 6650 4200
 Wire Wire Line
-	8200 3400 8200 3800
+	8200 3400 8200 3850
 Wire Wire Line
 	8400 3400 8800 3400
 $Comp
 L power:GND #PWR?
 U 1 1 5CA5A5EB
-P 8200 3800
+P 8200 3950
 AR Path="/5CA5A5EB" Ref="#PWR?"  Part="1" 
 AR Path="/5CA4DC1F/5CA5A5EB" Ref="#PWR0103"  Part="1" 
-F 0 "#PWR0103" H 8200 3550 50  0001 C CNN
-F 1 "GND" H 8250 3600 50  0000 C CNN
-F 2 "" H 8200 3800 50  0001 C CNN
-F 3 "" H 8200 3800 50  0001 C CNN
-	1    8200 3800
+F 0 "#PWR0103" H 8200 3700 50  0001 C CNN
+F 1 "GND" H 8250 3750 50  0000 C CNN
+F 2 "" H 8200 3950 50  0001 C CNN
+F 3 "" H 8200 3950 50  0001 C CNN
+	1    8200 3950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -169,149 +167,8 @@ Wire Wire Line
 	3450 4800 3450 4750
 Wire Wire Line
 	3450 4750 3600 4750
-$Sheet
-S 1600 5250 750  550 
-U 5CA5A61A
-F0 "sheet5CA5A5A1" 39
-F1 "analog.sch" 39
-F2 "out1" I R 2350 5400 39 
-F3 "+5V" I R 2350 5300 39 
-F4 "GND" I R 2350 5750 39 
-F5 "in1-" I L 1600 5450 39 
-F6 "in1+" I L 1600 5350 39 
-F7 "out2" I R 2350 5650 39 
-F8 "in2-" I L 1600 5700 39 
-F9 "in2+" I L 1600 5600 39 
-$EndSheet
-Wire Wire Line
-	2350 5650 3000 5650
-Wire Wire Line
-	3000 5650 3000 5300
 Wire Wire Line
 	3000 5300 3600 5300
-Wire Wire Line
-	2350 5400 2700 5400
-Wire Wire Line
-	2700 5400 2700 5200
-Wire Wire Line
-	2700 5200 3600 5200
-$Comp
-L power:+5V #PWR?
-U 1 1 5CA5A626
-P 2450 5000
-AR Path="/5CA5A626" Ref="#PWR?"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A626" Ref="#PWR0107"  Part="1" 
-F 0 "#PWR0107" H 2450 4850 50  0001 C CNN
-F 1 "+5V" H 2500 5200 50  0000 C CNN
-F 2 "" H 2450 5000 50  0001 C CNN
-F 3 "" H 2450 5000 50  0001 C CNN
-	1    2450 5000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 5300 2350 5300
-$Comp
-L Device:Jumper_NC_Small JP?
-U 1 1 5CA5A62D
-P 2450 5150
-AR Path="/5CA5A62D" Ref="JP?"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A62D" Ref="JP301"  Part="1" 
-F 0 "JP301" V 2404 5224 50  0000 L CNN
-F 1 "Jp_TEST" V 2495 5224 50  0000 L CNN
-F 2 "" H 2450 5150 50  0001 C CNN
-F 3 "~" H 2450 5150 50  0001 C CNN
-	1    2450 5150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2450 5050 2450 5000
-Wire Wire Line
-	2450 5250 2450 5300
-$Comp
-L power:GNDA #PWR?
-U 1 1 5CA5A635
-P 1450 5450
-AR Path="/5CA5A635" Ref="#PWR?"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A635" Ref="#PWR0112"  Part="1" 
-F 0 "#PWR0112" H 1450 5200 50  0001 C CNN
-F 1 "GNDA" H 1455 5277 50  0000 C CNN
-F 2 "" H 1450 5450 50  0001 C CNN
-F 3 "" H 1450 5450 50  0001 C CNN
-	1    1450 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1450 5450 1600 5450
-$Comp
-L power:GNDA #PWR?
-U 1 1 5CA5A63C
-P 1450 5700
-AR Path="/5CA5A63C" Ref="#PWR?"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A63C" Ref="#PWR0113"  Part="1" 
-F 0 "#PWR0113" H 1450 5450 50  0001 C CNN
-F 1 "GNDA" H 1455 5527 50  0000 C CNN
-F 2 "" H 1450 5700 50  0001 C CNN
-F 3 "" H 1450 5700 50  0001 C CNN
-	1    1450 5700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1450 5700 1600 5700
-Text Label 1200 5600 0    39   ~ 0
-+CAP
-Text Label 1200 5350 0    39   ~ 0
-+BAT
-$Comp
-L Device:Jumper_NC_Small JP?
-U 1 1 5CA5A645
-P 1450 5350
-AR Path="/5CA5A645" Ref="JP?"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A645" Ref="JP302"  Part="1" 
-F 0 "JP302" H 1450 5562 50  0001 C CNN
-F 1 "Jp_TEST" H 1450 5471 50  0001 C CNN
-F 2 "" H 1450 5350 50  0001 C CNN
-F 3 "~" H 1450 5350 50  0001 C CNN
-	1    1450 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 5350 1350 5350
-Wire Wire Line
-	1550 5350 1600 5350
-$Comp
-L Device:Jumper_NC_Small JP?
-U 1 1 5CA5A64D
-P 1450 5600
-AR Path="/5CA5A64D" Ref="JP?"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A64D" Ref="JP303"  Part="1" 
-F 0 "JP303" H 1450 5812 50  0001 C CNN
-F 1 "Jp_TEST" H 1450 5721 50  0001 C CNN
-F 2 "" H 1450 5600 50  0001 C CNN
-F 3 "~" H 1450 5600 50  0001 C CNN
-	1    1450 5600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 5600 1350 5600
-Wire Wire Line
-	1550 5600 1600 5600
-$Comp
-L power:GND #PWR?
-U 1 1 5CA5A655
-P 2450 6150
-AR Path="/5CA5A655" Ref="#PWR?"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A655" Ref="#PWR0114"  Part="1" 
-F 0 "#PWR0114" H 2450 5900 50  0001 C CNN
-F 1 "GND" H 2500 5950 50  0000 C CNN
-F 2 "" H 2450 6150 50  0001 C CNN
-F 3 "" H 2450 6150 50  0001 C CNN
-	1    2450 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 6150 2450 6050
-Wire Wire Line
-	2450 5750 2350 5750
 $Comp
 L Mechanical:MountingHole H?
 U 1 1 5CA5D716
@@ -376,13 +233,6 @@ Wire Wire Line
 	3250 4050 3600 4050
 Text HLabel 3250 4050 0    50   Input ~ 0
 Charge
-Text HLabel 2350 6050 0    50   Input ~ 0
-GND
-Wire Wire Line
-	2350 6050 2450 6050
-Connection ~ 2450 6050
-Wire Wire Line
-	2450 6050 2450 5750
 Text HLabel 8250 2600 0    50   Input ~ 0
 +18V_OUT
 Wire Wire Line
@@ -404,4 +254,17 @@ Wire Wire Line
 Wire Wire Line
 	6800 2900 6800 3400
 Connection ~ 6800 3400
+Wire Wire Line
+	3600 5200 3000 5200
+Text HLabel 3000 5200 0    50   Input ~ 0
+sig_bat+
+Text HLabel 3000 5300 0    50   Input ~ 0
+sig_cap+
+Text HLabel 8150 3850 0    50   Output ~ 0
+GND
+Wire Wire Line
+	8150 3850 8200 3850
+Connection ~ 8200 3850
+Wire Wire Line
+	8200 3850 8200 3950
 $EndSCHEMATC

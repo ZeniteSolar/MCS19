@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 3050 2400 1200 1050
+S 3050 2400 1200 1450
 U 5C9C4D6B
 F0 "CHARGER" 50
 F1 "Charger.sch" 50
@@ -24,9 +24,11 @@ F3 "RL_ON" O R 4250 3050 50
 F4 "RL_OFF" O R 4250 3150 50 
 F5 "GND" O R 4250 2600 50 
 F6 "+18V_IN" I R 4250 2500 50 
+F7 "sig_bat+" O R 4250 3400 50 
+F8 "sig_cap+" O R 4250 3500 50 
 $EndSheet
 $Sheet
-S 6000 2400 1250 1050
+S 6000 2400 1250 1450
 U 5CA4DC1F
 F0 "CONTROLLER" 50
 F1 "controller.sch" 50
@@ -35,16 +37,18 @@ F3 "RL_ON" I L 6000 3050 50
 F4 "Charge" I L 6000 2950 50 
 F5 "GND" I L 6000 2600 50 
 F6 "+18V_OUT" I L 6000 2500 50 
+F7 "sig_bat+" I L 6000 3400 50 
+F8 "sig_cap+" I L 6000 3500 50 
 $EndSheet
 $Comp
-L Connector:Conn_01x07_Male J101
+L Connector:Conn_01x11_Male J101
 U 1 1 5CA76C06
-P 4700 3050
-F 0 "J101" H 5000 3500 50  0000 R CNN
-F 1 "Conn_01x07_Male" H 5000 3400 50  0000 R CNN
-F 2 "" H 4700 3050 50  0001 C CNN
-F 3 "~" H 4700 3050 50  0001 C CNN
-	1    4700 3050
+P 4700 3250
+F 0 "J101" H 5000 3950 50  0000 R CNN
+F 1 "Conn_01x11_Male" H 5000 3850 50  0000 R CNN
+F 2 "" H 4700 3250 50  0001 C CNN
+F 3 "~" H 4700 3250 50  0001 C CNN
+	1    4700 3250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -67,11 +71,9 @@ Wire Wire Line
 	4400 3150 4500 3150
 Wire Wire Line
 	4400 3150 4400 3350
-Wire Wire Line
-	4400 3350 4500 3350
 Connection ~ 4400 3150
-Text Notes 4400 5000 0    50   ~ 0
-TO-DO LIST:\n  [x] Separar a abstração das duas placas\n\n  [x] Criar conexão entre as duas placas\n\n  [x] Nomear componentes;\n\n  [x] Passar alimentação para o Charger;\n\n  [x] Criar fonte 12V no  Charger\n\n  [_] Adicionar snubbers para os relés (olhar na simulação);\n\n  [_] Passar o condicionamento do sinal para o Charger;\n
+Text Notes 4450 5600 0    50   ~ 0
+TO-DO LIST:\n  [x] Separar a abstração das duas placas\n\n  [x] Criar conexão entre as duas placas\n\n  [x] Nomear componentes;\n\n  [x] Passar alimentação para o Charger;\n\n  [x] Criar fonte 12V no  Charger\n\n  [_] Adicionar snubbers para os relés (olhar na simulação);\n\n  [x] Passar o condicionamento do sinal para o Charger;\n\n  [_] \n\n  [_] 
 Wire Wire Line
 	4350 2950 4250 2950
 Wire Wire Line
@@ -85,15 +87,39 @@ Wire Wire Line
 	4450 2500 4450 2750
 Wire Wire Line
 	4450 2750 4500 2750
+Wire Wire Line
+	4400 3350 4400 3550
+Wire Wire Line
+	4400 3550 4500 3550
+Connection ~ 4400 3350
+Wire Wire Line
+	4400 3550 4400 3750
+Wire Wire Line
+	4400 3750 4500 3750
+Wire Wire Line
+	4400 3350 4500 3350
+Connection ~ 4400 3550
+Wire Wire Line
+	4500 3450 4350 3450
+Wire Wire Line
+	4350 3450 4350 3400
+Wire Wire Line
+	4350 3400 4250 3400
+Wire Wire Line
+	4250 3500 4300 3500
+Wire Wire Line
+	4300 3500 4300 3650
+Wire Wire Line
+	4300 3650 4500 3650
 $Comp
-L Connector:Conn_01x07_Male J102
-U 1 1 5CAB450A
-P 5550 3050
-F 0 "J102" H 5850 3500 50  0000 R CNN
-F 1 "Conn_01x07_Male" H 5850 3400 50  0000 R CNN
-F 2 "" H 5550 3050 50  0001 C CNN
-F 3 "~" H 5550 3050 50  0001 C CNN
-	1    5550 3050
+L Connector:Conn_01x11_Male J102
+U 1 1 5CBD36A2
+P 5550 3250
+F 0 "J102" H 5850 3950 50  0000 R CNN
+F 1 "Conn_01x11_Male" H 5850 3850 50  0000 R CNN
+F 2 "" H 5550 3250 50  0001 C CNN
+F 3 "~" H 5550 3250 50  0001 C CNN
+	1    5550 3250
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -116,8 +142,6 @@ Wire Wire Line
 	5850 3150 5750 3150
 Wire Wire Line
 	5850 3150 5850 3350
-Wire Wire Line
-	5850 3350 5750 3350
 Connection ~ 5850 3150
 Wire Wire Line
 	5900 2950 6000 2950
@@ -132,4 +156,28 @@ Wire Wire Line
 	5800 2500 5800 2750
 Wire Wire Line
 	5800 2750 5750 2750
+Wire Wire Line
+	5850 3350 5850 3550
+Wire Wire Line
+	5850 3550 5750 3550
+Connection ~ 5850 3350
+Wire Wire Line
+	5850 3550 5850 3750
+Wire Wire Line
+	5850 3750 5750 3750
+Wire Wire Line
+	5850 3350 5750 3350
+Connection ~ 5850 3550
+Wire Wire Line
+	5750 3450 5900 3450
+Wire Wire Line
+	5900 3450 5900 3400
+Wire Wire Line
+	5900 3400 6000 3400
+Wire Wire Line
+	6000 3500 5950 3500
+Wire Wire Line
+	5950 3500 5950 3650
+Wire Wire Line
+	5950 3650 5750 3650
 $EndSCHEMATC
