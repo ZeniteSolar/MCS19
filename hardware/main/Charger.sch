@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 2 9
+Sheet 2 8
 Title ""
 Date ""
 Rev ""
@@ -1027,4 +1027,17 @@ Text Label 4250 7400 2    50   ~ 0
 +12V
 Wire Wire Line
 	7700 4900 7700 5250
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5CB769FE
+P 4050 8600
+F 0 "#PWR?" H 4050 8400 50  0001 C CNN
+F 1 "GNDPWR" H 4054 8446 50  0000 C CNN
+F 2 "" H 4050 8550 50  0001 C CNN
+F 3 "" H 4050 8550 50  0001 C CNN
+	1    4050 8600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 8600 4050 8450
 $EndSCHEMATC

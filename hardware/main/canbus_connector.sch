@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 9
+Sheet 7 8
 Title ""
 Date ""
 Rev ""
@@ -189,148 +189,130 @@ Connection ~ 3400 3100
 Wire Wire Line
 	4950 3200 4950 3100
 Connection ~ 4950 3100
-Wire Wire Line
-	8800 4500 8800 3900
-Wire Wire Line
-	7850 3600 8400 3600
-Wire Wire Line
-	8400 3700 7850 3700
-Text Label 7650 3400 0    60   ~ 0
-CAN_18V_POS
-Text Label 7850 3500 0    60   ~ 0
-CAN_GND
-Text Label 7850 3600 0    60   ~ 0
-CAN_L
-Text Label 7850 3700 0    60   ~ 0
-CAN_H
-$Comp
-L Connector:RJ45_Shielded J2
-U 1 1 5C9C7D3B
-P 8800 3400
-AR Path="/5AAD16DD/5C9C7D3B" Ref="J2"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D3B" Ref="J704"  Part="1" 
-F 0 "J704" H 9000 3950 50  0000 C CNN
-F 1 "RJ45" H 8650 3950 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 8800 3400 50  0001 C CNN
-F 3 "" H 8800 3400 50  0001 C CNN
-	1    8800 3400
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 3000 8300 3000
-Wire Wire Line
-	7600 3000 7600 3500
-Wire Wire Line
-	7600 4500 8800 4500
-Wire Wire Line
-	8400 3100 8300 3100
-Wire Wire Line
-	8300 3100 8300 3000
-Connection ~ 8300 3000
-Wire Wire Line
-	8300 3000 7600 3000
-Wire Wire Line
-	8400 3200 8300 3200
-Wire Wire Line
-	8400 3300 8300 3300
-Wire Wire Line
-	8300 3300 8300 3400
-Connection ~ 8300 3400
-Wire Wire Line
-	8300 3400 8400 3400
-Wire Wire Line
-	7600 3500 8400 3500
-Connection ~ 7600 3500
-Wire Wire Line
-	7600 3500 7600 4500
-Wire Wire Line
-	7250 4500 7250 3900
-Wire Wire Line
-	6300 3600 6850 3600
-Wire Wire Line
-	6850 3700 6300 3700
-Text Label 6100 3400 0    60   ~ 0
-CAN_18V_POS
-Text Label 6300 3500 0    60   ~ 0
-CAN_GND
-Text Label 6300 3600 0    60   ~ 0
-CAN_L
-Text Label 6300 3700 0    60   ~ 0
-CAN_H
-$Comp
-L Connector:RJ45_Shielded J1
-U 1 1 5C9C7D58
-P 7250 3400
-AR Path="/5AAD16DD/5C9C7D58" Ref="J1"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D58" Ref="J703"  Part="1" 
-F 0 "J703" H 7450 3950 50  0000 C CNN
-F 1 "RJ45" H 7100 3950 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 7250 3400 50  0001 C CNN
-F 3 "" H 7250 3400 50  0001 C CNN
-	1    7250 3400
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6850 3000 6750 3000
-Wire Wire Line
-	6050 3000 6050 3500
-Wire Wire Line
-	6050 4500 7250 4500
-Wire Wire Line
-	6850 3100 6750 3100
-Wire Wire Line
-	6750 3100 6750 3000
-Connection ~ 6750 3000
-Wire Wire Line
-	6750 3000 6050 3000
-Wire Wire Line
-	6850 3200 6750 3200
-Wire Wire Line
-	6850 3300 6750 3300
-Wire Wire Line
-	6750 3300 6750 3400
-Connection ~ 6750 3400
-Wire Wire Line
-	6750 3400 6850 3400
-Wire Wire Line
-	6050 3500 6850 3500
-Connection ~ 6050 3500
+Connection ~ 6050 4500
 Wire Wire Line
 	6050 3500 6050 4500
 Wire Wire Line
-	7250 4500 7600 4500
-Connection ~ 7250 4500
-Connection ~ 7600 4500
+	6050 3500 6650 3500
+Wire Wire Line
+	6550 3400 6650 3400
+Wire Wire Line
+	6550 3300 6550 3400
+Wire Wire Line
+	6650 3300 6550 3300
+Wire Wire Line
+	6650 3200 6550 3200
+Wire Wire Line
+	6550 3000 6050 3000
+Wire Wire Line
+	6550 3200 6550 3100
+Wire Wire Line
+	6550 3100 6550 3000
+Connection ~ 6550 3100
+Wire Wire Line
+	6650 3100 6550 3100
+Connection ~ 6050 3500
+Wire Wire Line
+	6050 3000 6050 3500
+Connection ~ 6550 3000
+Wire Wire Line
+	6650 3000 6550 3000
 $Comp
-L power:GND #PWR0101
-U 1 1 5C9C7D70
-P 6050 4600
-AR Path="/5AAD16DD/5C9C7D70" Ref="#PWR0101"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D70" Ref="#PWR0139"  Part="1" 
-F 0 "#PWR0139" H 6050 4350 50  0001 C CNN
-F 1 "GND" H 6100 4400 50  0000 C CNN
-F 2 "" H 6050 4600 50  0001 C CNN
-F 3 "" H 6050 4600 50  0001 C CNN
-	1    6050 4600
-	1    0    0    -1  
+L Connector:RJ45_Shielded J1
+U 1 1 5C9C7D58
+P 7050 3400
+AR Path="/5AAD16DD/5C9C7D58" Ref="J1"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D58" Ref="J703"  Part="1" 
+F 0 "J703" H 7250 3950 50  0000 C CNN
+F 1 "RJ45" H 6900 3950 50  0000 C CNN
+F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 7050 3400 50  0001 C CNN
+F 3 "" H 7050 3400 50  0001 C CNN
+	1    7050 3400
+	-1   0    0    -1  
 $EndComp
+Text Label 6100 3700 0    60   ~ 0
+CAN_H
+Text Label 6100 3600 0    60   ~ 0
+CAN_L
+Text Label 6100 3500 0    60   ~ 0
+CAN_GND
 Wire Wire Line
-	6050 4500 6050 4600
-Connection ~ 6050 4500
+	6650 3700 6100 3700
 Wire Wire Line
-	6750 3200 6750 3100
-Connection ~ 6750 3100
+	6100 3600 6650 3600
 Wire Wire Line
-	8300 3200 8300 3100
-Connection ~ 8300 3100
+	7050 4500 7600 4500
 Wire Wire Line
-	6100 3400 6750 3400
+	6050 4500 7050 4500
+Connection ~ 7050 4500
 Wire Wire Line
-	7650 3400 8300 3400
-Text HLabel 2150 3300 0    60   Output ~ 0
-CAN_18V_POS
-Text Label 2250 3300 0    60   ~ 0
-CAN_18V_POS
+	7050 4500 7050 3900
 Wire Wire Line
-	2150 3300 2250 3300
+	7600 3500 7600 4500
+Wire Wire Line
+	7600 3500 8200 3500
+Wire Wire Line
+	8100 3400 8200 3400
+Wire Wire Line
+	8100 3300 8100 3400
+Wire Wire Line
+	8200 3300 8100 3300
+Wire Wire Line
+	8200 3200 8100 3200
+Wire Wire Line
+	8100 3000 7600 3000
+Wire Wire Line
+	8100 3200 8100 3100
+Wire Wire Line
+	8100 3100 8100 3000
+Connection ~ 8100 3100
+Wire Wire Line
+	8200 3100 8100 3100
+Connection ~ 7600 4500
+Wire Wire Line
+	7600 4500 8600 4500
+Connection ~ 7600 3500
+Wire Wire Line
+	7600 3000 7600 3500
+Connection ~ 8100 3000
+Wire Wire Line
+	8200 3000 8100 3000
+$Comp
+L Connector:RJ45_Shielded J2
+U 1 1 5C9C7D3B
+P 8600 3400
+AR Path="/5AAD16DD/5C9C7D3B" Ref="J2"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D3B" Ref="J704"  Part="1" 
+F 0 "J704" H 8800 3950 50  0000 C CNN
+F 1 "RJ45" H 8450 3950 50  0000 C CNN
+F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 8600 3400 50  0001 C CNN
+F 3 "" H 8600 3400 50  0001 C CNN
+	1    8600 3400
+	-1   0    0    -1  
+$EndComp
+Text Label 7650 3700 0    60   ~ 0
+CAN_H
+Text Label 7650 3600 0    60   ~ 0
+CAN_L
+Text Label 7650 3500 0    60   ~ 0
+CAN_GND
+Wire Wire Line
+	8200 3700 7650 3700
+Wire Wire Line
+	7650 3600 8200 3600
+Wire Wire Line
+	8600 4500 8600 3900
+Text Label 6100 3400 0    60   ~ 0
+CAN_18V
+Text Label 7650 3400 0    60   ~ 0
+CAN_18V
+Wire Wire Line
+	6100 3400 6550 3400
+Connection ~ 6550 3400
+Wire Wire Line
+	8100 3400 7650 3400
+Connection ~ 8100 3400
+Wire Wire Line
+	5450 4500 6050 4500
+Connection ~ 5450 4500
 $EndSCHEMATC
