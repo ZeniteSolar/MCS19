@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 6 8
+Sheet 2 9
 Title ""
 Date ""
 Rev ""
@@ -17,23 +17,23 @@ $EndDescr
 $Comp
 L Device:Thermistor_NTC TH1
 U 1 1 5C9E0B60
-P 3600 4450
-F 0 "TH1" V 3310 4450 50  0000 C CNN
-F 1 "60R" V 3401 4450 50  0000 C CNN
-F 2 "" H 3600 4500 50  0001 C CNN
-F 3 "~" H 3600 4500 50  0001 C CNN
-	1    3600 4450
+P 3800 4450
+F 0 "TH1" V 3510 4450 50  0000 C CNN
+F 1 "60R" V 3601 4450 50  0000 C CNN
+F 2 "" H 3800 4500 50  0001 C CNN
+F 3 "~" H 3800 4500 50  0001 C CNN
+	1    3800 4450
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R10
 U 1 1 5C9E0D49
-P 4250 4450
-F 0 "R10" V 4043 4450 50  0000 C CNN
-F 1 "10R" V 4134 4450 50  0000 C CNN
-F 2 "" V 4180 4450 50  0001 C CNN
-F 3 "~" H 4250 4450 50  0001 C CNN
-	1    4250 4450
+P 4300 4450
+F 0 "R10" V 4093 4450 50  0000 C CNN
+F 1 "10R" V 4184 4450 50  0000 C CNN
+F 2 "" V 4230 4450 50  0001 C CNN
+F 3 "~" H 4300 4450 50  0001 C CNN
+	1    4300 4450
 	0    1    1    0   
 $EndComp
 $Comp
@@ -48,9 +48,11 @@ F 3 "~" H 7300 4900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L High_current_rele:DIPxx-1Axx-13x K1
+L main-rescue:DIPxx-1Axx-13x-High_current_rele K1
 U 1 1 5C9E2F33
 P 2850 1450
+AR Path="/5C9E2F33" Ref="K1"  Part="1" 
+AR Path="/5C9C4D6B/5C9E2F33" Ref="K1"  Part="1" 
 F 0 "K1" V 3317 1450 50  0000 C CNN
 F 1 "DIPxx-1Axx-13x" V 3226 1450 50  0000 C CNN
 F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 3200 1400 50  0001 L CNN
@@ -59,131 +61,127 @@ F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Relay:SANYOU_SRD_Form_C K2
+L main-rescue:SANYOU_SRD_Form_C-Relay K2
 U 1 1 5C9E3465
-P 2800 4750
-F 0 "K2" V 3367 4750 50  0000 C CNN
-F 1 "SANYOU_SRD_Form_C" V 3276 4750 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 3250 4700 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 2800 4750 50  0001 C CNN
-	1    2800 4750
+P 3000 4750
+F 0 "K2" V 3567 4750 50  0000 C CNN
+F 1 "SANYOU_SRD_Form_C" V 3476 4750 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 3450 4700 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 3000 4750 50  0001 C CNN
+	1    3000 4750
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	3750 4450 4100 4450
-Text Label 3400 4450 2    50   ~ 0
+	3950 4450 4150 4450
+Text Label 3600 4450 2    50   ~ 0
 Charge
-Wire Wire Line
-	4400 4450 4750 4450
-Text Label 4450 4450 0    50   ~ 0
+Text Label 4650 4450 0    50   ~ 0
 +CAP
-Text Label 2200 4550 0    50   ~ 0
+Text Label 2400 4550 0    50   ~ 0
 +BAT
 Wire Wire Line
-	2200 4550 2500 4550
+	2400 4550 2700 4550
 Wire Wire Line
-	3100 4450 3450 4450
+	3300 4450 3650 4450
 $Comp
 L Device:Q_NPN_BEC Q1
 U 1 1 5C9E4DF9
-P 2050 5700
-F 0 "Q1" H 2241 5746 50  0000 L CNN
-F 1 "Q_NPN_BEC" H 2241 5655 50  0000 L CNN
-F 2 "" H 2250 5800 50  0001 C CNN
-F 3 "~" H 2050 5700 50  0001 C CNN
-	1    2050 5700
+P 2250 5700
+F 0 "Q1" H 2441 5746 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 2441 5655 50  0000 L CNN
+F 2 "" H 2450 5800 50  0001 C CNN
+F 3 "~" H 2250 5700 50  0001 C CNN
+	1    2250 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small_US R5
 U 1 1 5C9E5053
-P 2150 5250
-F 0 "R5" H 2218 5296 50  0000 L CNN
-F 1 "120" H 2218 5205 50  0000 L CNN
-F 2 "" H 2150 5250 50  0001 C CNN
-F 3 "~" H 2150 5250 50  0001 C CNN
-	1    2150 5250
+P 2350 5250
+F 0 "R5" H 2418 5296 50  0000 L CNN
+F 1 "120" H 2418 5205 50  0000 L CNN
+F 2 "" H 2350 5250 50  0001 C CNN
+F 3 "~" H 2350 5250 50  0001 C CNN
+	1    2350 5250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 5150 2150 4950
+	2350 5150 2350 4950
 Wire Wire Line
-	2150 5350 2150 5500
+	2350 5350 2350 5500
 $Comp
 L Device:C_Small C1
 U 1 1 5C9E51F2
-P 1750 5950
-F 0 "C1" H 1842 5996 50  0000 L CNN
-F 1 "100n" H 1842 5905 50  0000 L CNN
-F 2 "" H 1750 5950 50  0001 C CNN
-F 3 "~" H 1750 5950 50  0001 C CNN
-	1    1750 5950
+P 1950 5950
+F 0 "C1" H 2042 5996 50  0000 L CNN
+F 1 "100n" H 2042 5905 50  0000 L CNN
+F 2 "" H 1950 5950 50  0001 C CNN
+F 3 "~" H 1950 5950 50  0001 C CNN
+	1    1950 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 5850 1750 5700
+	1950 5850 1950 5700
 Wire Wire Line
-	1750 5700 1850 5700
+	1950 5700 2050 5700
 Wire Wire Line
-	2150 5900 2150 6200
+	2350 5900 2350 6200
 Wire Wire Line
-	1750 6200 1750 6050
+	1950 6200 1950 6050
 $Comp
 L Device:R_Small_US R3
 U 1 1 5C9E5463
-P 1500 5950
-F 0 "R3" H 1568 5996 50  0000 L CNN
-F 1 "10k" H 1568 5905 50  0000 L CNN
-F 2 "" H 1500 5950 50  0001 C CNN
-F 3 "~" H 1500 5950 50  0001 C CNN
-	1    1500 5950
+P 1700 5950
+F 0 "R3" H 1768 5996 50  0000 L CNN
+F 1 "10k" H 1768 5905 50  0000 L CNN
+F 2 "" H 1700 5950 50  0001 C CNN
+F 3 "~" H 1700 5950 50  0001 C CNN
+	1    1700 5950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small_US R1
 U 1 1 5C9E5531
-P 1200 5700
-F 0 "R1" V 995 5700 50  0000 C CNN
-F 1 "1k2" V 1086 5700 50  0000 C CNN
-F 2 "" H 1200 5700 50  0001 C CNN
-F 3 "~" H 1200 5700 50  0001 C CNN
-	1    1200 5700
+P 1400 5700
+F 0 "R1" V 1195 5700 50  0000 C CNN
+F 1 "1k2" V 1286 5700 50  0000 C CNN
+F 2 "" H 1400 5700 50  0001 C CNN
+F 3 "~" H 1400 5700 50  0001 C CNN
+	1    1400 5700
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1300 5700 1500 5700
-Connection ~ 1750 5700
+	1500 5700 1700 5700
+Connection ~ 1950 5700
 Wire Wire Line
-	1500 5850 1500 5700
-Connection ~ 1500 5700
+	1700 5850 1700 5700
+Connection ~ 1700 5700
 Wire Wire Line
-	1500 5700 1750 5700
+	1700 5700 1950 5700
 Wire Wire Line
-	1500 6050 1500 6200
+	1700 6050 1700 6200
 Wire Wire Line
-	1500 6200 1750 6200
-Connection ~ 1750 6200
+	1700 6200 1950 6200
+Connection ~ 1950 6200
 Wire Wire Line
-	1750 6200 2150 6200
+	1950 6200 2350 6200
 Wire Wire Line
-	3500 4950 3200 4950
-Text HLabel 850  5700 0    50   Output ~ 0
-Charge
+	3700 4950 3400 4950
 Wire Wire Line
-	850  5700 1100 5700
+	1050 5700 1300 5700
 $Comp
 L power:GNDPWR #PWR0102
 U 1 1 5C9E5EB3
-P 1750 6250
-F 0 "#PWR0102" H 1750 6050 50  0001 C CNN
-F 1 "GNDPWR" H 1754 6096 50  0000 C CNN
-F 2 "" H 1750 6200 50  0001 C CNN
-F 3 "" H 1750 6200 50  0001 C CNN
-	1    1750 6250
+P 1950 6250
+F 0 "#PWR0102" H 1950 6050 50  0001 C CNN
+F 1 "GNDPWR" H 1954 6096 50  0000 C CNN
+F 2 "" H 1950 6200 50  0001 C CNN
+F 3 "" H 1950 6200 50  0001 C CNN
+	1    1950 6250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 6250 1750 6200
+	1950 6250 1950 6200
 $Comp
 L Device:Q_NPN_BEC Q2
 U 1 1 5C9E64EB
@@ -268,8 +266,6 @@ Wire Wire Line
 Connection ~ 2000 2950
 Wire Wire Line
 	2000 2950 2400 2950
-Text HLabel 1100 2450 0    50   Output ~ 0
-RL_ON
 Wire Wire Line
 	1100 2450 1350 2450
 $Comp
@@ -369,8 +365,6 @@ Wire Wire Line
 Connection ~ 3700 2950
 Wire Wire Line
 	3700 2950 3300 2950
-Text HLabel 4600 2450 2    50   Output ~ 0
-RL_OFF
 Wire Wire Line
 	4600 2450 4350 2450
 $Comp
@@ -404,18 +398,18 @@ Wire Wire Line
 $Comp
 L power:+12V #PWR0111
 U 1 1 5C9EB031
-P 3500 4900
-F 0 "#PWR0111" H 3500 4750 50  0001 C CNN
-F 1 "+12V" H 3515 5073 50  0000 C CNN
-F 2 "" H 3500 4900 50  0001 C CNN
-F 3 "" H 3500 4900 50  0001 C CNN
-	1    3500 4900
+P 3700 4900
+F 0 "#PWR0111" H 3700 4750 50  0001 C CNN
+F 1 "+12V" H 3715 5073 50  0000 C CNN
+F 2 "" H 3700 4900 50  0001 C CNN
+F 3 "" H 3700 4900 50  0001 C CNN
+	1    3700 4900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3500 4900 3500 4950
+	3700 4900 3700 4950
 Text Label 2400 1250 2    50   ~ 0
-+BAT
+U_BAT+
 Text Label 3300 1250 0    50   ~ 0
 +CAP
 $Comp
@@ -429,35 +423,33 @@ F 3 "~" H 4050 1250 50  0001 C CNN
 	1    4050 1250
 	0    1    1    0   
 $EndComp
-Text HLabel 3800 950  2    50   Output ~ 0
-+CAP
 Wire Wire Line
-	2150 4950 2450 4950
+	2350 4950 2650 4950
 $Comp
 L Device:D D2
 U 1 1 5CA2C4E8
-P 2800 5450
-F 0 "D2" H 2800 5234 50  0000 C CNN
-F 1 "LL4148" H 2800 5325 50  0000 C CNN
-F 2 "Diode_SMD:D_MiniMELF" H 2800 5450 50  0001 C CNN
-F 3 "~" H 2800 5450 50  0001 C CNN
-	1    2800 5450
+P 3000 5450
+F 0 "D2" H 3000 5234 50  0000 C CNN
+F 1 "LL4148" H 3000 5325 50  0000 C CNN
+F 2 "Diode_SMD:D_MiniMELF" H 3000 5450 50  0001 C CNN
+F 3 "~" H 3000 5450 50  0001 C CNN
+	1    3000 5450
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2650 5450 2450 5450
+	2850 5450 2650 5450
 Wire Wire Line
-	2450 5450 2450 4950
-Connection ~ 2450 4950
+	2650 5450 2650 4950
+Connection ~ 2650 4950
 Wire Wire Line
-	2450 4950 2500 4950
+	2650 4950 2700 4950
 Wire Wire Line
-	2950 5450 3200 5450
+	3150 5450 3400 5450
 Wire Wire Line
-	3200 5450 3200 4950
-Connection ~ 3200 4950
+	3400 5450 3400 4950
+Connection ~ 3400 4950
 Wire Wire Line
-	3200 4950 3100 4950
+	3400 4950 3300 4950
 $Comp
 L Device:D D1
 U 1 1 5CA2E38D
@@ -506,7 +498,7 @@ Wire Notes Line
 	5250 3500 650  3500
 Wire Notes Line
 	650  3500 650  750 
-Text Notes 4100 3500 0    118  ~ 0
+Text Notes 4050 3500 0    118  ~ 0
 MAIN SWITCH
 Wire Notes Line
 	650  3700 5250 3700
@@ -566,14 +558,6 @@ Wire Wire Line
 	6650 1750 6650 1900
 Wire Wire Line
 	7050 1750 7050 1900
-Text HLabel 2550 950  2    50   Output ~ 0
-Bat+
-Wire Wire Line
-	2550 950  2450 950 
-Wire Wire Line
-	2450 950  2450 1250
-Wire Wire Line
-	2450 1250 2550 1250
 $Comp
 L power:GNDPWR #PWR01
 U 1 1 5C9DEA2A
@@ -597,7 +581,7 @@ Connection ~ 6850 2350
 Wire Wire Line
 	6850 2350 6650 2350
 Text Label 6400 1300 0    50   ~ 0
-+BAT
+U_BAT+
 Wire Wire Line
 	6400 1300 6650 1300
 Wire Wire Line
@@ -608,7 +592,7 @@ Wire Wire Line
 	7050 1300 7250 1300
 Text Label 7250 1300 2    50   ~ 0
 +CAP
-Text Label 2150 5450 0    39   ~ 0
+Text Label 2350 5450 0    39   ~ 0
 S_RL_ON
 $Comp
 L power:+12V #PWR02
@@ -668,29 +652,25 @@ L Mechanical:MountingHole_Pad H?
 U 1 1 5CA37EF3
 P 6550 4900
 F 0 "H?" V 6504 5050 50  0000 L CNN
-F 1 "UnfusedBat-" V 6595 5050 50  0000 L CNN
+F 1 "U_BAT-" V 6595 5050 50  0000 L CNN
 F 2 "" H 6550 4900 50  0001 C CNN
 F 3 "~" H 6550 4900 50  0001 C CNN
 	1    6550 4900
-	0    -1   -1   0   
+	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	6650 4900 7150 4900
 $Comp
 L Mechanical:MountingHole_Pad H?
 U 1 1 5CA39D8E
-P 8100 4900
-F 0 "H?" V 8054 5050 50  0000 L CNN
-F 1 "-BAT" V 8145 5050 50  0000 L CNN
-F 2 "" H 8100 4900 50  0001 C CNN
-F 3 "~" H 8100 4900 50  0001 C CNN
-	1    8100 4900
+P 8250 4900
+F 0 "H?" V 8204 5050 50  0000 L CNN
+F 1 "F_BAT-" V 8295 5050 50  0000 L CNN
+F 2 "" H 8250 4900 50  0001 C CNN
+F 3 "~" H 8250 4900 50  0001 C CNN
+	1    8250 4900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7450 4900 8000 4900
 Text Label 7750 4900 0    39   ~ 0
--BAT
+F_BAT-
 Wire Notes Line
 	5550 3700 9150 3700
 Wire Notes Line
@@ -699,32 +679,110 @@ Wire Notes Line
 	9150 6700 5550 6700
 Wire Notes Line
 	5550 6700 5550 3700
-Text Notes 8550 6700 0    118  ~ 0
-FUSE
-Wire Wire Line
-	3150 1250 3800 1250
-Wire Wire Line
-	3800 950  3800 1250
-Connection ~ 3800 1250
-Wire Wire Line
-	3800 1250 3950 1250
-Wire Wire Line
-	2450 1250 2200 1250
-Connection ~ 2450 1250
+Text Notes 8150 6700 0    118  ~ 0
+MAIN FUSE
 $Comp
 L Mechanical:MountingHole_Pad H?
 U 1 1 5CA4A13E
-P 2100 1250
-F 0 "H?" V 2054 1400 50  0000 L CNN
-F 1 "+BAT" V 2145 1400 50  0000 L CNN
-F 2 "" H 2100 1250 50  0001 C CNN
-F 3 "~" H 2100 1250 50  0001 C CNN
-	1    2100 1250
-	0    -1   -1   0   
+P 1950 1250
+F 0 "H?" V 1904 1400 50  0000 L CNN
+F 1 "U_BAT+" V 1995 1400 50  0000 L CNN
+F 2 "" H 1950 1250 50  0001 C CNN
+F 3 "~" H 1950 1250 50  0001 C CNN
+	1    1950 1250
+	0    -1   1    0   
 $EndComp
-Text HLabel 8000 4600 1    50   Output ~ 0
--BAT
 Wire Wire Line
-	8000 4600 8000 4900
-Connection ~ 8000 4900
+	4650 4450 4450 4450
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5CA5F768
+P 9500 1550
+AR Path="/5CA5F768" Ref="H?"  Part="1" 
+AR Path="/5C9C4D6B/5CA5F768" Ref="H?"  Part="1" 
+F 0 "H?" H 9600 1600 50  0000 L CNN
+F 1 "MountingHole" H 9600 1550 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9500 1550 50  0001 C CNN
+F 3 "~" H 9500 1550 50  0001 C CNN
+	1    9500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5CA5F76E
+P 9500 1350
+AR Path="/5CA5F76E" Ref="H?"  Part="1" 
+AR Path="/5C9C4D6B/5CA5F76E" Ref="H?"  Part="1" 
+F 0 "H?" H 9600 1400 50  0000 L CNN
+F 1 "MountingHole" H 9600 1350 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9500 1350 50  0001 C CNN
+F 3 "~" H 9500 1350 50  0001 C CNN
+	1    9500 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5CA5F774
+P 9500 1150
+AR Path="/5CA5F774" Ref="H?"  Part="1" 
+AR Path="/5C9C4D6B/5CA5F774" Ref="H?"  Part="1" 
+F 0 "H?" H 9600 1200 50  0000 L CNN
+F 1 "MountingHole" H 9600 1150 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9500 1150 50  0001 C CNN
+F 3 "~" H 9500 1150 50  0001 C CNN
+	1    9500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5CA5F77A
+P 9500 950
+AR Path="/5CA5F77A" Ref="H?"  Part="1" 
+AR Path="/5C9C4D6B/5CA5F77A" Ref="H?"  Part="1" 
+F 0 "H?" H 9600 1000 50  0000 L CNN
+F 1 "MountingHole" H 9600 950 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9500 950 50  0001 C CNN
+F 3 "~" H 9500 950 50  0001 C CNN
+	1    9500 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1250 3950 1250
+Wire Wire Line
+	2050 1250 2550 1250
+Wire Wire Line
+	6650 4900 7150 4900
+Wire Wire Line
+	7450 4900 7700 4900
+Text Label 6750 4900 0    39   ~ 0
+U_BAT-
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5CA63142
+P 7700 5250
+F 0 "#PWR?" H 7700 5050 50  0001 C CNN
+F 1 "GNDPWR" H 7704 5096 50  0000 C CNN
+F 2 "" H 7700 5200 50  0001 C CNN
+F 3 "" H 7700 5200 50  0001 C CNN
+	1    7700 5250
+	-1   0    0    -1  
+$EndComp
+Connection ~ 7700 4900
+Wire Wire Line
+	7700 4900 8150 4900
+Text HLabel 1050 5700 0    50   Output ~ 0
+Charge
+Text HLabel 1100 2450 0    50   Output ~ 0
+RL_ON
+Text HLabel 4600 2450 2    50   Output ~ 0
+RL_OFF
+Text HLabel 8250 5200 2    50   Output ~ 0
+GND
+Wire Wire Line
+	7700 5250 7700 5200
+Wire Wire Line
+	8250 5200 7700 5200
+Connection ~ 7700 5200
+Wire Wire Line
+	7700 5200 7700 4900
 $EndSCHEMATC

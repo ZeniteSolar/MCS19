@@ -1,0 +1,430 @@
+EESchema Schematic File Version 4
+LIBS:main-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 5300 4150 1350 1250
+U 5CA5A5AC
+F0 "sheet5CA5A59C" 60
+F1 "canbus.sch" 60
+F2 "SI" I L 5300 4450 60 
+F3 "SO" O L 5300 4350 60 
+F4 "CS" I L 5300 4550 60 
+F5 "SCK" I L 5300 4250 60 
+F6 "INT" O L 5300 4650 60 
+F7 "GND" O R 6650 4300 60 
+F8 "VCC" I R 6650 4200 60 
+F9 "CAN_H" B R 6650 4400 60 
+F10 "CAN_L" B R 6650 4500 60 
+$EndSheet
+$Sheet
+S 3600 3750 1150 1650
+U 5CA5A5BB
+F0 "sheet5CA5A59D" 60
+F1 "atmega328p.sch" 60
+F2 "SPI_MISO" I R 4750 4350 60 
+F3 "SPI_MOSI" O R 4750 4450 60 
+F4 "MCP_INT" I R 4750 4650 60 
+F5 "VCC" I L 3600 4550 60 
+F6 "GND" O L 3600 4750 60 
+F7 "SPI_SCK" O R 4750 4250 50 
+F8 "MCP_SS" O R 4750 4550 50 
+F9 "CAN_CTRL" O R 4750 3900 50 
+F10 "RL_OFF" O L 3600 3850 50 
+F11 "RL_ON" O L 3600 3950 50 
+F12 "CAP_SIG" I L 3600 5300 50 
+F13 "BAT_SIG" I L 3600 5200 50 
+F14 "Charge" O L 3600 4050 50 
+$EndSheet
+$Sheet
+S 7000 3100 1050 500 
+U 5CA5A5C0
+F0 "sheet5CA5A59E" 60
+F1 "supplies.sch" 60
+F2 "GND" O R 8050 3400 60 
+F3 "+5V_OUT" O L 7000 3400 60 
+F4 "+18V_IN" I R 8050 3300 60 
+$EndSheet
+$Sheet
+S 8650 3250 1250 600 
+U 5CA5A5C7
+F0 "sheet5CA5A59F" 60
+F1 "canbus_connector.sch" 60
+F2 "CAN_H" B L 8650 3500 60 
+F3 "CAN_L" B L 8650 3600 60 
+F4 "CAN_18V" O L 8650 3300 60 
+F5 "CAN_GND" B L 8650 3400 60 
+F6 "CAN_18V_POS" O R 9900 3300 50 
+$EndSheet
+Wire Wire Line
+	5300 4650 4750 4650
+Wire Wire Line
+	5300 4550 4750 4550
+Wire Wire Line
+	5300 4350 4750 4350
+Wire Wire Line
+	5300 4250 4750 4250
+Wire Wire Line
+	4750 4450 5300 4450
+Text Label 4900 4450 0    60   ~ 0
+MOSI
+Text Label 4900 4350 0    60   ~ 0
+MISO
+Text Label 4900 4250 0    60   ~ 0
+SCK
+Wire Wire Line
+	8650 3300 8450 3300
+Wire Wire Line
+	8050 3400 8250 3400
+Wire Wire Line
+	8650 3500 8350 3500
+Wire Wire Line
+	8350 3500 8350 4400
+Wire Wire Line
+	8350 4400 6650 4400
+Wire Wire Line
+	6650 4500 8450 4500
+Wire Wire Line
+	8450 4500 8450 3600
+Wire Wire Line
+	8450 3600 8650 3600
+Wire Wire Line
+	8250 3400 8250 4300
+Wire Wire Line
+	8250 4300 6850 4300
+Connection ~ 8250 3400
+Wire Wire Line
+	7000 3400 6800 3400
+Wire Wire Line
+	6800 3400 6800 3950
+Wire Wire Line
+	6800 4200 6650 4200
+Wire Wire Line
+	6850 4300 6850 4700
+Connection ~ 6850 4300
+Wire Wire Line
+	6850 4300 6650 4300
+Wire Wire Line
+	6650 3850 6650 3950
+Wire Wire Line
+	6650 3950 6800 3950
+Connection ~ 6800 3950
+Wire Wire Line
+	6800 3950 6800 4200
+Wire Wire Line
+	8250 3400 8650 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5CA5A5EB
+P 6850 4700
+AR Path="/5CA5A5EB" Ref="#PWR?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5EB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6850 4450 50  0001 C CNN
+F 1 "GND" H 6900 4500 50  0000 C CNN
+F 2 "" H 6850 4700 50  0001 C CNN
+F 3 "" H 6850 4700 50  0001 C CNN
+	1    6850 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5CA5A5F1
+P 6650 3850
+AR Path="/5CA5A5F1" Ref="#PWR?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5F1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6650 3700 50  0001 C CNN
+F 1 "+5V" H 6700 4050 50  0000 C CNN
+F 2 "" H 6650 3850 50  0001 C CNN
+F 3 "" H 6650 3850 50  0001 C CNN
+	1    6650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5CA5A5F7
+P 3450 4450
+AR Path="/5CA5A5F7" Ref="#PWR?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5F7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3450 4300 50  0001 C CNN
+F 1 "+5V" H 3500 4650 50  0000 C CNN
+F 2 "" H 3450 4450 50  0001 C CNN
+F 3 "" H 3450 4450 50  0001 C CNN
+	1    3450 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4450 3450 4550
+Wire Wire Line
+	3450 4550 3600 4550
+$Comp
+L power:GND #PWR?
+U 1 1 5CA5A5FF
+P 3450 4800
+AR Path="/5CA5A5FF" Ref="#PWR?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5FF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3450 4550 50  0001 C CNN
+F 1 "GND" H 3500 4600 50  0000 C CNN
+F 2 "" H 3450 4800 50  0001 C CNN
+F 3 "" H 3450 4800 50  0001 C CNN
+	1    3450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4800 3450 4750
+Wire Wire Line
+	3450 4750 3600 4750
+$Sheet
+S 8950 2200 600  450 
+U 5CA5A606
+F0 "sheet5CA5A5A0" 50
+F1 "CAN_ON_OFF.sch" 50
+F2 "In" I L 8950 2550 50 
+F3 "Out" O R 9550 2550 50 
+F4 "Ctrl" I L 8950 2300 50 
+$EndSheet
+Connection ~ 8450 3300
+Wire Wire Line
+	8450 3300 8050 3300
+Wire Wire Line
+	10150 3300 9900 3300
+Wire Wire Line
+	8950 2550 8450 2550
+Wire Wire Line
+	8450 2550 8450 3300
+Wire Wire Line
+	9550 2550 10150 2550
+Wire Wire Line
+	10150 2550 10150 3300
+Wire Wire Line
+	4750 3900 6300 3900
+Wire Wire Line
+	6300 3900 6300 2300
+Wire Wire Line
+	6300 2300 8950 2300
+$Sheet
+S 1600 5250 750  550 
+U 5CA5A61A
+F0 "sheet5CA5A5A1" 39
+F1 "analog.sch" 39
+F2 "out1" I R 2350 5400 39 
+F3 "+5V" I R 2350 5300 39 
+F4 "GND" I R 2350 5750 39 
+F5 "in1-" I L 1600 5450 39 
+F6 "in1+" I L 1600 5350 39 
+F7 "out2" I R 2350 5650 39 
+F8 "in2-" I L 1600 5700 39 
+F9 "in2+" I L 1600 5600 39 
+$EndSheet
+Wire Wire Line
+	2350 5650 3000 5650
+Wire Wire Line
+	3000 5650 3000 5300
+Wire Wire Line
+	3000 5300 3600 5300
+Wire Wire Line
+	2350 5400 2700 5400
+Wire Wire Line
+	2700 5400 2700 5200
+Wire Wire Line
+	2700 5200 3600 5200
+$Comp
+L power:+5V #PWR?
+U 1 1 5CA5A626
+P 2450 5000
+AR Path="/5CA5A626" Ref="#PWR?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A626" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2450 4850 50  0001 C CNN
+F 1 "+5V" H 2500 5200 50  0000 C CNN
+F 2 "" H 2450 5000 50  0001 C CNN
+F 3 "" H 2450 5000 50  0001 C CNN
+	1    2450 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5300 2350 5300
+$Comp
+L Device:Jumper_NC_Small JP?
+U 1 1 5CA5A62D
+P 2450 5150
+AR Path="/5CA5A62D" Ref="JP?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A62D" Ref="JP?"  Part="1" 
+F 0 "JP?" V 2404 5224 50  0000 L CNN
+F 1 "Jp_TEST" V 2495 5224 50  0000 L CNN
+F 2 "" H 2450 5150 50  0001 C CNN
+F 3 "~" H 2450 5150 50  0001 C CNN
+	1    2450 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 5050 2450 5000
+Wire Wire Line
+	2450 5250 2450 5300
+$Comp
+L power:GNDA #PWR?
+U 1 1 5CA5A635
+P 1450 5450
+AR Path="/5CA5A635" Ref="#PWR?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A635" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1450 5200 50  0001 C CNN
+F 1 "GNDA" H 1455 5277 50  0000 C CNN
+F 2 "" H 1450 5450 50  0001 C CNN
+F 3 "" H 1450 5450 50  0001 C CNN
+	1    1450 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 5450 1600 5450
+$Comp
+L power:GNDA #PWR?
+U 1 1 5CA5A63C
+P 1450 5700
+AR Path="/5CA5A63C" Ref="#PWR?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A63C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1450 5450 50  0001 C CNN
+F 1 "GNDA" H 1455 5527 50  0000 C CNN
+F 2 "" H 1450 5700 50  0001 C CNN
+F 3 "" H 1450 5700 50  0001 C CNN
+	1    1450 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 5700 1600 5700
+Text Label 1200 5600 0    39   ~ 0
++CAP
+Text Label 1200 5350 0    39   ~ 0
++BAT
+$Comp
+L Device:Jumper_NC_Small JP?
+U 1 1 5CA5A645
+P 1450 5350
+AR Path="/5CA5A645" Ref="JP?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A645" Ref="JP?"  Part="1" 
+F 0 "JP?" H 1450 5562 50  0001 C CNN
+F 1 "Jp_TEST" H 1450 5471 50  0001 C CNN
+F 2 "" H 1450 5350 50  0001 C CNN
+F 3 "~" H 1450 5350 50  0001 C CNN
+	1    1450 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 5350 1350 5350
+Wire Wire Line
+	1550 5350 1600 5350
+$Comp
+L Device:Jumper_NC_Small JP?
+U 1 1 5CA5A64D
+P 1450 5600
+AR Path="/5CA5A64D" Ref="JP?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A64D" Ref="JP?"  Part="1" 
+F 0 "JP?" H 1450 5812 50  0001 C CNN
+F 1 "Jp_TEST" H 1450 5721 50  0001 C CNN
+F 2 "" H 1450 5600 50  0001 C CNN
+F 3 "~" H 1450 5600 50  0001 C CNN
+	1    1450 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 5600 1350 5600
+Wire Wire Line
+	1550 5600 1600 5600
+$Comp
+L power:GND #PWR?
+U 1 1 5CA5A655
+P 2450 6150
+AR Path="/5CA5A655" Ref="#PWR?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A655" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2450 5900 50  0001 C CNN
+F 1 "GND" H 2500 5950 50  0000 C CNN
+F 2 "" H 2450 6150 50  0001 C CNN
+F 3 "" H 2450 6150 50  0001 C CNN
+	1    2450 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 6150 2450 6050
+Wire Wire Line
+	2450 5750 2350 5750
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5CA5D716
+P 2400 3150
+AR Path="/5CA5D716" Ref="H?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5D716" Ref="H?"  Part="1" 
+F 0 "H?" H 2500 3200 50  0000 L CNN
+F 1 "MountingHole" H 2500 3150 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2400 3150 50  0001 C CNN
+F 3 "~" H 2400 3150 50  0001 C CNN
+	1    2400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5CA5D71C
+P 2400 2950
+AR Path="/5CA5D71C" Ref="H?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5D71C" Ref="H?"  Part="1" 
+F 0 "H?" H 2500 3000 50  0000 L CNN
+F 1 "MountingHole" H 2500 2950 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2400 2950 50  0001 C CNN
+F 3 "~" H 2400 2950 50  0001 C CNN
+	1    2400 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5CA5D722
+P 2400 2750
+AR Path="/5CA5D722" Ref="H?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5D722" Ref="H?"  Part="1" 
+F 0 "H?" H 2500 2800 50  0000 L CNN
+F 1 "MountingHole" H 2500 2750 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2400 2750 50  0001 C CNN
+F 3 "~" H 2400 2750 50  0001 C CNN
+	1    2400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5CA5D728
+P 2400 2550
+AR Path="/5CA5D728" Ref="H?"  Part="1" 
+AR Path="/5CA4DC1F/5CA5D728" Ref="H?"  Part="1" 
+F 0 "H?" H 2500 2600 50  0000 L CNN
+F 1 "MountingHole" H 2500 2550 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2400 2550 50  0001 C CNN
+F 3 "~" H 2400 2550 50  0001 C CNN
+	1    2400 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3850 3600 3850
+Text HLabel 3250 3850 0    50   Input ~ 0
+RL_OFF
+Wire Wire Line
+	3250 3950 3600 3950
+Text HLabel 3250 3950 0    50   Input ~ 0
+RL_ON
+Wire Wire Line
+	3250 4050 3600 4050
+Text HLabel 3250 4050 0    50   Input ~ 0
+Charge
+Text HLabel 2350 6050 0    50   Input ~ 0
+GND
+Wire Wire Line
+	2350 6050 2450 6050
+Connection ~ 2450 6050
+Wire Wire Line
+	2450 6050 2450 5750
+$EndSCHEMATC
