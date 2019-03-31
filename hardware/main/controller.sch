@@ -196,7 +196,7 @@ F4 "Ctrl" I L 8950 2300 50
 $EndSheet
 Connection ~ 8450 3300
 Wire Wire Line
-	8450 3300 8050 3300
+	8450 3300 8250 3300
 Wire Wire Line
 	10150 3300 9900 3300
 Wire Wire Line
@@ -427,4 +427,13 @@ Wire Wire Line
 Connection ~ 2450 6050
 Wire Wire Line
 	2450 6050 2450 5750
+Text HLabel 8050 2900 0    50   Input ~ 0
++18V_OUT
+Wire Wire Line
+	8050 2900 8250 2900
+Wire Wire Line
+	8250 2900 8250 3300
+Connection ~ 8250 3300
+Wire Wire Line
+	8250 3300 8050 3300
 $EndSCHEMATC
