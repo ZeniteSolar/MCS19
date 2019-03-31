@@ -334,8 +334,6 @@ Wire Wire Line
 	8800 3050 9150 3050
 Text HLabel 2850 3550 0    60   Input ~ 0
 in1-
-Text HLabel 2850 3750 0    60   Input ~ 0
-in1+
 Text Notes 6450 6450 0    60   ~ 0
 https://www.edn.com/electronics-blogs/bakers-best/4418766/Closer-to-real-world-analog-filters
 Wire Wire Line
@@ -1162,4 +1160,6 @@ F 3 "" H 3750 5200 50  0001 C CNN
 	1    3750 5200
 	-1   0    0    1   
 $EndComp
+Text HLabel 2850 3750 0    60   Input ~ 0
+in1+
 $EndSCHEMATC
