@@ -26,4 +26,5 @@ Este módulo é responsável por gerenciar o carregamento do sistema com a final
             - Relé do inrush
             - Relé principal
         - Sinalizar o estado do fusível principal
-
+5. Garantir fixação mecânica que não flexione a PCB
+    - Utilizar estrutura auxiliar de material isolante
