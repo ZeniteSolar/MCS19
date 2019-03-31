@@ -344,39 +344,10 @@ Wire Wire Line
 Connection ~ 7850 3550
 Wire Wire Line
 	7850 3950 7850 4100
-Text HLabel 8800 2900 0    60   Input ~ 0
-+5V
-Text HLabel 8800 3050 0    60   Input ~ 0
-GND
-$Comp
-L power:+5V #PWR0301
-U 1 1 5AAC3254
-P 9150 2850
-AR Path="/5AAC3254" Ref="#PWR0301"  Part="1" 
-AR Path="/5AAC947C/5AAC3254" Ref="#PWR0301"  Part="1" 
-AR Path="/5C9FC045/5AAC3254" Ref="#PWR015"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A61A/5AAC3254" Ref="#PWR0141"  Part="1" 
-AR Path="/5C9C4D6B/5CBAEDA0/5AAC3254" Ref="#PWR0301"  Part="1" 
-AR Path="/5CBD2CE3/5CBAEDA0/5AAC3254" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0301" H 9150 2700 50  0001 C CNN
-F 1 "+5V" H 9250 2850 50  0000 C CNN
-F 2 "" H 9150 2850 50  0001 C CNN
-F 3 "" H 9150 2850 50  0001 C CNN
-	1    9150 2850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9150 2900 8800 2900
-Wire Wire Line
-	8800 3050 9150 3050
 Text HLabel 2850 3550 0    60   Input ~ 0
 in1-
 Text Notes 6450 6450 0    60   ~ 0
 https://www.edn.com/electronics-blogs/bakers-best/4418766/Closer-to-real-world-analog-filters
-Wire Wire Line
-	9150 3050 9150 3100
-Wire Wire Line
-	9150 2850 9150 2900
 Wire Wire Line
 	4550 3550 4650 3550
 Wire Wire Line
