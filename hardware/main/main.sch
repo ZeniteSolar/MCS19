@@ -17,7 +17,7 @@ $EndDescr
 $Sheet
 S 3050 2400 1200 950 
 U 5C9C4D6B
-F0 "charger" 50
+F0 "CHARGER" 50
 F1 "Charger.sch" 50
 F2 "Charge" O R 4250 2700 50 
 F3 "RL_ON" O R 4250 2800 50 
@@ -35,10 +35,10 @@ F4 "Charge" I L 6300 2700 50
 F5 "GND" I L 6300 3000 50 
 $EndSheet
 $Comp
-L Connector:Conn_01x06_Male J?
+L Connector:Conn_01x06_Male J101
 U 1 1 5CA76C06
 P 4650 2900
-F 0 "J?" H 4950 3300 50  0000 R CNN
+F 0 "J101" H 4950 3300 50  0000 R CNN
 F 1 "Conn_01x06_Male" H 4950 3200 50  0000 R CNN
 F 2 "" H 4650 2900 50  0001 C CNN
 F 3 "~" H 4650 2900 50  0001 C CNN
@@ -78,10 +78,10 @@ Wire Wire Line
 	4300 3000 4250 3000
 Connection ~ 4400 3100
 $Comp
-L Connector:Conn_01x06_Male J?
+L Connector:Conn_01x06_Male J102
 U 1 1 5CA80272
 P 5900 2900
-F 0 "J?" H 6200 3300 50  0000 R CNN
+F 0 "J102" H 6200 3300 50  0000 R CNN
 F 1 "Conn_01x06_Male" H 6200 3200 50  0000 R CNN
 F 2 "" H 5900 2900 50  0001 C CNN
 F 3 "~" H 5900 2900 50  0001 C CNN
@@ -120,4 +120,6 @@ Wire Wire Line
 Wire Wire Line
 	6250 3000 6300 3000
 Connection ~ 6150 3100
+Text Notes 4400 4750 0    50   ~ 0
+TO-DO LIST:\n  [x] Separar a abstração das duas placas\n\n  [x] Criar conexão entre as duas placas\n\n  [x] Nomear componentes;\n\n  [_] Passar alimentação para o Charger;\n\n  [_] Adicionar snubbers para os relés (olhar na simulação);\n\n  [_] Passar o condicionamento do sinal para o Charger;\n
 $EndSCHEMATC

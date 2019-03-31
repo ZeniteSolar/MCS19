@@ -395,19 +395,6 @@ Wire Wire Line
 	3000 2100 2850 2100
 Wire Wire Line
 	2850 2100 2850 1950
-$Comp
-L power:+12V #PWR0111
-U 1 1 5C9EB031
-P 3700 4900
-F 0 "#PWR0111" H 3700 4750 50  0001 C CNN
-F 1 "+12V" H 3715 5073 50  0000 C CNN
-F 2 "" H 3700 4900 50  0001 C CNN
-F 3 "" H 3700 4900 50  0001 C CNN
-	1    3700 4900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 4900 3700 4950
 Text Label 2400 1250 2    50   ~ 0
 U_BAT+
 Text Label 3300 1250 0    50   ~ 0
@@ -595,22 +582,11 @@ Text Label 7250 1300 2    50   ~ 0
 Text Label 2350 5450 0    39   ~ 0
 S_RL_ON
 $Comp
-L power:+12V #PWR02
-U 1 1 5C9F0E54
-P 8100 1350
-F 0 "#PWR02" H 8100 1200 50  0001 C CNN
-F 1 "+12V" H 8115 1523 50  0000 C CNN
-F 2 "" H 8100 1350 50  0001 C CNN
-F 3 "" H 8100 1350 50  0001 C CNN
-	1    8100 1350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small_US R13
 U 1 1 5C9F0F2F
 P 8100 1650
 F 0 "R13" H 8150 1700 50  0000 L CNN
-F 1 "450" H 8168 1605 50  0000 L CNN
+F 1 "470" H 8168 1605 50  0000 L CNN
 F 2 "" H 8100 1650 50  0001 C CNN
 F 3 "~" H 8100 1650 50  0001 C CNN
 	1    8100 1650
@@ -648,10 +624,10 @@ Wire Notes Line
 Text Notes 7450 3500 0    118  ~ 0
 VISUAL_INDICATION\n
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H206
 U 1 1 5CA37EF3
 P 6550 4900
-F 0 "H?" V 6504 5050 50  0000 L CNN
+F 0 "H206" V 6504 5050 50  0000 L CNN
 F 1 "U_BAT-" V 6595 5050 50  0000 L CNN
 F 2 "" H 6550 4900 50  0001 C CNN
 F 3 "~" H 6550 4900 50  0001 C CNN
@@ -659,10 +635,10 @@ F 3 "~" H 6550 4900 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H207
 U 1 1 5CA39D8E
 P 8250 4900
-F 0 "H?" V 8204 5050 50  0000 L CNN
+F 0 "H207" V 8204 5050 50  0000 L CNN
 F 1 "F_BAT-" V 8295 5050 50  0000 L CNN
 F 2 "" H 8250 4900 50  0001 C CNN
 F 3 "~" H 8250 4900 50  0001 C CNN
@@ -682,10 +658,10 @@ Wire Notes Line
 Text Notes 8150 6700 0    118  ~ 0
 MAIN FUSE
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H203
 U 1 1 5CA4A13E
 P 1950 1250
-F 0 "H?" V 1904 1400 50  0000 L CNN
+F 0 "H203" V 1904 1400 50  0000 L CNN
 F 1 "U_BAT+" V 1995 1400 50  0000 L CNN
 F 2 "" H 1950 1250 50  0001 C CNN
 F 3 "~" H 1950 1250 50  0001 C CNN
@@ -699,8 +675,8 @@ L Mechanical:MountingHole H?
 U 1 1 5CA5F768
 P 9500 1550
 AR Path="/5CA5F768" Ref="H?"  Part="1" 
-AR Path="/5C9C4D6B/5CA5F768" Ref="H?"  Part="1" 
-F 0 "H?" H 9600 1600 50  0000 L CNN
+AR Path="/5C9C4D6B/5CA5F768" Ref="H205"  Part="1" 
+F 0 "H205" H 9600 1600 50  0000 L CNN
 F 1 "MountingHole" H 9600 1550 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 9500 1550 50  0001 C CNN
 F 3 "~" H 9500 1550 50  0001 C CNN
@@ -712,8 +688,8 @@ L Mechanical:MountingHole H?
 U 1 1 5CA5F76E
 P 9500 1350
 AR Path="/5CA5F76E" Ref="H?"  Part="1" 
-AR Path="/5C9C4D6B/5CA5F76E" Ref="H?"  Part="1" 
-F 0 "H?" H 9600 1400 50  0000 L CNN
+AR Path="/5C9C4D6B/5CA5F76E" Ref="H204"  Part="1" 
+F 0 "H204" H 9600 1400 50  0000 L CNN
 F 1 "MountingHole" H 9600 1350 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 9500 1350 50  0001 C CNN
 F 3 "~" H 9500 1350 50  0001 C CNN
@@ -725,8 +701,8 @@ L Mechanical:MountingHole H?
 U 1 1 5CA5F774
 P 9500 1150
 AR Path="/5CA5F774" Ref="H?"  Part="1" 
-AR Path="/5C9C4D6B/5CA5F774" Ref="H?"  Part="1" 
-F 0 "H?" H 9600 1200 50  0000 L CNN
+AR Path="/5C9C4D6B/5CA5F774" Ref="H202"  Part="1" 
+F 0 "H202" H 9600 1200 50  0000 L CNN
 F 1 "MountingHole" H 9600 1150 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 9500 1150 50  0001 C CNN
 F 3 "~" H 9500 1150 50  0001 C CNN
@@ -738,8 +714,8 @@ L Mechanical:MountingHole H?
 U 1 1 5CA5F77A
 P 9500 950
 AR Path="/5CA5F77A" Ref="H?"  Part="1" 
-AR Path="/5C9C4D6B/5CA5F77A" Ref="H?"  Part="1" 
-F 0 "H?" H 9600 1000 50  0000 L CNN
+AR Path="/5C9C4D6B/5CA5F77A" Ref="H201"  Part="1" 
+F 0 "H201" H 9600 1000 50  0000 L CNN
 F 1 "MountingHole" H 9600 950 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 9500 950 50  0001 C CNN
 F 3 "~" H 9500 950 50  0001 C CNN
@@ -757,10 +733,10 @@ Wire Wire Line
 Text Label 6750 4900 0    39   ~ 0
 U_BAT-
 $Comp
-L power:GNDPWR #PWR?
+L power:GNDPWR #PWR0101
 U 1 1 5CA63142
 P 7700 5250
-F 0 "#PWR?" H 7700 5050 50  0001 C CNN
+F 0 "#PWR0101" H 7700 5050 50  0001 C CNN
 F 1 "GNDPWR" H 7704 5096 50  0000 C CNN
 F 2 "" H 7700 5200 50  0001 C CNN
 F 3 "" H 7700 5200 50  0001 C CNN
@@ -785,4 +761,18 @@ Wire Wire Line
 Connection ~ 7700 5200
 Wire Wire Line
 	7700 5200 7700 4900
+NoConn ~ 3300 4650
+$Comp
+L power:+5V #PWR?
+U 1 1 5CA9CA1B
+P 8100 1350
+F 0 "#PWR?" H 8100 1200 50  0001 C CNN
+F 1 "+5V" H 8150 1550 50  0000 C CNN
+F 2 "" H 8100 1350 50  0001 C CNN
+F 3 "" H 8100 1350 50  0001 C CNN
+	1    8100 1350
+	1    0    0    -1  
+$EndComp
+Text HLabel 3700 4950 2    50   Output ~ 0
++5V
 $EndSCHEMATC
