@@ -83,7 +83,7 @@ $EndComp
 Wire Wire Line
 	3950 4450 4000 4450
 Text Label 3600 4450 2    50   ~ 0
-Charge
+CH
 Text Label 4650 4450 0    50   ~ 0
 +CAP
 Text Label 2400 4550 0    50   ~ 0
@@ -92,19 +92,6 @@ Wire Wire Line
 	2400 4550 2650 4550
 Wire Wire Line
 	3300 4450 3550 4450
-$Comp
-L Device:Q_NPN_BEC Q802
-U 1 1 5C9E4DF9
-P 2250 5700
-AR Path="/5C9C4D6B/5C9E4DF9" Ref="Q802"  Part="1" 
-AR Path="/5CBD2CE3/5C9E4DF9" Ref="Q?"  Part="1" 
-F 0 "Q802" H 2441 5746 50  0000 L CNN
-F 1 "Q_NPN_BEC" H 2441 5655 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23_HandSoldering" H 2450 5800 50  0001 C CNN
-F 3 "~" H 2250 5700 50  0001 C CNN
-	1    2250 5700
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_Small_US R806
 U 1 1 5C9E5053
@@ -204,19 +191,6 @@ $EndComp
 Wire Wire Line
 	1950 6250 1950 6200
 $Comp
-L Device:Q_NPN_BEC Q801
-U 1 1 5C9E64EB
-P 2250 2600
-AR Path="/5C9C4D6B/5C9E64EB" Ref="Q801"  Part="1" 
-AR Path="/5CBD2CE3/5C9E64EB" Ref="Q?"  Part="1" 
-F 0 "Q801" H 2441 2646 50  0000 L CNN
-F 1 "BCV27" H 2441 2555 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23_HandSoldering" H 2450 2700 50  0001 C CNN
-F 3 "~" H 2250 2600 50  0001 C CNN
-	1    2250 2600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Small_US R805
 U 1 1 5C9E64F1
 P 2350 2150
@@ -312,19 +286,6 @@ F 3 "" H 1950 3100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1950 3150 1950 3100
-$Comp
-L Device:Q_NPN_BEC Q803
-U 1 1 5C9E7354
-P 3350 2600
-AR Path="/5C9C4D6B/5C9E7354" Ref="Q803"  Part="1" 
-AR Path="/5CBD2CE3/5C9E7354" Ref="Q?"  Part="1" 
-F 0 "Q803" H 3541 2646 50  0000 L CNN
-F 1 "BCV27" H 3541 2555 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23_HandSoldering" H 3550 2700 50  0001 C CNN
-F 3 "~" H 3350 2600 50  0001 C CNN
-	1    3350 2600
-	-1   0    0    -1  
-$EndComp
 $Comp
 L Device:R_Small_US R809
 U 1 1 5C9E735A
@@ -423,8 +384,6 @@ Wire Wire Line
 	3650 3150 3650 3100
 Text Label 2350 1400 2    50   ~ 0
 U_BAT+
-Text Label 3250 1400 0    50   ~ 0
-+BAT
 $Comp
 L Mechanical:MountingHole_Pad H802
 U 1 1 5C9E3AC0
@@ -1528,7 +1487,6 @@ F 3 "~" H 2250 5700 50  0001 C CNN
 	1    2050 5700
 	1    0    0    -1  
 $EndComp
-Connection ~ 2050 5700
 $Comp
 L Connector:TestPoint TP802
 U 1 1 5CAC4B91
@@ -1701,10 +1659,8 @@ F 3 "~" H 9500 1750 50  0001 C CNN
 	1    9500 1750
 	1    0    0    -1  
 $EndComp
-Connection ~ 2050 2600
 Wire Wire Line
 	1950 2600 2050 2600
-Connection ~ 3550 2600
 Wire Wire Line
 	3750 7600 4050 7600
 $Comp
@@ -1721,4 +1677,48 @@ $EndComp
 Wire Wire Line
 	8000 8000 7950 8000
 Connection ~ 7950 8000
+Text Label 3300 1400 0    50   ~ 0
++CAP
+Connection ~ 2050 5700
+$Comp
+L Device:Q_NPN_BEC Q802
+U 1 1 5C9E4DF9
+P 2250 5700
+AR Path="/5C9C4D6B/5C9E4DF9" Ref="Q802"  Part="1" 
+AR Path="/5CBD2CE3/5C9E4DF9" Ref="Q?"  Part="1" 
+F 0 "Q802" H 2441 5746 50  0000 L CNN
+F 1 "Q_NPN_BEC" H 2441 5655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23_HandSoldering" H 2450 5800 50  0001 C CNN
+F 3 "~" H 2250 5700 50  0001 C CNN
+	1    2250 5700
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 2600
+$Comp
+L Device:Q_NPN_BEC Q803
+U 1 1 5C9E7354
+P 3350 2600
+AR Path="/5C9C4D6B/5C9E7354" Ref="Q803"  Part="1" 
+AR Path="/5CBD2CE3/5C9E7354" Ref="Q?"  Part="1" 
+F 0 "Q803" H 3541 2646 50  0000 L CNN
+F 1 "BCV27" H 3541 2555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23_HandSoldering" H 3550 2700 50  0001 C CNN
+F 3 "~" H 3350 2600 50  0001 C CNN
+	1    3350 2600
+	-1   0    0    -1  
+$EndComp
+Connection ~ 2050 2600
+$Comp
+L Device:Q_NPN_BEC Q801
+U 1 1 5C9E64EB
+P 2250 2600
+AR Path="/5C9C4D6B/5C9E64EB" Ref="Q801"  Part="1" 
+AR Path="/5CBD2CE3/5C9E64EB" Ref="Q?"  Part="1" 
+F 0 "Q801" H 2441 2646 50  0000 L CNN
+F 1 "BCV27" H 2441 2555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23_HandSoldering" H 2450 2700 50  0001 C CNN
+F 3 "~" H 2250 2600 50  0001 C CNN
+	1    2250 2600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
