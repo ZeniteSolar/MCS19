@@ -142,10 +142,6 @@ F 3 "" H 7350 4450 50  0001 C CNN
 	1    7350 4450
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 5050 3850
-NoConn ~ 5050 3950
-NoConn ~ 5050 4050
-NoConn ~ 5050 4150
 NoConn ~ 5050 4750
 NoConn ~ 5050 4850
 Text Notes 5100 6400 0    60   ~ 0
@@ -220,7 +216,6 @@ Wire Wire Line
 	5900 5600 5900 5650
 Wire Wire Line
 	5900 5300 5900 5400
-NoConn ~ 5050 3750
 Wire Wire Line
 	4350 5450 4350 5650
 Wire Wire Line
@@ -525,13 +520,20 @@ F 3 "" H 4550 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4550 2250 4550 2150
-NoConn ~ 5050 3650
 Wire Wire Line
 	5950 4350 6000 4350
-Text Label 5050 4650 0    50   ~ 0
-ON_OFF_PUMP
-Text HLabel 5600 4650 2    50   Output ~ 0
-ON_OFF_PUMP
+NoConn ~ 5050 4650
 Wire Wire Line
-	4950 4650 5600 4650
+	4950 4650 5050 4650
+Text HLabel 5050 3750 2    50   Input ~ 0
+RL_OFF
+Text HLabel 5050 3850 2    50   Input ~ 0
+RL_ON
+Text HLabel 5050 3950 2    50   Input ~ 0
+CAP_SIG
+Text HLabel 5050 4050 2    50   Input ~ 0
+BAT_SIG
+NoConn ~ 5050 4150
+Text HLabel 5050 3650 2    50   Input ~ 0
+Charge
 $EndSCHEMATC

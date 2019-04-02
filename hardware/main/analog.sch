@@ -1256,4 +1256,8 @@ Wire Wire Line
 Wire Wire Line
 	9100 3700 9550 3700
 Connection ~ 9100 3700
+Text HLabel 9000 5950 2    50   Output ~ 0
+GND
+Wire Wire Line
+	8850 5950 9000 5950
 $EndSCHEMATC

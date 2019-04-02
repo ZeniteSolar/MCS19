@@ -46,7 +46,7 @@ U 1 1 5CA76C06
 P 4700 3250
 F 0 "J101" H 5000 3950 50  0000 R CNN
 F 1 "Conn_01x11_Male" H 5000 3850 50  0000 R CNN
-F 2 "" H 4700 3250 50  0001 C CNN
+F 2 "KicadZeniteSolarLibrary18:PinHeader_1x11_P2.54mm_Vertical_HandSoldering" H 4700 3250 50  0001 C CNN
 F 3 "~" H 4700 3250 50  0001 C CNN
 	1    4700 3250
 	-1   0    0    1   
@@ -117,7 +117,7 @@ U 1 1 5CBD36A2
 P 5550 3250
 F 0 "J102" H 5850 3950 50  0000 R CNN
 F 1 "Conn_01x11_Male" H 5850 3850 50  0000 R CNN
-F 2 "" H 5550 3250 50  0001 C CNN
+F 2 "KicadZeniteSolarLibrary18:PinHeader_1x11_P2.54mm_Vertical_HandSoldering" H 5550 3250 50  0001 C CNN
 F 3 "~" H 5550 3250 50  0001 C CNN
 	1    5550 3250
 	1    0    0    1   
