@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -73,7 +73,7 @@ Wire Wire Line
 	4400 3150 4400 3350
 Connection ~ 4400 3150
 Text Notes 4450 5600 0    50   ~ 0
-TO-DO LIST:\n  [x] Separar a abstração das duas placas\n\n  [x] Criar conexão entre as duas placas\n\n  [x] Nomear componentes;\n\n  [x] Passar alimentação para o Charger;\n\n  [x] Criar fonte 12V no  Charger\n\n  [_] Adicionar snubbers para os relés (olhar na simulação);\n\n  [x] Passar o condicionamento do sinal para o Charger;\n\n  [_] Incluir pontos de teste!!!\n\n  [_] 
+TO-DO LIST:\n  [x] Separar a abstração das duas placas\n\n  [x] Criar conexão entre as duas placas\n\n  [x] Nomear componentes;\n\n  [x] Passar alimentação para o Charger;\n\n  [x] Criar fonte 12V no  Charger\n\n  [x] Adicionar snubbers para os relés (olhar na simulação);\n\n  [x] Passar o condicionamento do sinal para o Charger;\n\n  [x] Incluir pontos de teste!!!\n\n  [x] Modificar alimentação do Analog para 12V
 Wire Wire Line
 	4350 2950 4250 2950
 Wire Wire Line
