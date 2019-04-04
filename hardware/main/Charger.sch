@@ -54,20 +54,6 @@ F 3 "~" H 7300 4900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L main-rescue:DIPxx-1Axx-13x-High_current_rele K?
-U 1 1 5C9E2F33
-P 2800 1600
-AR Path="/5C9E2F33" Ref="K?"  Part="1" 
-AR Path="/5C9C4D6B/5C9E2F33" Ref="K801"  Part="1" 
-AR Path="/5CBD2CE3/5C9E2F33" Ref="K?"  Part="1" 
-F 0 "K801" V 3267 1600 50  0000 C CNN
-F 1 "DIPxx-1Axx-13x" V 3176 1600 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:Mega_Relay_K100" H 3150 1550 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 2800 1600 50  0001 C CNN
-	1    2800 1600
-	0    -1   -1   0   
-$EndComp
-$Comp
 L main-rescue:SANYOU_SRD_Form_C-Relay K802
 U 1 1 5C9E3465
 P 3000 4750
@@ -206,8 +192,6 @@ $EndComp
 Wire Wire Line
 	2350 2050 2350 1850
 Wire Wire Line
-	2350 1850 2500 1850
-Wire Wire Line
 	2350 2250 2350 2350
 $Comp
 L Device:C_Small C801
@@ -302,8 +286,6 @@ $EndComp
 Wire Wire Line
 	3250 2050 3250 1850
 Wire Wire Line
-	3250 1850 3100 1850
-Wire Wire Line
 	3250 2250 3250 2350
 $Comp
 L Device:C_Small C809
@@ -382,19 +364,19 @@ F 3 "" H 3650 3100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3650 3150 3650 3100
-Text Label 2350 1400 2    50   ~ 0
+Text Label 2350 1200 2    50   ~ 0
 U_BAT+
 $Comp
 L Mechanical:MountingHole_Pad H802
 U 1 1 5C9E3AC0
-P 4000 1400
+P 4000 1200
 AR Path="/5C9C4D6B/5C9E3AC0" Ref="H802"  Part="1" 
 AR Path="/5CBD2CE3/5C9E3AC0" Ref="H?"  Part="1" 
-F 0 "H802" V 3954 1550 50  0000 L CNN
-F 1 "+BAT" V 4045 1550 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 4000 1400 50  0001 C CNN
-F 3 "~" H 4000 1400 50  0001 C CNN
-	1    4000 1400
+F 0 "H802" V 3954 1350 50  0000 L CNN
+F 1 "+BAT" V 4045 1350 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 4000 1200 50  0001 C CNN
+F 3 "~" H 4000 1200 50  0001 C CNN
+	1    4000 1200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -666,14 +648,14 @@ MAIN FUSE
 $Comp
 L Mechanical:MountingHole_Pad H801
 U 1 1 5CA4A13E
-P 1900 1400
+P 1900 1200
 AR Path="/5C9C4D6B/5CA4A13E" Ref="H801"  Part="1" 
 AR Path="/5CBD2CE3/5CA4A13E" Ref="H?"  Part="1" 
-F 0 "H801" V 1854 1550 50  0000 L CNN
-F 1 "U_BAT+" V 1945 1550 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 1900 1400 50  0001 C CNN
-F 3 "~" H 1900 1400 50  0001 C CNN
-	1    1900 1400
+F 0 "H801" V 1854 1350 50  0000 L CNN
+F 1 "U_BAT+" V 1945 1350 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 1900 1200 50  0001 C CNN
+F 3 "~" H 1900 1200 50  0001 C CNN
+	1    1900 1200
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
@@ -735,7 +717,7 @@ F 3 "~" H 9500 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2000 1400 2050 1400
+	2000 1200 2050 1200
 $Comp
 L power:GNDPWR #PWR0810
 U 1 1 5CA63142
@@ -821,8 +803,6 @@ Wire Wire Line
 Connection ~ 4150 5450
 Wire Wire Line
 	4150 5450 4150 5500
-Wire Wire Line
-	2800 2100 2800 2350
 Text Label 3000 3450 2    50   ~ 0
 +12V
 Wire Wire Line
@@ -879,21 +859,21 @@ Wire Wire Line
 $Comp
 L power:PWR_FLAG #FLG0801
 U 1 1 5CB83AF7
-P 2050 1200
+P 2050 1000
 AR Path="/5C9C4D6B/5CB83AF7" Ref="#FLG0801"  Part="1" 
 AR Path="/5CBD2CE3/5CB83AF7" Ref="#FLG?"  Part="1" 
-F 0 "#FLG0801" H 2050 1275 50  0001 C CNN
-F 1 "PWR_FLAG" H 2050 1400 50  0000 C CNN
-F 2 "" H 2050 1200 50  0001 C CNN
-F 3 "~" H 2050 1200 50  0001 C CNN
-	1    2050 1200
+F 0 "#FLG0801" H 2050 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2050 1200 50  0000 C CNN
+F 2 "" H 2050 1000 50  0001 C CNN
+F 3 "~" H 2050 1000 50  0001 C CNN
+	1    2050 1000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 1200 2050 1400
-Connection ~ 2050 1400
+	2050 1000 2050 1200
+Connection ~ 2050 1200
 Wire Wire Line
-	2050 1400 2450 1400
+	2050 1200 2450 1200
 $Comp
 L power:PWR_FLAG #FLG0804
 U 1 1 5CB8872B
@@ -1118,43 +1098,43 @@ Text Label 7950 7550 2    50   ~ 0
 $Comp
 L Device:R_Small R807
 U 1 1 5CA4B635
-P 2700 1000
-F 0 "R807" V 2504 1000 50  0000 C CNN
-F 1 "1R" V 2595 1000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2700 1000 50  0001 C CNN
-F 3 "~" H 2700 1000 50  0001 C CNN
-	1    2700 1000
+P 2700 800
+F 0 "R807" V 2504 800 50  0000 C CNN
+F 1 "1R" V 2595 800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2700 800 50  0001 C CNN
+F 3 "~" H 2700 800 50  0001 C CNN
+	1    2700 800 
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C807
 U 1 1 5CA4B63B
-P 3000 1000
-F 0 "C807" V 2771 1000 50  0000 C CNN
-F 1 "100n" V 2862 1000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3000 1000 50  0001 C CNN
-F 3 "~" H 3000 1000 50  0001 C CNN
-	1    3000 1000
+P 3000 800
+F 0 "C807" V 2771 800 50  0000 C CNN
+F 1 "100n" V 2862 800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3000 800 50  0001 C CNN
+F 3 "~" H 3000 800 50  0001 C CNN
+	1    3000 800 
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2800 1000 2900 1000
+	2800 800  2900 800 
 Wire Wire Line
-	2450 1000 2450 1400
+	2450 800  2450 1200
 Wire Wire Line
-	2450 1000 2600 1000
-Connection ~ 2450 1400
+	2450 800  2600 800 
+Connection ~ 2450 1200
 Wire Wire Line
-	2450 1400 2500 1400
+	2450 1200 2500 1200
 Wire Wire Line
-	3200 1000 3200 1400
+	3200 800  3200 1200
 Wire Wire Line
-	3100 1400 3200 1400
+	3100 1200 3200 1200
 Wire Wire Line
-	3100 1000 3200 1000
-Connection ~ 3200 1400
+	3100 800  3200 800 
+Connection ~ 3200 1200
 Wire Wire Line
-	3200 1400 3900 1400
+	3200 1200 3900 1200
 $Comp
 L Device:R_Small R808
 U 1 1 5CA80622
@@ -1468,7 +1448,7 @@ $EndComp
 Wire Wire Line
 	8000 8000 7950 8000
 Connection ~ 7950 8000
-Text Label 3300 1400 0    50   ~ 0
+Text Label 3300 1200 0    50   ~ 0
 +CAP
 Connection ~ 2050 5700
 $Comp
@@ -1524,12 +1504,12 @@ $EndSheet
 Wire Wire Line
 	1950 7850 2200 7850
 $Comp
-L power:GNDPWR #PWR?
+L power:GNDPWR #PWR0101
 U 1 1 5CA8D58E
 P 2200 8000
-AR Path="/5C9C4D6B/5CA8D58E" Ref="#PWR?"  Part="1" 
+AR Path="/5C9C4D6B/5CA8D58E" Ref="#PWR0101"  Part="1" 
 AR Path="/5CBD2CE3/5CA8D58E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2200 7800 50  0001 C CNN
+F 0 "#PWR0101" H 2200 7800 50  0001 C CNN
 F 1 "GNDPWR" H 2204 7846 50  0000 C CNN
 F 2 "" H 2200 7950 50  0001 C CNN
 F 3 "" H 2200 7950 50  0001 C CNN
@@ -1551,4 +1531,32 @@ Wire Wire Line
 	3400 7500 3550 7500
 Text Label 3550 7500 2    50   ~ 0
 +12V
+Wire Wire Line
+	2350 1850 2650 1850
+Wire Wire Line
+	2950 1850 3250 1850
+Wire Wire Line
+	2800 1850 2800 2350
+$Comp
+L K100:K100A K1
+U 1 1 5CA93DA7
+P 2800 1750
+F 0 "K1" V 2890 1522 50  0000 R CNN
+F 1 "K100A" V 2799 1522 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical_SMD_Pin1Right" H 3150 1700 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_SIL.pdf" H 2800 1750 50  0001 C CNN
+	1    2800 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L k100A:K100B U2
+U 1 1 5CA9433B
+P 2800 1350
+F 0 "U2" V 3217 1350 50  0000 C CNN
+F 1 "K100B" V 3126 1350 50  0000 C CNN
+F 2 "KicadZeniteSolarLibrary18:Mega_Relay_K100_separated" H 2550 1200 50  0001 C CNN
+F 3 "" H 2550 1200 50  0001 C CNN
+	1    2800 1350
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

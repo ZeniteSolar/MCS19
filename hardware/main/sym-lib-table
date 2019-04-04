@@ -3,4 +3,7 @@
   (lib (name basicsensormodule-rescue)(type Legacy)(uri ${KIPRJMOD}/basicsensormodule-rescue.lib)(options "")(descr ""))
   (lib (name MAB19-rescue)(type Legacy)(uri ${KIPRJMOD}/MAB19-rescue.lib)(options "")(descr ""))
   (lib (name main-rescue)(type Legacy)(uri ${KIPRJMOD}/main-rescue.lib)(options "")(descr ""))
+  (lib (name K100)(type Legacy)(uri ${KIPRJMOD}/KicadZeniteSolarLibrary18.pretty/K100.lib)(options "")(descr ""))
+  (lib (name k100A)(type Legacy)(uri ${KIPRJMOD}/KicadZeniteSolarLibrary18.pretty/k100A.lib)(options "")(descr ""))
+  (lib (name k100B)(type Legacy)(uri ${KIPRJMOD}/KicadZeniteSolarLibrary18.pretty/k100B.lib)(options "")(descr ""))
 )

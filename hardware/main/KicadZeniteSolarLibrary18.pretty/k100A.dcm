@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP K100A
+D Standex Meder SIL reed relay, SPST, Closing Contact
+K Single Pole Reed Relay SPST
+F https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_SIL.pdf
+$ENDCMP
+#
+#End Doc Library
