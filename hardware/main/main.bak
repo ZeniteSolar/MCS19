@@ -19,26 +19,26 @@ S 3050 2400 1200 1450
 U 5C9C4D6B
 F0 "CHARGER" 50
 F1 "Charger.sch" 50
-F2 "Charge" O R 4250 2950 50 
-F3 "RL_ON" O R 4250 3050 50 
-F4 "RL_OFF" O R 4250 3150 50 
+F2 "Charge" O R 4250 3150 50 
+F3 "RL_ON" O R 4250 3500 50 
+F4 "RL_OFF" O R 4250 3400 50 
 F5 "GND" O R 4250 2600 50 
 F6 "+18V_IN" I R 4250 2500 50 
-F7 "sig_bat+" O R 4250 3400 50 
-F8 "sig_cap+" O R 4250 3500 50 
+F7 "sig_bat+" O R 4250 2950 50 
+F8 "sig_cap+" O R 4250 3050 50 
 $EndSheet
 $Sheet
 S 6000 2400 1250 1450
 U 5CA4DC1F
 F0 "CONTROLLER" 50
 F1 "controller.sch" 50
-F2 "RL_OFF" I L 6000 3150 50 
-F3 "RL_ON" I L 6000 3050 50 
-F4 "Charge" I L 6000 2950 50 
+F2 "RL_OFF" I L 6000 3400 50 
+F3 "RL_ON" I L 6000 3500 50 
+F4 "Charge" I L 6000 3150 50 
 F5 "GND" I L 6000 2600 50 
 F6 "+18V_OUT" I L 6000 2500 50 
-F7 "sig_bat+" I L 6000 3400 50 
-F8 "sig_cap+" I L 6000 3500 50 
+F7 "sig_bat+" I L 6000 2950 50 
+F8 "sig_cap+" I L 6000 3050 50 
 $EndSheet
 Wire Wire Line
 	4250 3150 4350 3150
@@ -111,12 +111,12 @@ Wire Wire Line
 Wire Wire Line
 	5950 3500 5950 3650
 $Comp
-L Connector_Generic:Conn_02x11_Odd_Even J?
+L Connector_Generic:Conn_02x11_Odd_Even J1
 U 1 1 5CA976F8
 P 4700 3250
-F 0 "J?" H 4750 3967 50  0000 C CNN
+F 0 "J1" H 4750 3967 50  0000 C CNN
 F 1 "Conn_02x11_Odd_Even" H 4750 3876 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x11_P2.54mm_Vertical" H 4700 3250 50  0001 C CNN
+F 2 "KicadZeniteSolarLibrary18:PinHeader_2x11_P2.54mm_Vertical_HandSoldering" H 4700 3250 50  0001 C CNN
 F 3 "~" H 4700 3250 50  0001 C CNN
 	1    4700 3250
 	1    0    0    -1  
@@ -187,12 +187,12 @@ Wire Wire Line
 Wire Wire Line
 	5900 3150 5900 3250
 $Comp
-L Connector_Generic:Conn_02x11_Odd_Even J?
+L Connector_Generic:Conn_02x11_Odd_Even J2
 U 1 1 5CAAC328
 P 5450 3250
-F 0 "J?" H 5500 3967 50  0000 C CNN
+F 0 "J2" H 5500 3967 50  0000 C CNN
 F 1 "Conn_02x11_Odd_Even" H 5500 3876 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x11_P2.54mm_Vertical" H 5450 3250 50  0001 C CNN
+F 2 "KicadZeniteSolarLibrary18:PinHeader_2x11_P2.54mm_Vertical_HandSoldering" H 5450 3250 50  0001 C CNN
 F 3 "~" H 5450 3250 50  0001 C CNN
 	1    5450 3250
 	1    0    0    -1  

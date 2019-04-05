@@ -433,36 +433,36 @@ Wire Wire Line
 	3300 3550 3750 3550
 $Comp
 L Amplifier_Operational:LM324 U301
-U 1 1 5BE784E0
+U 3 1 5BE784E0
 P 4950 3650
 AR Path="/5BE784E0" Ref="U301"  Part="3" 
 AR Path="/5AAC947C/5BE784E0" Ref="U301"  Part="3" 
 AR Path="/5C9FC045/5BE784E0" Ref="U1"  Part="3" 
 AR Path="/5CA4DC1F/5CA5A61A/5BE784E0" Ref="U901"  Part="3" 
-AR Path="/5C9C4D6B/5CBAEDA0/5BE784E0" Ref="U301"  Part="1" 
+AR Path="/5C9C4D6B/5CBAEDA0/5BE784E0" Ref="U301"  Part="3" 
 AR Path="/5CBD2CE3/5CBAEDA0/5BE784E0" Ref="U?"  Part="3" 
 F 0 "U301" H 5050 3800 50  0000 C CNN
 F 1 "LM324" H 5000 3900 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4900 3750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5000 3850 50  0001 C CNN
-	1    4950 3650
+	3    4950 3650
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:LM324 U301
-U 2 1 5BE7C0AB
+U 4 1 5BE7C0AB
 P 7050 3550
 AR Path="/5BE7C0AB" Ref="U301"  Part="2" 
 AR Path="/5AAC947C/5BE7C0AB" Ref="U301"  Part="2" 
 AR Path="/5C9FC045/5BE7C0AB" Ref="U1"  Part="2" 
 AR Path="/5CA4DC1F/5CA5A61A/5BE7C0AB" Ref="U901"  Part="2" 
-AR Path="/5C9C4D6B/5CBAEDA0/5BE7C0AB" Ref="U301"  Part="2" 
+AR Path="/5C9C4D6B/5CBAEDA0/5BE7C0AB" Ref="U301"  Part="4" 
 AR Path="/5CBD2CE3/5CBAEDA0/5BE7C0AB" Ref="U?"  Part="2" 
 F 0 "U301" H 7200 3700 50  0000 C CNN
 F 1 "LM324" H 7150 3800 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7000 3650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7100 3750 50  0001 C CNN
-	2    7050 3550
+	4    7050 3550
 	1    0    0    1   
 $EndComp
 $Comp
@@ -974,36 +974,36 @@ Wire Wire Line
 	3300 5100 3750 5100
 $Comp
 L Amplifier_Operational:LM324 U?
-U 3 1 5CA04791
+U 2 1 5CA04791
 P 4950 5200
 AR Path="/5CA04791" Ref="U?"  Part="3" 
 AR Path="/5AAC947C/5CA04791" Ref="U?"  Part="3" 
 AR Path="/5C9FC045/5CA04791" Ref="U2"  Part="3" 
 AR Path="/5CA4DC1F/5CA5A61A/5CA04791" Ref="U902"  Part="3" 
-AR Path="/5C9C4D6B/5CBAEDA0/5CA04791" Ref="U301"  Part="3" 
+AR Path="/5C9C4D6B/5CBAEDA0/5CA04791" Ref="U301"  Part="2" 
 AR Path="/5CBD2CE3/5CBAEDA0/5CA04791" Ref="U?"  Part="3" 
 F 0 "U301" H 5050 5350 50  0000 C CNN
 F 1 "LM324" H 5000 5450 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4900 5300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5000 5400 50  0001 C CNN
-	3    4950 5200
+	2    4950 5200
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:LM324 U?
-U 4 1 5CA04797
+U 1 1 5CA04797
 P 7050 5100
 AR Path="/5CA04797" Ref="U?"  Part="2" 
 AR Path="/5AAC947C/5CA04797" Ref="U?"  Part="2" 
 AR Path="/5C9FC045/5CA04797" Ref="U2"  Part="2" 
 AR Path="/5CA4DC1F/5CA5A61A/5CA04797" Ref="U902"  Part="2" 
-AR Path="/5C9C4D6B/5CBAEDA0/5CA04797" Ref="U301"  Part="4" 
+AR Path="/5C9C4D6B/5CBAEDA0/5CA04797" Ref="U301"  Part="1" 
 AR Path="/5CBD2CE3/5CBAEDA0/5CA04797" Ref="U?"  Part="2" 
 F 0 "U301" H 7200 5250 50  0000 C CNN
 F 1 "LM324" H 7150 5350 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7000 5200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7100 5300 50  0001 C CNN
-	4    7050 5100
+	1    7050 5100
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -1102,17 +1102,6 @@ F 3 "" H 5800 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDPWR #PWR0142
-U 1 1 5CBEAA58
-P 5350 4100
-F 0 "#PWR0142" H 5350 3900 50  0001 C CNN
-F 1 "GNDPWR" H 5400 3900 50  0000 C CNN
-F 2 "" H 5350 4050 50  0001 C CNN
-F 3 "" H 5350 4050 50  0001 C CNN
-	1    5350 4100
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GNDPWR #PWR0143
 U 1 1 5CBEACE6
 P 5350 5650
@@ -1186,4 +1175,16 @@ Text HLabel 9000 4400 2    50   Output ~ 0
 GND
 Wire Wire Line
 	9000 4400 8850 4400
+$Comp
+L power:GNDPWR #PWR0142
+U 1 1 5CBEAA58
+P 5350 4100
+F 0 "#PWR0142" H 5350 3900 50  0001 C CNN
+F 1 "GNDPWR" H 5400 3900 50  0000 C CNN
+F 2 "" H 5350 4050 50  0001 C CNN
+F 3 "" H 5350 4050 50  0001 C CNN
+	1    5350 4100
+	1    0    0    -1  
+$EndComp
+NoConn ~ -6100 4300
 $EndSCHEMATC
