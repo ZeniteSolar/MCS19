@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -24,8 +24,8 @@ F3 "RL_ON" O R 4250 3500 50
 F4 "RL_OFF" O R 4250 3400 50 
 F5 "GND" O R 4250 2600 50 
 F6 "+18V_IN" I R 4250 2500 50 
-F7 "sig_bat+" O R 4250 2950 50 
-F8 "sig_cap+" O R 4250 3050 50 
+F7 "sig_bat+" O R 4250 3050 50 
+F8 "sig_cap+" O R 4250 2950 50 
 $EndSheet
 $Sheet
 S 6000 2400 1250 1450
@@ -37,8 +37,8 @@ F3 "RL_ON" I L 6000 3500 50
 F4 "Charge" I L 6000 3150 50 
 F5 "GND" I L 6000 2600 50 
 F6 "+18V_OUT" I L 6000 2500 50 
-F7 "sig_bat+" I L 6000 2950 50 
-F8 "sig_cap+" I L 6000 3050 50 
+F7 "sig_bat+" I L 6000 3050 50 
+F8 "sig_cap+" I L 6000 2950 50 
 $EndSheet
 Wire Wire Line
 	4250 3150 4350 3150

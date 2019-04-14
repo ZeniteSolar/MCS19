@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -939,9 +939,9 @@ Wire Wire Line
 	6400 8150 7100 8150
 Wire Wire Line
 	6400 8400 7100 8400
-Text Label 6600 8300 0    39   ~ 0
-+CAP
 Text Label 6600 8050 0    39   ~ 0
++CAP
+Text Label 6600 8300 0    39   ~ 0
 U_BAT+
 $Comp
 L Device:Jumper_NC_Small JP?
@@ -985,9 +985,9 @@ Wire Wire Line
 	7950 8450 7850 8450
 Wire Wire Line
 	7950 8600 7950 8450
-Text HLabel 8200 8100 2    50   Output ~ 0
-sig_bat+
 Text HLabel 8200 8350 2    50   Output ~ 0
+sig_bat+
+Text HLabel 8200 8100 2    50   Output ~ 0
 sig_cap+
 $Comp
 L power:GNDPWR #PWR0812

@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 9
+Sheet 9 9
 Title ""
 Date ""
 Rev ""
@@ -30,19 +30,6 @@ Text Label 4500 3600 0    60   ~ 0
 CAN_L
 Text Label 4500 3700 0    60   ~ 0
 CAN_H
-$Comp
-L Connector:RJ45_Shielded J602
-U 1 1 5A01AFBA
-P 5450 3400
-AR Path="/5AAD16DD/5A01AFBA" Ref="J602"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A5C7/5A01AFBA" Ref="J702"  Part="1" 
-F 0 "J702" H 5650 3950 50  0000 C CNN
-F 1 "RJ45" H 5300 3950 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 5450 3400 50  0001 C CNN
-F 3 "" H 5450 3400 50  0001 C CNN
-	1    5450 3400
-	-1   0    0    -1  
-$EndComp
 Text HLabel 2150 3500 0    60   BiDi ~ 0
 CAN_H
 Text HLabel 2150 3600 0    60   BiDi ~ 0
@@ -94,19 +81,6 @@ Text Label 2950 3600 0    60   ~ 0
 CAN_L
 Text Label 2950 3700 0    60   ~ 0
 CAN_H
-$Comp
-L Connector:RJ45_Shielded J601
-U 1 1 5BE6C2F7
-P 3900 3400
-AR Path="/5AAD16DD/5BE6C2F7" Ref="J601"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A5C7/5BE6C2F7" Ref="J701"  Part="1" 
-F 0 "J701" H 4100 3950 50  0000 C CNN
-F 1 "RJ45" H 3750 3950 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 3900 3400 50  0001 C CNN
-F 3 "" H 3900 3400 50  0001 C CNN
-	1    3900 3400
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	3500 3000 3400 3000
 Wire Wire Line
@@ -217,19 +191,6 @@ Wire Wire Line
 Connection ~ 6550 3000
 Wire Wire Line
 	6650 3000 6550 3000
-$Comp
-L Connector:RJ45_Shielded J1
-U 1 1 5C9C7D58
-P 7050 3400
-AR Path="/5AAD16DD/5C9C7D58" Ref="J1"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D58" Ref="J703"  Part="1" 
-F 0 "J703" H 7250 3950 50  0000 C CNN
-F 1 "RJ45" H 6900 3950 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 7050 3400 50  0001 C CNN
-F 3 "" H 7050 3400 50  0001 C CNN
-	1    7050 3400
-	-1   0    0    -1  
-$EndComp
 Text Label 6100 3700 0    60   ~ 0
 CAN_H
 Text Label 6100 3600 0    60   ~ 0
@@ -277,19 +238,6 @@ Wire Wire Line
 Connection ~ 8100 3000
 Wire Wire Line
 	8200 3000 8100 3000
-$Comp
-L Connector:RJ45_Shielded J2
-U 1 1 5C9C7D3B
-P 8600 3400
-AR Path="/5AAD16DD/5C9C7D3B" Ref="J2"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D3B" Ref="J704"  Part="1" 
-F 0 "J704" H 8800 3950 50  0000 C CNN
-F 1 "RJ45" H 8450 3950 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 8600 3400 50  0001 C CNN
-F 3 "" H 8600 3400 50  0001 C CNN
-	1    8600 3400
-	-1   0    0    -1  
-$EndComp
 Text Label 7650 3700 0    60   ~ 0
 CAN_H
 Text Label 7650 3600 0    60   ~ 0
@@ -315,4 +263,56 @@ Connection ~ 8100 3400
 Wire Wire Line
 	5450 4500 6050 4500
 Connection ~ 5450 4500
+$Comp
+L Connector:RJ45_Shielded J2
+U 1 1 5C9C7D3B
+P 8600 3400
+AR Path="/5AAD16DD/5C9C7D3B" Ref="J2"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D3B" Ref="J704"  Part="1" 
+F 0 "J704" H 8800 3950 50  0000 C CNN
+F 1 "8P8C_Shielded" H 8450 3950 50  0000 C CNN
+F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 8600 3400 50  0001 C CNN
+F 3 "" H 8600 3400 50  0001 C CNN
+	1    8600 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:RJ45_Shielded J1
+U 1 1 5C9C7D58
+P 7050 3400
+AR Path="/5AAD16DD/5C9C7D58" Ref="J1"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5C7/5C9C7D58" Ref="J703"  Part="1" 
+F 0 "J703" H 7250 3950 50  0000 C CNN
+F 1 "8P8C_Shielded" H 6900 3950 50  0000 C CNN
+F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 7050 3400 50  0001 C CNN
+F 3 "" H 7050 3400 50  0001 C CNN
+	1    7050 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:RJ45_Shielded J602
+U 1 1 5A01AFBA
+P 5450 3400
+AR Path="/5AAD16DD/5A01AFBA" Ref="J602"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5C7/5A01AFBA" Ref="J702"  Part="1" 
+F 0 "J702" H 5650 3950 50  0000 C CNN
+F 1 "8P8C_Shielded" H 5300 3950 50  0000 C CNN
+F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 5450 3400 50  0001 C CNN
+F 3 "" H 5450 3400 50  0001 C CNN
+	1    5450 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:RJ45_Shielded J601
+U 1 1 5BE6C2F7
+P 3900 3400
+AR Path="/5AAD16DD/5BE6C2F7" Ref="J601"  Part="1" 
+AR Path="/5CA4DC1F/5CA5A5C7/5BE6C2F7" Ref="J701"  Part="1" 
+F 0 "J701" H 4100 3950 50  0000 C CNN
+F 1 "8P8C_Shielded" H 3750 3950 50  0000 C CNN
+F 2 "KicadZeniteSolarLibrary18:RJ45_YH59_01" H 3900 3400 50  0001 C CNN
+F 3 "" H 3900 3400 50  0001 C CNN
+	1    3900 3400
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC

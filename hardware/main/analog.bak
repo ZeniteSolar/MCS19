@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -433,19 +433,19 @@ Wire Wire Line
 	3300 3550 3750 3550
 $Comp
 L Amplifier_Operational:LM324 U301
-U 1 1 5BE784E0
+U 2 1 5BE784E0
 P 4950 3650
 AR Path="/5BE784E0" Ref="U301"  Part="3" 
 AR Path="/5AAC947C/5BE784E0" Ref="U301"  Part="3" 
 AR Path="/5C9FC045/5BE784E0" Ref="U1"  Part="3" 
 AR Path="/5CA4DC1F/5CA5A61A/5BE784E0" Ref="U901"  Part="3" 
-AR Path="/5C9C4D6B/5CBAEDA0/5BE784E0" Ref="U301"  Part="1" 
+AR Path="/5C9C4D6B/5CBAEDA0/5BE784E0" Ref="U301"  Part="2" 
 AR Path="/5CBD2CE3/5CBAEDA0/5BE784E0" Ref="U?"  Part="3" 
 F 0 "U301" H 5050 3800 50  0000 C CNN
 F 1 "LM324" H 5000 3900 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4900 3750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5000 3850 50  0001 C CNN
-	1    4950 3650
+	2    4950 3650
 	1    0    0    1   
 $EndComp
 $Comp
@@ -974,19 +974,19 @@ Wire Wire Line
 	3300 5100 3750 5100
 $Comp
 L Amplifier_Operational:LM324 U?
-U 2 1 5CA04791
+U 1 1 5CA04791
 P 4950 5200
 AR Path="/5CA04791" Ref="U?"  Part="3" 
 AR Path="/5AAC947C/5CA04791" Ref="U?"  Part="3" 
 AR Path="/5C9FC045/5CA04791" Ref="U2"  Part="3" 
 AR Path="/5CA4DC1F/5CA5A61A/5CA04791" Ref="U902"  Part="3" 
-AR Path="/5C9C4D6B/5CBAEDA0/5CA04791" Ref="U301"  Part="2" 
+AR Path="/5C9C4D6B/5CBAEDA0/5CA04791" Ref="U301"  Part="1" 
 AR Path="/5CBD2CE3/5CBAEDA0/5CA04791" Ref="U?"  Part="3" 
 F 0 "U301" H 5050 5350 50  0000 C CNN
 F 1 "LM324" H 5000 5450 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4900 5300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5000 5400 50  0001 C CNN
-	2    4950 5200
+	1    4950 5200
 	1    0    0    1   
 $EndComp
 $Comp
