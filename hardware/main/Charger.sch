@@ -1560,4 +1560,26 @@ F 3 "" H 2550 1200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 NoConn ~ 6300 11300
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO2
+U 1 1 5CC3B73E
+P 10700 8800
+F 0 "#LOGO2" H 10700 9075 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10700 8575 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_9.8x8mm_Copper" H 10700 8800 50  0001 C CNN
+F 3 "~" H 10700 8800 50  0001 C CNN
+	1    10700 8800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO1
+U 1 1 5CC3C3FD
+P 10700 8150
+F 0 "#LOGO1" H 10700 8425 50  0001 C CNN
+F 1 "Zenite" H 10700 7925 50  0001 C CNN
+F 2 "KicadZeniteSolarLibrary18:zenite" H 10700 8150 50  0001 C CNN
+F 3 "~" H 10700 8150 50  0001 C CNN
+	1    10700 8150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

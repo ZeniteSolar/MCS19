@@ -529,9 +529,9 @@ Text HLabel 5050 3950 2    50   Input ~ 0
 RL_OFF
 Text HLabel 5050 4050 2    50   Input ~ 0
 RL_ON
-Text HLabel 5050 3750 2    50   Input ~ 0
-CAP_SIG
 Text HLabel 5050 3650 2    50   Input ~ 0
+CAP_SIG
+Text HLabel 5050 3750 2    50   Input ~ 0
 BAT_SIG
 NoConn ~ 5050 4150
 Text HLabel 5050 3850 2    50   Input ~ 0
