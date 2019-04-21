@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -1561,10 +1561,10 @@ F 3 "" H 2550 1200 50  0001 C CNN
 $EndComp
 NoConn ~ 6300 11300
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO?
+L Graphic:Logo_Open_Hardware_Small #LOGO2
 U 1 1 5CC3B73E
 P 10700 8800
-F 0 "#LOGO?" H 10700 9075 50  0001 C CNN
+F 0 "#LOGO2" H 10700 9075 50  0001 C CNN
 F 1 "Logo_Open_Hardware_Small" H 10700 8575 50  0001 C CNN
 F 2 "Symbol:OSHW-Logo2_9.8x8mm_Copper" H 10700 8800 50  0001 C CNN
 F 3 "~" H 10700 8800 50  0001 C CNN

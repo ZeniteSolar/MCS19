@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -53,8 +53,6 @@ Wire Wire Line
 Wire Wire Line
 	2850 3750 3750 3750
 Wire Wire Line
-	4550 3250 4550 3300
-Wire Wire Line
 	4350 3550 4550 3550
 Connection ~ 4550 3550
 Wire Wire Line
@@ -65,8 +63,6 @@ Connection ~ 4550 3750
 Wire Wire Line
 	5250 3650 5350 3650
 Connection ~ 5350 3650
-Wire Wire Line
-	5350 3250 5350 3300
 Wire Wire Line
 	5350 4100 5350 4000
 $Comp
@@ -122,8 +118,6 @@ F 3 "" H 6600 3900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6500 3650 6600 3650
-Wire Wire Line
-	6600 3600 6600 3650
 Connection ~ 6600 3650
 Wire Wire Line
 	6100 3650 6200 3650
@@ -190,32 +184,10 @@ F 3 "" H 4950 4000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5350 4000 5050 4000
-$Comp
-L Connector:TestPoint TP307
-U 1 1 5AAB4639
-P 4550 4050
-AR Path="/5AAB4639" Ref="TP307"  Part="1" 
-AR Path="/5AAC947C/5AAB4639" Ref="TP307"  Part="1" 
-AR Path="/5C9FC045/5AAB4639" Ref="TP6"  Part="1" 
-AR Path="/5CA4DC1F/5CA5A61A/5AAB4639" Ref="TP907"  Part="1" 
-AR Path="/5C9C4D6B/5CBAEDA0/5AAB4639" Ref="TP307"  Part="1" 
-AR Path="/5CBD2CE3/5CBAEDA0/5AAB4639" Ref="TP?"  Part="1" 
-F 0 "TP307" H 4550 4350 50  0000 C BNN
-F 1 "op_a_in+" H 4550 4300 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4550 4050 50  0001 C CNN
-F 3 "" H 4550 4050 50  0001 C CNN
-	1    4550 4050
-	-1   0    0    1   
-$EndComp
-Connection ~ 4550 3300
-Connection ~ 4550 4000
-Connection ~ 5350 3300
 Connection ~ 3750 3550
 Connection ~ 3750 3750
 Wire Wire Line
 	6200 3800 6200 3650
-Wire Wire Line
-	3750 3450 3750 3550
 Wire Wire Line
 	3750 3750 3750 3850
 Text HLabel 8000 3550 2    60   Input ~ 0
@@ -266,8 +238,6 @@ Wire Wire Line
 	6750 3250 6750 3450
 Wire Wire Line
 	4550 3300 4550 3550
-Wire Wire Line
-	4550 4000 4550 4050
 Wire Wire Line
 	5350 3300 5350 3650
 Wire Wire Line
@@ -492,8 +462,6 @@ Wire Wire Line
 Wire Wire Line
 	2850 5300 3750 5300
 Wire Wire Line
-	4550 4800 4550 4850
-Wire Wire Line
 	4350 5100 4550 5100
 Connection ~ 4550 5100
 Wire Wire Line
@@ -504,8 +472,6 @@ Connection ~ 4550 5300
 Wire Wire Line
 	5250 5200 5350 5200
 Connection ~ 5350 5200
-Wire Wire Line
-	5350 4800 5350 4850
 Wire Wire Line
 	5350 5650 5350 5550
 $Comp
@@ -561,8 +527,6 @@ F 3 "" H 6600 5450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6500 5200 6600 5200
-Wire Wire Line
-	6600 5150 6600 5200
 Connection ~ 6600 5200
 Wire Wire Line
 	6100 5200 6200 5200
@@ -629,17 +593,10 @@ F 3 "" H 4950 5550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5350 5550 5050 5550
-Connection ~ 4550 4850
-Connection ~ 4550 5550
-Connection ~ 5350 4850
 Connection ~ 3750 5100
 Connection ~ 3750 5300
 Wire Wire Line
 	6200 5350 6200 5200
-Wire Wire Line
-	3750 5000 3750 5100
-Wire Wire Line
-	3750 5300 3750 5400
 Text HLabel 8000 5100 2    60   Input ~ 0
 out2
 $Comp
@@ -688,8 +645,6 @@ Wire Wire Line
 	6750 4800 6750 5000
 Wire Wire Line
 	4550 4850 4550 5100
-Wire Wire Line
-	4550 5550 4550 5600
 Wire Wire Line
 	5350 4850 5350 5200
 Wire Wire Line
@@ -787,8 +742,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7100 5300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4550 5550 4850 5550
-Wire Wire Line
-	7850 5050 7850 5100
 $Comp
 L Device:R_Small R?
 U 1 1 5CA047C1
@@ -853,9 +806,6 @@ Wire Wire Line
 	9100 3550 9100 3700
 Wire Wire Line
 	8850 3700 9100 3700
-Wire Wire Line
-	9100 3700 9550 3700
-Connection ~ 9100 3700
 Text HLabel 9000 4400 2    50   Output ~ 0
 GND
 Wire Wire Line
