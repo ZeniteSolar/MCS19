@@ -349,7 +349,7 @@ U 1 1 5BECD3FE
 P 7750 4450
 F 0 "J401" H 7700 4000 50  0000 C CNN
 F 1 "USART" H 7700 4100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7750 4450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 7750 4450 50  0001 C CNN
 F 3 "~" H 7750 4450 50  0001 C CNN
 	1    7750 4450
 	1    0    0    1   
