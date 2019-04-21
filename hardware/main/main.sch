@@ -142,7 +142,7 @@ U 1 1 5CBBEA1E
 P 4725 3250
 F 0 "J1" H 4805 3292 50  0000 L CNN
 F 1 "Conn_01x11" H 4805 3201 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 4725 3250 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Horizontal" H 4725 3250 50  0001 C CNN
 F 3 "~" H 4725 3250 50  0001 C CNN
 	1    4725 3250
 	1    0    0    -1  
@@ -156,7 +156,7 @@ F 1 "Conn_01x11" H 5395 2616 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Horizontal" H 5475 3250 50  0001 C CNN
 F 3 "~" H 5475 3250 50  0001 C CNN
 	1    5475 3250
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	5675 2750 5800 2750
