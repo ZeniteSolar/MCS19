@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -1561,25 +1561,36 @@ F 3 "" H 2550 1200 50  0001 C CNN
 $EndComp
 NoConn ~ 6300 11300
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO2
-U 1 1 5CC3B73E
-P 10700 8800
-F 0 "#LOGO2" H 10700 9075 50  0001 C CNN
-F 1 "Logo_Open_Hardware_Small" H 10700 8575 50  0001 C CNN
-F 2 "Symbol:OSHW-Logo2_9.8x8mm_Copper" H 10700 8800 50  0001 C CNN
-F 3 "~" H 10700 8800 50  0001 C CNN
-	1    10700 8800
+L Graphic:Logo_Open_Hardware_Small LOGO2
+U 1 1 5CC0B817
+P 10650 9150
+F 0 "LOGO2" H 10650 9425 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10650 8925 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_9.8x8mm_Copper" H 10650 9150 50  0001 C CNN
+F 3 "~" H 10650 9150 50  0001 C CNN
+	1    10650 9150
 	1    0    0    -1  
 $EndComp
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO1
-U 1 1 5CC3C3FD
-P 10700 8150
-F 0 "#LOGO1" H 10700 8425 50  0001 C CNN
-F 1 "Zenite" H 10700 7925 50  0001 C CNN
-F 2 "KicadZeniteSolarLibrary18:zenite" H 10700 8150 50  0001 C CNN
-F 3 "~" H 10700 8150 50  0001 C CNN
-	1    10700 8150
+L Graphic:Logo_Open_Hardware_Small LOGO1
+U 1 1 5CC0BA8B
+P 10650 8450
+F 0 "LOGO1" H 10650 8725 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10650 8225 50  0001 C CNN
+F 2 "KicadZeniteSolarLibrary18:zenite" H 10650 8450 50  0001 C CNN
+F 3 "~" H 10650 8450 50  0001 C CNN
+	1    10650 8450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small LOGO3
+U 1 1 5CC0BCBA
+P 10700 7850
+F 0 "LOGO3" H 10700 8125 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10700 7625 50  0001 C CNN
+F 2 "Symbol:KiCad-Logo2_5mm_Copper" H 10700 7850 50  0001 C CNN
+F 3 "~" H 10700 7850 50  0001 C CNN
+	1    10700 7850
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

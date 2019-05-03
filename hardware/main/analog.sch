@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:main-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -49,9 +49,7 @@ F 3 "" H 4250 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2850 3550 3100 3550
-Wire Wire Line
-	2850 3750 3750 3750
+	2850 3750 3100 3750
 Wire Wire Line
 	4350 3550 4550 3550
 Connection ~ 4550 3550
@@ -297,8 +295,6 @@ Wire Wire Line
 	6200 4250 7450 4250
 Wire Wire Line
 	6750 3250 7450 3250
-Wire Wire Line
-	3300 3550 3750 3550
 $Comp
 L Amplifier_Operational:LM324 U301
 U 2 1 5BE784E0
@@ -392,18 +388,18 @@ Wire Wire Line
 $Comp
 L Device:R_Small R302
 U 1 1 5BE77B14
-P 3200 3550
+P 3200 3750
 AR Path="/5BE77B14" Ref="R302"  Part="1" 
 AR Path="/5AAC947C/5BE77B14" Ref="R302"  Part="1" 
 AR Path="/5C9FC045/5BE77B14" Ref="R14"  Part="1" 
 AR Path="/5CA4DC1F/5CA5A61A/5BE77B14" Ref="R902"  Part="1" 
 AR Path="/5C9C4D6B/5CBAEDA0/5BE77B14" Ref="R302"  Part="1" 
 AR Path="/5CBD2CE3/5CBAEDA0/5BE77B14" Ref="R?"  Part="1" 
-F 0 "R302" V 3000 3500 50  0000 L CNN
-F 1 "100k" V 3100 3450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3200 3550 50  0001 C CNN
-F 3 "" H 3200 3550 50  0001 C CNN
-	1    3200 3550
+F 0 "R302" V 3000 3700 50  0000 L CNN
+F 1 "100k" V 3100 3650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3200 3750 50  0001 C CNN
+F 3 "" H 3200 3750 50  0001 C CNN
+	1    3200 3750
 	0    1    1    0   
 $EndComp
 $Comp
@@ -458,9 +454,7 @@ F 3 "" H 4250 5300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2850 5100 3100 5100
-Wire Wire Line
-	2850 5300 3750 5300
+	2850 5300 3100 5300
 Wire Wire Line
 	4350 5100 4550 5100
 Connection ~ 4550 5100
@@ -704,8 +698,6 @@ Wire Wire Line
 	6200 5800 7450 5800
 Wire Wire Line
 	6750 4800 7450 4800
-Wire Wire Line
-	3300 5100 3750 5100
 $Comp
 L Amplifier_Operational:LM324 U?
 U 1 1 5CA04791
@@ -745,18 +737,18 @@ Wire Wire Line
 $Comp
 L Device:R_Small R?
 U 1 1 5CA047C1
-P 3200 5100
+P 3200 5300
 AR Path="/5CA047C1" Ref="R?"  Part="1" 
 AR Path="/5AAC947C/5CA047C1" Ref="R?"  Part="1" 
 AR Path="/5C9FC045/5CA047C1" Ref="R15"  Part="1" 
 AR Path="/5CA4DC1F/5CA5A61A/5CA047C1" Ref="R911"  Part="1" 
 AR Path="/5C9C4D6B/5CBAEDA0/5CA047C1" Ref="R311"  Part="1" 
 AR Path="/5CBD2CE3/5CBAEDA0/5CA047C1" Ref="R?"  Part="1" 
-F 0 "R311" V 3000 5050 50  0000 L CNN
-F 1 "100k" V 3100 5000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3200 5100 50  0001 C CNN
-F 3 "" H 3200 5100 50  0001 C CNN
-	1    3200 5100
+F 0 "R311" V 3000 5250 50  0000 L CNN
+F 1 "100k" V 3100 5200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3200 5300 50  0001 C CNN
+F 3 "" H 3200 5300 50  0001 C CNN
+	1    3200 5300
 	0    1    1    0   
 $EndComp
 $Comp
@@ -914,4 +906,12 @@ F 3 "" H 7850 5600 50  0001 C CNN
 	1    7850 5650
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3300 3750 3750 3750
+Wire Wire Line
+	2850 3550 3750 3550
+Wire Wire Line
+	3300 5300 3750 5300
+Wire Wire Line
+	2850 5100 3750 5100
 $EndSCHEMATC
