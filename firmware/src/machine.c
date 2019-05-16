@@ -75,7 +75,7 @@ inline void set_state_idle(void)
     VERBOSE_MSG_MACHINE(usart_send_string("\n>>>IDLE STATE\n"));
     state_machine = STATE_IDLE;
     relay_clk = 0;
-    first_boat_off = 0;
+    charge_count_error = 0;
  }
 
 /**
@@ -86,7 +86,6 @@ inline void set_state_running(void)
     VERBOSE_MSG_MACHINE(usart_send_string("\n>>>RUNNING STATE\n"));
     state_machine = STATE_RUNNING;
     relay_clk = 0;
-    first_boat_off = 0;
  }
 
 /**
@@ -165,35 +164,27 @@ void pulse_mainrelay_off(void)
     clr_mainrelay_off();
 }
 
-/**
+
+
+/*
+ * @
  * @breif turns the boat on, slowly charging the caps before activate the
  * main relay
  */
+
 void turn_boat_on(void)
 {
     #ifdef VERBOSE_ON_RELAY
     VERBOSE_MSG_MACHINE(usart_send_string("Turning boat on"));
     #endif
-
-    if(!relay_clk)
-        set_chargerelay();
-
-    if (relay_clk++ < 50){
-        VERBOSE_MSG_MACHINE(usart_send_string("Chraging cap"));
-        VERBOSE_MSG_ERROR(usart_send_uint16(relay_clk));
-        _delay_ms(5);    
-    }
-    else{
         pulse_mainrelay_on();
         _delay_ms(200);
         clr_chargerelay();
-        relay_clk = 0;
     }    
-}
 
 
-/**
- * @b2rief turns the boat off.
+/*
+b2rief turns the boat off.
  */
 void turn_boat_off(void)
 {
@@ -209,6 +200,17 @@ void turn_boat_off(void)
     _delay_ms(50);
     pulse_mainrelay_off();           
     _delay_ms(50);
+}
+void turn_charge_boat_on(void)
+{
+    set_chargerelay();
+    charging = true;
+}
+
+void turn_charge_boat_off(void)
+{
+    clr_chargerelay();
+    charging = false;
 }
 
 
@@ -236,7 +238,6 @@ inline void task_initializing(void)
  */
 inline void task_idle(void)
 {
-    
 #ifdef LED_ON
     if(led_clk_div++ >= 30){
         cpl_led(LED1);
@@ -251,20 +252,36 @@ inline void task_idle(void)
         set_state_running();
 #else //RELAY_TEST_MODE
 
+    
     if(system_flags.boat_on){
-        VERBOSE_MSG_MACHINE(usart_send_string("\t\tIDLE STATE ===> BOAT ON!!!\n"));
-        turn_boat_on();
-        first_boat_off = 0;
-        if (relay_clk >= 50){
-            set_state_running();
-            relay_clk = 0;        
-        }    
-    }else{
-        if(!first_boat_off){
-            first_boat_off = 1;
-            set_state_idle();
-        }
+            VERBOSE_MSG_MACHINE( usart_send_string("adc:") );
+            VERBOSE_MSG_MACHINE( usart_send_uint16(adc.channel[0].avg) );
+            VERBOSE_MSG_MACHINE( usart_send_char('\n') );
+        turn_charge_boat_on();
+            if (relay_clk++<=25 || adc.channel[0].avg < 620){
+                _delay_ms(100);
+
+                if (++charge_count_error>100){
+                    error_flags.no_charge = 1;
+                    set_state_error();
+                }   
+            }
+            else
+            {
+                VERBOSE_MSG_MACHINE(usart_send_string("\t\tIDLE STATE ===> BOAT ON!!!\n"));
+                turn_boat_on();
+                _delay_ms(50);
+                relay_clk = 0;
+                turn_charge_boat_off();
+                set_state_running();
+            }
     }
+    else if (charging){
+            VERBOSE_MSG_MACHINE(usart_send_string("\t\tBOAT OFF BEFORE CHARGING\n"));
+            relay_clk = 0;
+            turn_charge_boat_off();
+            set_state_running();
+        }
 
 #endif //RELAY_TEST_MODE
 }
@@ -320,7 +337,8 @@ inline void task_error(void)
     VERBOSE_MSG_ERROR(usart_send_string("The error code is: "));
     VERBOSE_MSG_ERROR(usart_send_uint16(error_flags.all));
     VERBOSE_MSG_ERROR(usart_send_char('\n'));
-
+    if (error_flags.no_charge)
+        VERBOSE_MSG_ERROR(usart_send_string("\t - Capacitors undevolage after charge!\n"));
     if(error_flags.no_canbus)
         VERBOSE_MSG_ERROR(usart_send_string("\t - No canbus communication with MIC17!\n"));
     if(!error_flags.all)

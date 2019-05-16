@@ -54,6 +54,7 @@ typedef union system_flags{
 typedef union error_flags{
     struct{
         uint8_t     no_canbus     :1;
+        uint8_t     no_charge     :1;
     };
     uint8_t   all;
 }error_flags_t;
@@ -104,17 +105,22 @@ void pulse_mainrelay_on(void);
 void pulse_mainrelay_off(void);
 void turn_boat_on(void);
 void turn_boat_off(void);
+void turn_charge_boat_on(void);
+void turn_charge_boat_off(void);
 
 // machine variables
 volatile state_machine_t state_machine;
 volatile system_flags_t system_flags;
 volatile error_flags_t error_flags;
 volatile measurements_t measurements;
+volatile uint16_t charge_count_error;
+volatile uint8_t charging;
+volatile uint8_t relay_clk;
 volatile uint8_t first_boat_off;
-volatile uint16_t relay_clk;
 volatile uint8_t machine_clk;
 volatile uint8_t machine_clk_divider;
 volatile uint8_t total_errors;           // Contagem de ERROS
+volatile uint16_t charge_count_error;
 
 // other variables
 volatile uint8_t led_clk_div;
