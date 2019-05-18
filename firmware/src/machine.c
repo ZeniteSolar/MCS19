@@ -46,7 +46,7 @@ void machine_init(void)
 inline void set_machine_initial_state(void)
 {
     error_flags.all = 0;
-    machine_clk = machine_clk_divider = led_clk_div = 0;
+    relay_clk = machine_clk = machine_clk_divider = led_clk_div = 0;
 }
 
 /**
@@ -254,15 +254,22 @@ inline void task_idle(void)
 
     
     if(system_flags.boat_on){
-            VERBOSE_MSG_MACHINE( usart_send_string("adc:") );
-            VERBOSE_MSG_MACHINE( usart_send_uint16(adc.channel[0].avg) );
-            VERBOSE_MSG_MACHINE( usart_send_char('\n') );
+        
         turn_charge_boat_on();
-            if (relay_clk++<=25 || adc.channel[0].avg < 620){
+
+VERBOSE_MSG_MACHINE(usart_send_string("\nV_CAP"));
+VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_CAP].avg));
+VERBOSE_MSG_MACHINE(usart_send_string("\nV_BAT"));
+VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_BAT].avg));
+
+            //secure time and mesure cap voltage 
+            if (relay_clk++<=CHARGING_TIME_CAPACITOR || ((100 * adc.channel[V_CAP].avg) <= (CAPACITOR_CHARGE_PERCENTAGE * adc.channel[V_BAT].avg))){
                 _delay_ms(100);
 
-                if (++charge_count_error>100){
+                if (++charge_count_error > 2*CHARGING_TIME_CAPACITOR){
+                    
                     error_flags.no_charge = 1;
+                    turn_charge_boat_off();
                     set_state_error();
                 }   
             }
@@ -338,7 +345,7 @@ inline void task_error(void)
     VERBOSE_MSG_ERROR(usart_send_uint16(error_flags.all));
     VERBOSE_MSG_ERROR(usart_send_char('\n'));
     if (error_flags.no_charge)
-        VERBOSE_MSG_ERROR(usart_send_string("\t - Capacitors undevolage after charge!\n"));
+        VERBOSE_MSG_ERROR(usart_send_string("\t - Capacitors undervolage after charge!\n"));
     if(error_flags.no_canbus)
         VERBOSE_MSG_ERROR(usart_send_string("\t - No canbus communication with MIC17!\n"));
     if(!error_flags.all)

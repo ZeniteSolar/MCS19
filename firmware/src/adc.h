@@ -35,12 +35,12 @@ typedef enum adc_channels{
 typedef struct{
     uint32_t sum;
     uint16_t avg;
+    uint16_t samples;
 } adc_channel_t;
 
 typedef struct adc{
     adc_channel_t channel[ADC_LAST_CHANNEL+1];
     adc_channels_t select;
-    uint16_t samples;
     uint8_t ready;
 } adc_t;
 

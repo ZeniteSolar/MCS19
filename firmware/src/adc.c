@@ -100,25 +100,26 @@ ISR(ADC_vect)
     #endif // ADC_8BITS
 #endif // FAKE_ADC_ON
 
+    if(++adc.channel[adc.select].samples >= ADC_AVG_SIZE_10){
+        adc.channel[adc.select].avg = adc.channel[adc.select].sum >> ADC_AVG_SIZE_2;
+
+        adc.channel[adc.select].samples = adc.channel[adc.select].sum = 0;
+        adc.ready = 1;
+
+        #ifdef VERBOSE_ON_ADC
+        VERBOSE_MSG_ADC( usart_send_string("adc:") );
+        VERBOSE_MSG_ADC( usart_send_uint16(adc.select) );
+        VERBOSE_MSG_ADC( usart_send_char(':') );
+        VERBOSE_MSG_ADC( usart_send_uint16(adc.channel[adc.select].avg) );
+        VERBOSE_MSG_ADC( usart_send_char('\n') );
+        #endif
+    }
     if(++adc.select > ADC_LAST_CHANNEL){
         adc.select = ADC0;             // recycles
-        
-        if(++adc.samples >= ADC_AVG_SIZE_10){
-            adc.channel[adc.select].avg = adc.channel[adc.select].sum >> ADC_AVG_SIZE_2;
-
-            adc.samples = adc.channel[adc.select].sum = 0;
-            adc.ready = 1;
-            
-            #ifdef VERBOSE_ON_ADC
-            VERBOSE_MSG_ADC( usart_send_string("adc:") );
-            VERBOSE_MSG_ADC( usart_send_uint16(adc.channel[adc.select].avg) );
-            VERBOSE_MSG_ADC( usart_send_char('\n') );
-            #endif
-        }
     }
-
-    adc_select_channel(adc.select);
-                           
+    
+        adc_select_channel(adc.select);                           
+    
 }
  
 /**

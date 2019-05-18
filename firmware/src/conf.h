@@ -51,6 +51,9 @@
 #define ADC1_LINEAR_COEF                    0
 #define ADC_AVG_SIZE_2                      7                  // in base 2
 #define ADC_AVG_SIZE_10                     128                // in base 10
+#define V_BAT 								1	//Battery adc channel 1
+#define V_CAP 								0	//Capacitor adc channel 1
+
 
 //#define FAKE_ADC_ON
 #ifdef FAKE_ADC_ON
@@ -59,6 +62,9 @@
 
 #endif //ADC_ON
 
+#define CHARGING_TIME_CAPACITOR_ms 2500
+#define CHARGING_TIME_CAPACITOR CHARGING_TIME_CAPACITOR_ms/100
+#define CAPACITOR_CHARGE_PERCENTAGE 98	
 
 #ifdef MACHINE_ON
 // The machine frequency may not be superior of ADC_FREQUENCY/ADC_AVG_SIZE_10
