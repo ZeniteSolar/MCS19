@@ -40,6 +40,7 @@ typedef enum state_machine{
     STATE_RUNNING,
     STATE_ERROR,
     STATE_RESET,
+    STATE_WAITING_RESET,
 } state_machine_t;
 
 typedef union system_flags{
@@ -89,6 +90,7 @@ void task_idle(void);
 void task_running(void);
 void task_error(void);
 void task_reset(void);
+void task_waiting_reset(void);
 
 // the machine itself
 void set_machine_initial_state(void);
@@ -99,6 +101,7 @@ void set_state_initializing(void);
 void set_state_idle(void);
 void set_state_running(void);
 void set_state_reset(void);
+void set_state_waiting_reset(void);
 
 //relay functions
 void pulse_mainrelay_on(void);
@@ -121,6 +124,7 @@ volatile uint8_t machine_clk;
 volatile uint8_t machine_clk_divider;
 volatile uint8_t total_errors;           // Contagem de ERROS
 volatile uint16_t charge_count_error;
+volatile uint8_t reset_clk;
 
 // other variables
 volatile uint8_t led_clk_div;

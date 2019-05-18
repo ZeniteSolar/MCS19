@@ -97,6 +97,13 @@ inline void set_state_reset(void)
     state_machine = STATE_RESET;
 }
 
+inline void set_state_waiting_reset(void)
+{
+    VERBOSE_MSG_MACHINE(usart_send_string("\n>>>WAITING RESET STATE\n"));
+    state_machine = STATE_WAITING_RESET;    
+}
+
+
 /**
  * @breif prints the configurations and definitions
  */
@@ -346,6 +353,7 @@ inline void task_error(void)
     VERBOSE_MSG_ERROR(usart_send_char('\n'));
     if (error_flags.no_charge)
         VERBOSE_MSG_ERROR(usart_send_string("\t - Capacitors undervolage after charge!\n"));
+        set_state_waiting_reset();
     if(error_flags.no_canbus)
         VERBOSE_MSG_ERROR(usart_send_string("\t - No canbus communication with MIC17!\n"));
     if(!error_flags.all)
@@ -367,6 +375,23 @@ inline void task_error(void)
     cpl_led(LED2);
 #endif
     set_state_initializing();
+}
+
+/**
+ * @brief wait the user turn off the boat for a defined time 
+ */
+inline void task_waiting_reset(void)
+{
+    if(!system_flags.boat_on){
+        if (reset_clk++ < TIME_TO_RESET){
+            _delay_ms(100);
+        }
+        else{
+            set_state_reset();
+        }
+    }
+    else
+    VERBOSE_MSG_ERROR(usart_send_string("I WILL RESET WHEN THE USER TURN OFF THE BOAT AND I WIL WAIT FOR STABILIZE MYSELF!\n"));
 }
                     
 /**
@@ -470,7 +495,8 @@ inline void machine_run(void)
                     break;
                 case STATE_ERROR:
                     task_error();
-
+                case STATE_WAITING_RESET:
+                    task_waiting_reset();
                 case STATE_RESET:
                 default:
                     task_reset();

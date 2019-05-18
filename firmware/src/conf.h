@@ -66,6 +66,10 @@
 #define CHARGING_TIME_CAPACITOR CHARGING_TIME_CAPACITOR_ms/100
 #define CAPACITOR_CHARGE_PERCENTAGE 98	
 
+//if isn't possible charge the sistem, wait user turn off the boat for TIME_TO_RESET_ms ms 
+#define TIME_TO_RESET_ms 2000
+#define TIME_TO_RESET TIME_TO_RESET_ms/100
+
 #ifdef MACHINE_ON
 // The machine frequency may not be superior of ADC_FREQUENCY/ADC_AVG_SIZE_10
 #define MACHINE_TIMER_FREQUENCY             120           //<! machine timer frequency in Hz
