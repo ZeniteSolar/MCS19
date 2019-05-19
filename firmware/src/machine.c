@@ -211,13 +211,13 @@ void turn_boat_off(void)
 void turn_charge_boat_on(void)
 {
     set_chargerelay();
-    charging = true;
+    system_flags.boat_charging = 1;
 }
 
 void turn_charge_boat_off(void)
 {
     clr_chargerelay();
-    charging = false;
+    system_flags.boat_charging = 0;
 }
 
 
@@ -290,7 +290,7 @@ VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_BAT].avg));
                 set_state_running();
             }
     }
-    else if (charging){
+    else if (system_flags.boat_charging){
             VERBOSE_MSG_MACHINE(usart_send_string("\t\tBOAT OFF BEFORE CHARGING\n"));
             relay_clk = 0;
             turn_charge_boat_off();
@@ -474,6 +474,7 @@ inline void machine_run(void)
                 print_infos();
                 set_state_error();
             }
+            z
 
             switch(state_machine){
                 case STATE_INITIALIZING:

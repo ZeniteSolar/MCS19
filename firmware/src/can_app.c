@@ -73,6 +73,7 @@ inline void can_app_send_relay(void)
     can_t msg;
     msg.id                                  = CAN_FILTER_MSG_MCS19_RELAY;
     msg.length                              = CAN_LENGTH_MSG_MCS19_RELAY;
+    msg.flags.rtr = 0;
 
     for(uint8_t i = msg.length; i; i--)     msg.data[i-1] = 0;
 
