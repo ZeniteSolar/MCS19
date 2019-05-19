@@ -382,6 +382,8 @@ inline void task_error(void)
  */
 inline void task_waiting_reset(void)
 {
+    VERBOSE_MSG_ERROR(usart_send_string("I WILL RESET WHEN THE USER TURN OFF THE BOAT AND I WIL WAIT FOR STABILIZE MYSELF!\n"));
+    _delay_ms(100);
     if(!system_flags.boat_on){
         if (reset_clk++ < TIME_TO_RESET){
             _delay_ms(100);
@@ -390,8 +392,7 @@ inline void task_waiting_reset(void)
             set_state_reset();
         }
     }
-    else
-    VERBOSE_MSG_ERROR(usart_send_string("I WILL RESET WHEN THE USER TURN OFF THE BOAT AND I WIL WAIT FOR STABILIZE MYSELF!\n"));
+    
 }
                     
 /**
@@ -474,7 +475,7 @@ inline void machine_run(void)
                 print_infos();
                 set_state_error();
             }
-            z
+            
 
             switch(state_machine){
                 case STATE_INITIALIZING:
