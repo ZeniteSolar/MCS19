@@ -187,7 +187,7 @@ void turn_boat_on(void)
         pulse_mainrelay_on();
         _delay_ms(200);
         clr_chargerelay();
-    }    
+}    
 
 
 /*
@@ -264,33 +264,31 @@ inline void task_idle(void)
         
         turn_charge_boat_on();
 
-VERBOSE_MSG_MACHINE(usart_send_string("\nV_CAP"));
-VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_CAP].avg));
-VERBOSE_MSG_MACHINE(usart_send_string("\nV_BAT"));
-VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_BAT].avg));
+        VERBOSE_MSG_MACHINE(usart_send_string("\nV_CAP"));
+        VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_CAP].avg));
+        VERBOSE_MSG_MACHINE(usart_send_string("\nV_BAT"));
+        VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_BAT].avg));
 
             //secure time and mesure cap voltage 
-            if (relay_clk++<=CHARGING_TIME_CAPACITOR || ((100 * adc.channel[V_CAP].avg) <= (CAPACITOR_CHARGE_PERCENTAGE * adc.channel[V_BAT].avg))){
-                _delay_ms(100);
+        if(relay_clk++ <= CHARGING_TIME_CAPACITOR || ((100 * adc.channel[V_CAP].avg) <= (CAPACITOR_CHARGE_PERCENTAGE * adc.channel[V_BAT].avg))){
+            _delay_ms(100);
 
-                if (++charge_count_error > 2*CHARGING_TIME_CAPACITOR){
-                    
-                    error_flags.no_charge = 1;
-                    turn_charge_boat_off();
-                    set_state_error();
-                }   
-            }
-            else
-            {
-                VERBOSE_MSG_MACHINE(usart_send_string("\t\tIDLE STATE ===> BOAT ON!!!\n"));
-                turn_boat_on();
-                _delay_ms(50);
-                relay_clk = 0;
+            if(++charge_count_error > 2 * CHARGING_TIME_CAPACITOR){ 
+                error_flags.no_charge = 1;
                 turn_charge_boat_off();
-                set_state_running();
-            }
+                set_state_error();
+            }   
+        }
+        else{
+            VERBOSE_MSG_MACHINE(usart_send_string("\t\tIDLE STATE ===> BOAT ON!!!\n"));
+            turn_boat_on();
+            _delay_ms(50);
+            relay_clk = 0;
+            turn_charge_boat_off();
+            set_state_running();
+        }
     }
-    else if (system_flags.boat_charging){
+    else if(system_flags.boat_charging){
             VERBOSE_MSG_MACHINE(usart_send_string("\t\tBOAT OFF BEFORE CHARGING\n"));
             relay_clk = 0;
             turn_charge_boat_off();
@@ -351,9 +349,10 @@ inline void task_error(void)
     VERBOSE_MSG_ERROR(usart_send_string("The error code is: "));
     VERBOSE_MSG_ERROR(usart_send_uint16(error_flags.all));
     VERBOSE_MSG_ERROR(usart_send_char('\n'));
-    if (error_flags.no_charge)
+    if (error_flags.no_charge){
         VERBOSE_MSG_ERROR(usart_send_string("\t - Capacitors undervolage after charge!\n"));
         set_state_waiting_reset();
+    }
     if(error_flags.no_canbus)
         VERBOSE_MSG_ERROR(usart_send_string("\t - No canbus communication with MIC17!\n"));
     if(!error_flags.all)
@@ -370,7 +369,7 @@ inline void task_error(void)
         VERBOSE_MSG_ERROR(usart_send_string("The watchdog will reset the whole system.\n"));
         set_state_reset();
     }
-    
+        
 #ifdef LED_ON
     cpl_led(LED2);
 #endif
@@ -384,11 +383,18 @@ inline void task_waiting_reset(void)
 {
     VERBOSE_MSG_ERROR(usart_send_string("I WILL RESET WHEN THE USER TURN OFF THE BOAT AND I WIL WAIT FOR STABILIZE MYSELF!\n"));
     _delay_ms(100);
+    VERBOSE_MSG_MACHINE(usart_send_string("\nsystem_flags_boat_on"));      
+    VERBOSE_MSG_MACHINE(usart_send_uint16(system_flags.boat_on));
+    VERBOSE_MSG_MACHINE(usart_send_char('\n'));
     if(!system_flags.boat_on){
+        VERBOSE_MSG_MACHINE(usart_send_string("\nUSER TURN_OFF BOAT"));
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
         if (reset_clk++ < TIME_TO_RESET){
             _delay_ms(100);
         }
         else{
+        VERBOSE_MSG_MACHINE(usart_send_string("\nset state reset"));
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
             set_state_reset();
         }
     }
@@ -468,14 +474,22 @@ inline void machine_run(void)
 
             measurements.adc0_avg_sum_count++;
             measurements.adc0_avg_sum += measurements.adc0_avg;
-
+/*
             if(error_flags.all){
                 print_system_flags();
                 print_error_flags();
                 print_infos();
                 set_state_error();
             }
-            
+*/
+        VERBOSE_MSG_MACHINE(usart_send_string("\nstate machine"));
+        VERBOSE_MSG_MACHINE(usart_send_uint16(state_machine));
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
+
+        VERBOSE_MSG_MACHINE(usart_send_string("\nSTATE WAITING RESET"));
+        VERBOSE_MSG_MACHINE(usart_send_uint16(STATE_WAITING_RESET));
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
+
 
             switch(state_machine){
                 case STATE_INITIALIZING:
@@ -498,9 +512,24 @@ inline void machine_run(void)
                 case STATE_ERROR:
                     task_error();
                 case STATE_WAITING_RESET:
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));                    
+        VERBOSE_MSG_MACHINE(usart_send_string("machine_run STATE_WAITING_RESET"));
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
+
+
                     task_waiting_reset();
+                    #ifdef CAN_ON
+                        can_app_task();
+                    #endif /* CAN_ON */   
+
                 case STATE_RESET:
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));                    
+        VERBOSE_MSG_MACHINE(usart_send_string("state_machine RESET"));
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
                 default:
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));                    
+        VERBOSE_MSG_MACHINE(usart_send_string("state_machine not recognized"));
+        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
                     task_reset();
                     break;
             }
