@@ -95,6 +95,7 @@ inline void set_state_reset(void)
 {
     VERBOSE_MSG_MACHINE(usart_send_string("\n>>>RESET STATE\n"));
     state_machine = STATE_RESET;
+    error_flags.no_charge = 0;
 }
 
 inline void set_state_waiting_reset(void)
@@ -133,6 +134,7 @@ inline void print_system_flags(void)
 /**
 * @brief prints the error flags
 */
+
 inline void print_error_flags(void)
 {
     //VERBOSE_MSG_MACHINE(usart_send_string(" errFl: "));
@@ -343,16 +345,13 @@ inline void task_error(void)
         led_clk_div = 0;
     }
 #endif
-
+    set_state_initializing();
 
     total_errors++;         // incrementa a contagem de erros
     VERBOSE_MSG_ERROR(usart_send_string("The error code is: "));
     VERBOSE_MSG_ERROR(usart_send_uint16(error_flags.all));
     VERBOSE_MSG_ERROR(usart_send_char('\n'));
-    if (error_flags.no_charge){
-        VERBOSE_MSG_ERROR(usart_send_string("\t - Capacitors undervolage after charge!\n"));
-        set_state_waiting_reset();
-    }
+
     if(error_flags.no_canbus)
         VERBOSE_MSG_ERROR(usart_send_string("\t - No canbus communication with MIC17!\n"));
     if(!error_flags.all)
@@ -369,11 +368,18 @@ inline void task_error(void)
         VERBOSE_MSG_ERROR(usart_send_string("The watchdog will reset the whole system.\n"));
         set_state_reset();
     }
+
+    if (error_flags.no_charge){
+        VERBOSE_MSG_ERROR(usart_send_string("\t - Capacitors undervolage after charge!\n"));
+        set_state_waiting_reset();
+    }
         
 #ifdef LED_ON
     cpl_led(LED2);
 #endif
-    set_state_initializing();
+
+
+
 }
 
 /**
@@ -381,24 +387,16 @@ inline void task_error(void)
  */
 inline void task_waiting_reset(void)
 {
-    VERBOSE_MSG_ERROR(usart_send_string("I WILL RESET WHEN THE USER TURN OFF THE BOAT AND I WIL WAIT FOR STABILIZE MYSELF!\n"));
     _delay_ms(100);
-    VERBOSE_MSG_MACHINE(usart_send_string("\nsystem_flags_boat_on"));      
-    VERBOSE_MSG_MACHINE(usart_send_uint16(system_flags.boat_on));
-    VERBOSE_MSG_MACHINE(usart_send_char('\n'));
     if(!system_flags.boat_on){
-        VERBOSE_MSG_MACHINE(usart_send_string("\nUSER TURN_OFF BOAT"));
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
-        if (reset_clk++ < TIME_TO_RESET){
+        if (reset_clk++ < TIME_TO_RESET)
             _delay_ms(100);
-        }
-        else{
-        VERBOSE_MSG_MACHINE(usart_send_string("\nset state reset"));
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
+        else
             set_state_reset();
-        }
     }
-    
+    else{
+        VERBOSE_MSG_ERROR(usart_send_string("I WILL RESET WHEN THE USER TURN OFF THE BOAT AND I WIL WAIT FOR STABILIZE MYSELF!\n"));
+    }
 }
                     
 /**
@@ -474,21 +472,16 @@ inline void machine_run(void)
 
             measurements.adc0_avg_sum_count++;
             measurements.adc0_avg_sum += measurements.adc0_avg;
-/*
+
             if(error_flags.all){
                 print_system_flags();
                 print_error_flags();
                 print_infos();
                 set_state_error();
+                if(error_flags.no_charge)
+                    set_state_waiting_reset();
             }
-*/
-        VERBOSE_MSG_MACHINE(usart_send_string("\nstate machine"));
-        VERBOSE_MSG_MACHINE(usart_send_uint16(state_machine));
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
 
-        VERBOSE_MSG_MACHINE(usart_send_string("\nSTATE WAITING RESET"));
-        VERBOSE_MSG_MACHINE(usart_send_uint16(STATE_WAITING_RESET));
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
 
 
             switch(state_machine){
@@ -507,29 +500,20 @@ inline void machine_run(void)
                     #ifdef CAN_ON
                         can_app_task();
                     #endif /* CAN_ON */   
-                    
+
                     break;
                 case STATE_ERROR:
                     task_error();
                 case STATE_WAITING_RESET:
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));                    
-        VERBOSE_MSG_MACHINE(usart_send_string("machine_run STATE_WAITING_RESET"));
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
-
-
                     task_waiting_reset();
                     #ifdef CAN_ON
                         can_app_task();
                     #endif /* CAN_ON */   
 
+                    break;
+
                 case STATE_RESET:
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));                    
-        VERBOSE_MSG_MACHINE(usart_send_string("state_machine RESET"));
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
                 default:
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));                    
-        VERBOSE_MSG_MACHINE(usart_send_string("state_machine not recognized"));
-        VERBOSE_MSG_MACHINE(usart_send_char('\n'));
                     task_reset();
                     break;
             }
