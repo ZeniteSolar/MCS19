@@ -67,7 +67,7 @@
 #define CAPACITOR_CHARGE_PERCENTAGE 98	
 
 //if isn't possible charge the sistem, wait user turn off the boat for TIME_TO_RESET_ms ms 
-#define TIME_TO_RESET_ms 10000
+#define TIME_TO_RESET_ms 20000
 #define TIME_TO_RESET TIME_TO_RESET_ms/100
 
 #ifdef MACHINE_ON
@@ -122,7 +122,8 @@
 #ifdef CAN_ON
 #define SPI_ON
 #define CAN_APP_SEND_STATE_FREQ     40//36000     //<! state msg frequency in Hz
-#define CAN_APP_SEND_ADC_FREQ       4//6000      //<! adc msg frequency in Hz
+#define CAN_APP_SEND_ADC_FREQ       15//6000      //<! adc msg frequency in Hz
+#define CAN_APP_SEND_RELAY_FREQ       15//6000      //<! adc msg frequency in Hz
 
 // CANBUS DEFINITONS
 // ----------------------------------------------------------------------------

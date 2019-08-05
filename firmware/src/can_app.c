@@ -33,7 +33,7 @@ inline void can_app_task(void)
 
     if(can_app_send_state_clk_div++ >= CAN_APP_SEND_STATE_CLK_DIV){
 #ifdef USART_ON
-        VERBOSE_MSG_CAN_APP(usart_send_string("state msg was sent.\n"));
+        //VERBOSE_MSG_CAN_APP(usart_send_string("state msg was sent.\n"));
 #endif
         can_app_send_state();
         can_app_send_state_clk_div = 0;
@@ -41,11 +41,18 @@ inline void can_app_task(void)
 
     if(can_app_send_adc_clk_div++ >= CAN_APP_SEND_ADC_CLK_DIV){
 #ifdef USART_ON
-        VERBOSE_MSG_CAN_APP(usart_send_string("adc msg was sent.\n"));
+        //VERBOSE_MSG_CAN_APP(usart_send_string("adc msg was sent.\n"));
 #endif
         can_app_send_bat();
         can_app_send_cap();
         can_app_send_adc_clk_div = 0;
+    }
+    if(can_app_send_relay_clk_div++ >= CAN_APP_SEND_RELAY_CLK_DIV){
+        can_app_send_relay();
+        can_app_send_relay_clk_div = 0;
+#ifdef USART_ON
+        VERBOSE_MSG_CAN_APP(usart_send_string("relay msg was sent.\n"));
+#endif
     }
 
 }
@@ -63,7 +70,7 @@ inline void can_app_send_state(void)
 
     can_send_message(&msg);
 #ifdef VERBOSE_MSG_CAN_APP
-    VERBOSE_MSG_CAN_APP(usart_send_string("state msg was send.\n"));
+    //VERBOSE_MSG_CAN_APP(usart_send_string("state msg was send.\n"));
 //    VERBOSE_MSG_CAN_APP(can_app_print_msg(&msg));
 #endif
 }
@@ -78,15 +85,20 @@ inline void can_app_send_relay(void)
     for(uint8_t i = msg.length; i; i--)     msg.data[i-1] = 0;
 
     msg.data[CAN_SIGNATURE_BYTE]                = CAN_SIGNATURE_SELF;
-    msg.data[CAN_MSG_MCS19_CHARGE_RELAY_BYTE] |=
-        (system_flags.boat_charging << CAN_MSG_MCS19_CHARGE_RELAY_BIT);
-    msg.data[CAN_MSG_MCS19_MAIN_RELAY_BYTE] |= 
-        (system_flags.boat_on << CAN_MSG_MCS19_MAIN_RELAY_BIT);
+    if(system_flags.boat_charging)
+        msg.data[CAN_MSG_MCS19_CHARGE_RELAY_BYTE] = 0xFF;
+    else
+        msg.data[CAN_MSG_MCS19_CHARGE_RELAY_BYTE] = 0x00;
+
+    if(system_flags.boat_running)
+        msg.data[CAN_MSG_MCS19_MAIN_RELAY_BYTE] = 0xFF; 
+    else
+        msg.data[CAN_MSG_MCS19_MAIN_RELAY_BYTE] = 0x00; 
 
     can_send_message(&msg); 
 #ifdef VERBOSE_MSG_CAN_APP
     VERBOSE_MSG_CAN_APP(usart_send_string("relay state was sent.\n"));
-//    VERBOSE_MSG_CAN_APP(can_app_print_msg(&msg));
+    VERBOSE_MSG_CAN_APP(can_app_print_msg(&msg));
 #endif
 
 }
@@ -113,7 +125,7 @@ inline void can_app_send_bat(void)
 
     can_send_message(&msg); 
 #ifdef VERBOSE_MSG_CAN_APP
-    VERBOSE_MSG_CAN_APP(usart_send_string("adc bat msg was sent.\n"));
+    //VERBOSE_MSG_CAN_APP(usart_send_string("adc bat msg was sent.\n"));
 //    VERBOSE_MSG_CAN_APP(can_app_print_msg(&msg));
 #endif
 
@@ -141,7 +153,7 @@ inline void can_app_send_cap(void)
 
     can_send_message(&msg); 
 #ifdef VERBOSE_MSG_CAN_APP
-    VERBOSE_MSG_CAN_APP(usart_send_string("adc cap msg was sent.\n"));
+    //VERBOSE_MSG_CAN_APP(usart_send_string("adc cap msg was sent.\n"));
 //    VERBOSE_MSG_CAN_APP(can_app_print_msg(&msg));
 #endif
 
@@ -201,34 +213,26 @@ inline void can_app_extractor_mic17_state(can_t *msg)
 inline void can_app_msg_extractors_switch(can_t *msg)
 {
     if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC17){
-
-        VERBOSE_MSG_CAN_APP(usart_send_string("I know these msgs:\n "));
-                VERBOSE_MSG_CAN_APP(usart_send_string("MCS: "));
-                VERBOSE_MSG_CAN_APP(usart_send_uint16(CAN_FILTER_MSG_MIC17_MCS));                
-                VERBOSE_MSG_CAN_APP(usart_send_char('\n'));
-                VERBOSE_MSG_CAN_APP(usart_send_string("state: "));
-                VERBOSE_MSG_CAN_APP(usart_send_uint16(CAN_FILTER_MSG_MIC17_STATE)); 
-                VERBOSE_MSG_CAN_APP(usart_send_char('\n'));
         switch(msg->id){
             case CAN_FILTER_MSG_MIC17_MCS:
-                VERBOSE_MSG_CAN_APP(usart_send_string("got a boat_on msg: "));
-                VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
+                //VERBOSE_MSG_CAN_APP(usart_send_string("got a boat_on msg: "));
+                //VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 can_app_extractor_mic17_mcs(msg);
 
             case CAN_FILTER_MSG_MIC17_STATE:
 #ifdef USART_ON
-                VERBOSE_MSG_CAN_APP(usart_send_string("got a state msg: "));
+                //VERBOSE_MSG_CAN_APP(usart_send_string("got a state msg: "));
 #endif
-                VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
+                //VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 can_app_extractor_mic17_state(msg);
                 break;
             default:
 #ifdef USART_ON
-                VERBOSE_MSG_CAN_APP(usart_send_string("got a unknown msg:\n "));
+                //VERBOSE_MSG_CAN_APP(usart_send_string("got a unknown msg:\n "));
                                
 
 #endif
-                VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
+                //VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 break;
         }    
     }

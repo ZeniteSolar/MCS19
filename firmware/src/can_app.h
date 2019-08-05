@@ -23,6 +23,7 @@ void can_app_task(void);
 void can_app_send_state(void);
 void can_app_send_bat(void);
 void can_app_send_cap(void);
+void can_app_send_relay(void);
 void can_app_msg_extractors_switch(can_t *msg);
 void can_app_extractor_mic17_state(can_t *msg);
 void can_app_extractor_mic17_mcs(can_t *msg);
@@ -31,6 +32,7 @@ void check_can(void);
 #ifdef CAN_ON
 #define CAN_APP_SEND_STATE_CLK_DIV  CAN_APP_SEND_STATE_FREQ
 #define CAN_APP_SEND_ADC_CLK_DIV    CAN_APP_SEND_ADC_FREQ
+#define CAN_APP_SEND_RELAY_CLK_DIV    CAN_APP_SEND_RELAY_FREQ
 #else
 #define CAN_APP_SEND_STATE_CLK_DIV  1
 #define CAN_APP_SEND_ADC_CLK_DIV    1
@@ -38,5 +40,6 @@ void check_can(void);
 
 uint32_t can_app_send_state_clk_div;
 uint32_t can_app_send_adc_clk_div;
+uint32_t can_app_send_relay_clk_div;
 
 #endif /* ifndef CAN_APP_H */

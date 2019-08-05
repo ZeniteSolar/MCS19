@@ -47,7 +47,7 @@ typedef union system_flags{
     struct{
         uint8_t     boat_on        :1;
         uint8_t     boat_charging  :1; 
-        uint8_t     boat_on_before :1;
+        uint8_t     boat_running :1;
     };
     uint8_t   all__;
 } system_flags_t;

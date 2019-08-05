@@ -23,6 +23,7 @@
 // SIGNATURES
 #define CAN_SIGNATURE_MAM17             190
 #define CAN_SIGNATURE_MCS17             200
+#define CAN_SIGNATURE_MCS19             200
 #define CAN_SIGNATURE_MAD17             210
 #define CAN_SIGNATURE_MCC17_1           221
 #define CAN_SIGNATURE_MCC17_2           222
@@ -35,7 +36,7 @@
 #define CAN_SIGNATURE_MSC19_3           253
 #define CAN_SIGNATURE_MSC19_4           254
 
-#define CAN_SIGNATURE_SELF              CAN_SIGNATURE_MSC19_1
+#define CAN_SIGNATURE_SELF              CAN_SIGNATURE_MCS19
 
 //------------------------------------------------------------------------------
 
@@ -148,6 +149,8 @@
 
 
 //------------------------------------------------------------------------------
+
+
 
 // FILTERS FOR MESSAGES FROM MAD17:
 #define CAN_FILTER_MSG_MAD17_STATE      0b10000000000   //<! Informs about state and errors

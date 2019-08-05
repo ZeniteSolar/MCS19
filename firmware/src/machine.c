@@ -261,6 +261,8 @@ inline void task_idle(void)
         set_state_running();
 #else //RELAY_TEST_MODE
 
+
+    system_flags.boat_running = 0;
     
     if(system_flags.boat_on){
         
@@ -314,6 +316,8 @@ inline void task_running(void)
         led_clk_div = 0;
     }
 #endif // LED_ON
+
+    system_flags.boat_running = 1;
 
 
 #ifdef RELAY_TEST_MODE
@@ -389,8 +393,11 @@ inline void task_waiting_reset(void)
 {
     _delay_ms(100);
     if(!system_flags.boat_on){
-        if (reset_clk++ < TIME_TO_RESET)
-            _delay_ms(100);
+        if (reset_clk++ < TIME_TO_RESET){
+            _delay_ms(500);
+        VERBOSE_MSG_ERROR(usart_send_uint16(reset_clk));
+        VERBOSE_MSG_ERROR(usart_send_char('\n'));
+        }
         else
             set_state_reset();
     }

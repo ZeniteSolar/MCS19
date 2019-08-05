@@ -180,28 +180,4 @@ Wire Wire Line
 	5675 3450 5900 3450
 Wire Wire Line
 	5675 3550 5850 3550
-$Comp
-L Device:C_Small C?
-U 0 0 5CE36B1A
-P 8700 3300
-F 0 "C?" H 8792 3346 50  0001 L CNN
-F 1 "C_Small" H 8792 3255 50  0001 L CNN
-F 2 "" H 8700 3300 50  0001 C CNN
-F 3 "~" H 8700 3300 50  0001 C CNN
-	0    8700 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x03 J?
-U 1 1 5CE3715C
-P 8900 3300
-F 0 "J?" H 8980 3342 50  0000 L CNN
-F 1 "Screw_Terminal_01x03" H 8980 3251 50  0000 L CNN
-F 2 "" H 8900 3300 50  0001 C CNN
-F 3 "~" H 8900 3300 50  0001 C CNN
-	1    8900 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8700 3300 8300 3300
 $EndSCHEMATC
