@@ -1,0 +1,2639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/alejopm/Documents/zenite/MCS19/hardware/main/main.sch</source>
+    <date>sex 26 abr 2019 18:18:20 -03</date>
+    <tool>Eeschema 5.1.0</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>main.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/CHARGER/" tstamps="/5C9C4D6B/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Charger.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>analog.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/CHARGER/12V/" tstamps="/5C9C4D6B/5CA70307/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>12V.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/CONTROLLER/" tstamps="/5CA4DC1F/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>controller.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>canbus.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="7" name="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>atmega328p.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="8" name="/CONTROLLER/sheet5CA5A59E/" tstamps="/5CA4DC1F/5CA5A5C0/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>supplies.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="9" name="/CONTROLLER/sheet5CA5A59F/" tstamps="/5CA4DC1F/5CA5A5C7/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>canbus_connector.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>Conn_01x11</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x11" description="Generic connector, single row, 01x11, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CBBEA1E</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x11</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x11" description="Generic connector, single row, 01x11, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CBBEEEA</tstamp>
+    </comp>
+    <comp ref="TH801">
+      <value>60R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Thermistor_NTC" description="Temperature dependent resistor, negative temperature coefficient"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E0B60</tstamp>
+    </comp>
+    <comp ref="R812">
+      <value>10R</value>
+      <footprint>Resistor_THT:R_Axial_Power_L48.0mm_W12.5mm_P55.88mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E0D49</tstamp>
+    </comp>
+    <comp ref="F802">
+      <value>Fuse Mega 200A</value>
+      <footprint>KicadZeniteSolarLibrary18:MegaFuse</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Fuse" description="Fuse"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E0E43</tstamp>
+    </comp>
+    <comp ref="K802">
+      <value>SANYOU_SRD_Form_C</value>
+      <footprint>Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C</footprint>
+      <datasheet>http://www.sanyourelay.ca/public/products/pdf/SRD.pdf</datasheet>
+      <libsource lib="main-rescue" part="SANYOU_SRD_Form_C-Relay" description=""/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E3465</tstamp>
+    </comp>
+    <comp ref="R806">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E5053</tstamp>
+    </comp>
+    <comp ref="C802">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E51F2</tstamp>
+    </comp>
+    <comp ref="R804">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E5463</tstamp>
+    </comp>
+    <comp ref="R802">
+      <value>1k2</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E5531</tstamp>
+    </comp>
+    <comp ref="R805">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E64F1</tstamp>
+    </comp>
+    <comp ref="C801">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E64FA</tstamp>
+    </comp>
+    <comp ref="R803">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E6504</tstamp>
+    </comp>
+    <comp ref="R801">
+      <value>1k2</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E650A</tstamp>
+    </comp>
+    <comp ref="R809">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E735A</tstamp>
+    </comp>
+    <comp ref="C809">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E7363</tstamp>
+    </comp>
+    <comp ref="R810">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E736D</tstamp>
+    </comp>
+    <comp ref="R811">
+      <value>1k2</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E7373</tstamp>
+    </comp>
+    <comp ref="H802">
+      <value>+BAT</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E3AC0</tstamp>
+    </comp>
+    <comp ref="D803">
+      <value>LL4148</value>
+      <footprint>Diode_SMD:D_MiniMELF_Handsoldering</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA2C4E8</tstamp>
+    </comp>
+    <comp ref="D802">
+      <value>LL4148</value>
+      <footprint>Diode_SMD:D_MiniMELF_Handsoldering</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA2E38D</tstamp>
+    </comp>
+    <comp ref="D804">
+      <value>LL4148</value>
+      <footprint>Diode_SMD:D_MiniMELF_Handsoldering</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA305B3</tstamp>
+    </comp>
+    <comp ref="D805">
+      <value>RED_LED</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9DA847</tstamp>
+    </comp>
+    <comp ref="D806">
+      <value>GRN_LED</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9DA913</tstamp>
+    </comp>
+    <comp ref="R813">
+      <value>2k5</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9DA993</tstamp>
+    </comp>
+    <comp ref="R814">
+      <value>2k5</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9DAA1D</tstamp>
+    </comp>
+    <comp ref="R815">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9F0F2F</tstamp>
+    </comp>
+    <comp ref="D807">
+      <value>YLW_LED</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9F2966</tstamp>
+    </comp>
+    <comp ref="H803">
+      <value>U_BAT-</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA37EF3</tstamp>
+    </comp>
+    <comp ref="H804">
+      <value>F_BAT-</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA39D8E</tstamp>
+    </comp>
+    <comp ref="H801">
+      <value>U_BAT+</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA4A13E</tstamp>
+    </comp>
+    <comp ref="H808">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA5F768</tstamp>
+    </comp>
+    <comp ref="H807">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA5F76E</tstamp>
+    </comp>
+    <comp ref="H806">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA5F774</tstamp>
+    </comp>
+    <comp ref="H805">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA5F77A</tstamp>
+    </comp>
+    <comp ref="C812">
+      <value>4700u</value>
+      <footprint>Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP1_Small" description="Polarized capacitor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CABA9BC</tstamp>
+    </comp>
+    <comp ref="C810">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC7DC0</tstamp>
+    </comp>
+    <comp ref="C804">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CADFEC7</tstamp>
+    </comp>
+    <comp ref="C808">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAF15BA</tstamp>
+    </comp>
+    <comp ref="JP803">
+      <value>Jp_TEST</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CBAEDB1</tstamp>
+    </comp>
+    <comp ref="JP801">
+      <value>Jp_TEST</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CBAEDC9</tstamp>
+    </comp>
+    <comp ref="JP802">
+      <value>Jp_TEST</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Small" description="Jumper, normally closed, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CBAEDD1</tstamp>
+    </comp>
+    <comp ref="NT801">
+      <value>Net-Tie_2</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Net-Tie_2" description="Net tie, 2 pins"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CBEDB7A</tstamp>
+    </comp>
+    <comp ref="R807">
+      <value>1R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA4B635</tstamp>
+    </comp>
+    <comp ref="C807">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA4B63B</tstamp>
+    </comp>
+    <comp ref="R808">
+      <value>1R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA80622</tstamp>
+    </comp>
+    <comp ref="C806">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA80628</tstamp>
+    </comp>
+    <comp ref="TP812">
+      <value>RL_OFF</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CABC8DF</tstamp>
+    </comp>
+    <comp ref="TP801">
+      <value>RL_ON</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC3737</tstamp>
+    </comp>
+    <comp ref="TP804">
+      <value>B_ON</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC3D1D</tstamp>
+    </comp>
+    <comp ref="TP809">
+      <value>B_OFF</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC4039</tstamp>
+    </comp>
+    <comp ref="TP807">
+      <value>OFF</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC4259</tstamp>
+    </comp>
+    <comp ref="TP805">
+      <value>ON</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC4303</tstamp>
+    </comp>
+    <comp ref="TP803">
+      <value>B_CH</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC476F</tstamp>
+    </comp>
+    <comp ref="TP802">
+      <value>Charge</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC4B91</tstamp>
+    </comp>
+    <comp ref="TP806">
+      <value>CH-</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC4D0F</tstamp>
+    </comp>
+    <comp ref="TP808">
+      <value>CH+</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CAC655D</tstamp>
+    </comp>
+    <comp ref="R816">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small_US" description="Resistor, small US symbol"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CACF4BA</tstamp>
+    </comp>
+    <comp ref="D808">
+      <value>GRN_LED</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CACF4C1</tstamp>
+    </comp>
+    <comp ref="TP811">
+      <value>TH-</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CADE54F</tstamp>
+    </comp>
+    <comp ref="TP810">
+      <value>TH+</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CADE61F</tstamp>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CB4155D</tstamp>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CB41563</tstamp>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CB41569</tstamp>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CB4156F</tstamp>
+    </comp>
+    <comp ref="Q802">
+      <value>Q_NPN_BEC</value>
+      <footprint>Package_TO_SOT_SMD:TSOT-23_HandSoldering</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Q_NPN_BEC" description="NPN transistor, base/emitter/collector"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E4DF9</tstamp>
+    </comp>
+    <comp ref="Q803">
+      <value>BCV27</value>
+      <footprint>Package_TO_SOT_SMD:TSOT-23_HandSoldering</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Q_NPN_BEC" description="NPN transistor, base/emitter/collector"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E7354</tstamp>
+    </comp>
+    <comp ref="Q801">
+      <value>BCV27</value>
+      <footprint>Package_TO_SOT_SMD:TSOT-23_HandSoldering</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Q_NPN_BEC" description="NPN transistor, base/emitter/collector"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5C9E64EB</tstamp>
+    </comp>
+    <comp ref="K1">
+      <value>K100A</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical_SMD_Pin1Right</footprint>
+      <datasheet>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_SIL.pdf</datasheet>
+      <libsource lib="K100" part="K100A" description="Standex Meder SIL reed relay, SPST, Closing Contact"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA93DA7</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>K100B</value>
+      <footprint>KicadZeniteSolarLibrary18:Mega_Relay_K100_separated</footprint>
+      <libsource lib="k100A" part="K100B" description=""/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CA9433B</tstamp>
+    </comp>
+    <comp ref="LOGO2">
+      <value>Logo_Open_Hardware_Small</value>
+      <footprint>Symbol:OSHW-Logo2_9.8x8mm_Copper</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Graphic" part="Logo_Open_Hardware_Small" description="Open Hardware logo, small"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CC0B817</tstamp>
+    </comp>
+    <comp ref="LOGO1">
+      <value>Logo_Open_Hardware_Small</value>
+      <footprint>KicadZeniteSolarLibrary18:zenite</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Graphic" part="Logo_Open_Hardware_Small" description="Open Hardware logo, small"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CC0BA8B</tstamp>
+    </comp>
+    <comp ref="LOGO3">
+      <value>Logo_Open_Hardware_Small</value>
+      <footprint>Symbol:KiCad-Logo2_5mm_Copper</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Graphic" part="Logo_Open_Hardware_Small" description="Open Hardware logo, small"/>
+      <sheetpath names="/CHARGER/" tstamps="/5C9C4D6B/"/>
+      <tstamp>5CC0BCBA</tstamp>
+    </comp>
+    <comp ref="R303">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AAAFE5C</tstamp>
+    </comp>
+    <comp ref="R308">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AAB0092</tstamp>
+    </comp>
+    <comp ref="R306">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AAB2C10</tstamp>
+    </comp>
+    <comp ref="R307">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AAB2D9F</tstamp>
+    </comp>
+    <comp ref="C303">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AAB2FEC</tstamp>
+    </comp>
+    <comp ref="C302">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AAB31B3</tstamp>
+    </comp>
+    <comp ref="R301">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AAB421B</tstamp>
+    </comp>
+    <comp ref="R309">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AAB4362</tstamp>
+    </comp>
+    <comp ref="D301">
+      <value>4V7</value>
+      <footprint>Diode_SMD:D_MiniMELF_Handsoldering</footprint>
+      <libsource lib="Device" part="D_Zener_Small" description="Zener diode, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5AABF910</tstamp>
+    </comp>
+    <comp ref="R305">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5BE62E23</tstamp>
+    </comp>
+    <comp ref="C301">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5BE62E2C</tstamp>
+    </comp>
+    <comp ref="U301">
+      <value>LM324</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm2902-n.pdf</datasheet>
+      <libsource lib="Amplifier_Operational" part="LM324" description="Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5BE784E0</tstamp>
+    </comp>
+    <comp ref="C304">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5BE7C4D7</tstamp>
+    </comp>
+    <comp ref="R302">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5BE77B14</tstamp>
+    </comp>
+    <comp ref="R304">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5C9FD126</tstamp>
+    </comp>
+    <comp ref="R312">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA046D5</tstamp>
+    </comp>
+    <comp ref="R317">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA046DB</tstamp>
+    </comp>
+    <comp ref="R315">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA046ED</tstamp>
+    </comp>
+    <comp ref="R316">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA046F3</tstamp>
+    </comp>
+    <comp ref="C307">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA046F9</tstamp>
+    </comp>
+    <comp ref="C306">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA04704</tstamp>
+    </comp>
+    <comp ref="R310">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA04713</tstamp>
+    </comp>
+    <comp ref="R318">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA0471B</tstamp>
+    </comp>
+    <comp ref="D302">
+      <value>4V7</value>
+      <footprint>Diode_SMD:D_MiniMELF_Handsoldering</footprint>
+      <libsource lib="Device" part="D_Zener_Small" description="Zener diode, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA0474F</tstamp>
+    </comp>
+    <comp ref="R314">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA0477C</tstamp>
+    </comp>
+    <comp ref="C305">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA04784</tstamp>
+    </comp>
+    <comp ref="R311">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA047C1</tstamp>
+    </comp>
+    <comp ref="R313">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CHARGER/sheet5CBAED96/" tstamps="/5C9C4D6B/5CBAEDA0/"/>
+      <tstamp>5CA047DF</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>LM7812</value>
+      <footprint>KicadZeniteSolarLibrary18:TO-220-3_Horizontal_TabDown_SMD</footprint>
+      <datasheet>https://www.sparkfun.com/datasheets/Components/LM7805.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="LM7805_TO220" description="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
+      <sheetpath names="/CHARGER/12V/" tstamps="/5C9C4D6B/5CA70307/"/>
+      <tstamp>5CA7C0B0</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/12V/" tstamps="/5C9C4D6B/5CA70307/"/>
+      <tstamp>5CA7C0B7</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LL4148</value>
+      <footprint>Diode_SMD:D_MiniMELF_Handsoldering</footprint>
+      <datasheet>https://www.vishay.com/docs/85557/ll4148.pdf</datasheet>
+      <libsource lib="Diode" part="LL4148" description="100V 0.15A standard switching diode, MiniMELF"/>
+      <sheetpath names="/CHARGER/12V/" tstamps="/5C9C4D6B/5CA70307/"/>
+      <tstamp>5CA7C0BE</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CHARGER/12V/" tstamps="/5C9C4D6B/5CA70307/"/>
+      <tstamp>5CA7C0C5</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>500mA</value>
+      <footprint>Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/643/0ZCJ_Nov2016-1132002.pdf</datasheet>
+      <libsource lib="Device" part="Fuse_Small" description="Fuse, small symbol"/>
+      <sheetpath names="/CHARGER/12V/" tstamps="/5C9C4D6B/5CA70307/"/>
+      <tstamp>5CA7C0CC</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="CP1_Small" description="Polarized capacitor, small US symbol"/>
+      <sheetpath names="/CHARGER/12V/" tstamps="/5C9C4D6B/5CA70307/"/>
+      <tstamp>5CA7C0FC</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>1uF</value>
+      <footprint>Capacitor_Tantalum_SMD:CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder</footprint>
+      <libsource lib="Device" part="CP1_Small" description="Polarized capacitor, small US symbol"/>
+      <sheetpath names="/CHARGER/12V/" tstamps="/5C9C4D6B/5CA70307/"/>
+      <tstamp>5CA7C103</tstamp>
+    </comp>
+    <comp ref="H304">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CONTROLLER/" tstamps="/5CA4DC1F/"/>
+      <tstamp>5CA5D716</tstamp>
+    </comp>
+    <comp ref="H303">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CONTROLLER/" tstamps="/5CA4DC1F/"/>
+      <tstamp>5CA5D71C</tstamp>
+    </comp>
+    <comp ref="H302">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CONTROLLER/" tstamps="/5CA4DC1F/"/>
+      <tstamp>5CA5D722</tstamp>
+    </comp>
+    <comp ref="H301">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/CONTROLLER/" tstamps="/5CA4DC1F/"/>
+      <tstamp>5CA5D728</tstamp>
+    </comp>
+    <comp ref="U201">
+      <value>MCP2551-I/SN</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <libsource lib="Interface_CAN_LIN" part="MCP2561-E-SN" description="High-Speed CAN Transceiver, 1Mbps, 5V supply, SPLIT pin, -40C to +125C, SOIC8 package"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>59FDAEE3</tstamp>
+    </comp>
+    <comp ref="R203">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>59FDAF39</tstamp>
+    </comp>
+    <comp ref="R202">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>59FDAF40</tstamp>
+    </comp>
+    <comp ref="R201">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>59FDAF5C</tstamp>
+    </comp>
+    <comp ref="C201">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC0190</tstamp>
+    </comp>
+    <comp ref="D201">
+      <value>pesd1can</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23_Handsoldering</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/PESD1CAN.pdf</datasheet>
+      <libsource lib="Device" part="D_TVS_x2_AAC" description="Bidirectional dual transient-voltage-suppression diode, center on pin 3"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC0839</tstamp>
+    </comp>
+    <comp ref="TP203">
+      <value>TXCAN</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC2327</tstamp>
+    </comp>
+    <comp ref="TP204">
+      <value>RXCAN</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC23CC</tstamp>
+    </comp>
+    <comp ref="TP209">
+      <value>INT</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC2B03</tstamp>
+    </comp>
+    <comp ref="TP201">
+      <value>SI</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC2C42</tstamp>
+    </comp>
+    <comp ref="TP202">
+      <value>SO</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC2C8C</tstamp>
+    </comp>
+    <comp ref="TP206">
+      <value>SCK</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC2CDB</tstamp>
+    </comp>
+    <comp ref="TP205">
+      <value>SC</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC2E79</tstamp>
+    </comp>
+    <comp ref="TP208">
+      <value>CAN_L</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC8491</tstamp>
+    </comp>
+    <comp ref="TP207">
+      <value>CAN_H</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5AAC8C25</tstamp>
+    </comp>
+    <comp ref="Y201">
+      <value>16MHz</value>
+      <footprint>Crystal:Crystal_HC49-U_Vertical</footprint>
+      <datasheet>http://www.farnell.com/datasheets/321153.pdf</datasheet>
+      <libsource lib="Device" part="Crystal_Small" description="Two pin crystal, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5BE72790</tstamp>
+    </comp>
+    <comp ref="C203">
+      <value>22pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5BE72797</tstamp>
+    </comp>
+    <comp ref="C204">
+      <value>22pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5BE7279E</tstamp>
+    </comp>
+    <comp ref="C202">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5BEDED38</tstamp>
+    </comp>
+    <comp ref="C205">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5BEF6349</tstamp>
+    </comp>
+    <comp ref="U202">
+      <value>MCP2515-xSO</value>
+      <footprint>Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/21801e.pdf</datasheet>
+      <libsource lib="main-rescue" part="MCP2515-xSO-Interface_CAN_LIN-MAB19-rescue" description=""/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59C/" tstamps="/5CA4DC1F/5CA5A5AC/"/>
+      <tstamp>5BE69763</tstamp>
+    </comp>
+    <comp ref="Y401">
+      <value>16MHz</value>
+      <footprint>Crystal:Crystal_HC49-U_Vertical</footprint>
+      <datasheet>http://www.farnell.com/datasheets/321153.pdf</datasheet>
+      <libsource lib="Device" part="Crystal_Small" description="Two pin crystal, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>59FE3A5A</tstamp>
+    </comp>
+    <comp ref="C403">
+      <value>22pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>59FE3A61</tstamp>
+    </comp>
+    <comp ref="C404">
+      <value>22pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>59FE3A68</tstamp>
+    </comp>
+    <comp ref="R401">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>59FE4B17</tstamp>
+    </comp>
+    <comp ref="C406">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>59FE4EE2</tstamp>
+    </comp>
+    <comp ref="D402">
+      <value>LED_RED</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="LED_Small" description="Light emitting diode, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>59FE5354</tstamp>
+    </comp>
+    <comp ref="R404">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>59FFC489</tstamp>
+    </comp>
+    <comp ref="U401">
+      <value>ATMEGA328P-PU</value>
+      <footprint>Package_DIP:DIP-28_W7.62mm_Socket</footprint>
+      <libsource lib="MCU_Microchip_ATmega" part="ATmega328P-PU" description="20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, DIP-28"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>59FE3414</tstamp>
+    </comp>
+    <comp ref="R402">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5AACAE36</tstamp>
+    </comp>
+    <comp ref="R403">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5AACB0BA</tstamp>
+    </comp>
+    <comp ref="D403">
+      <value>LED_RED</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="LED_Small" description="Light emitting diode, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5BE7DD75</tstamp>
+    </comp>
+    <comp ref="R405">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5BE7DD7B</tstamp>
+    </comp>
+    <comp ref="D401">
+      <value>LL4148</value>
+      <footprint>Diode_SMD:D_MiniMELF_Handsoldering</footprint>
+      <datasheet>http://www.vishay.com/docs/85557/ll4148.pdf</datasheet>
+      <libsource lib="Diode" part="LL4148" description="100V 0.15A standard switching diode, MiniMELF"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5BE95CC8</tstamp>
+    </comp>
+    <comp ref="J401">
+      <value>USART</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5BECD3FE</tstamp>
+    </comp>
+    <comp ref="C405">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5BED8033</tstamp>
+    </comp>
+    <comp ref="C402">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5BF3B4C1</tstamp>
+    </comp>
+    <comp ref="C401">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59D/" tstamps="/5CA4DC1F/5CA5A5BB/"/>
+      <tstamp>5BF2780D</tstamp>
+    </comp>
+    <comp ref="U501">
+      <value>LM7805</value>
+      <footprint>KicadZeniteSolarLibrary18:TO-220-3_Horizontal_TabDown_SMD</footprint>
+      <datasheet>https://www.sparkfun.com/datasheets/Components/LM7805.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="LM7805_TO220" description="Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59E/" tstamps="/5CA4DC1F/5CA5A5C0/"/>
+      <tstamp>5A007B62</tstamp>
+    </comp>
+    <comp ref="C501">
+      <value>1uF</value>
+      <footprint>Capacitor_Tantalum_SMD:CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder</footprint>
+      <libsource lib="Device" part="CP1_Small" description="Polarized capacitor, small US symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59E/" tstamps="/5CA4DC1F/5CA5A5C0/"/>
+      <tstamp>5A008895</tstamp>
+    </comp>
+    <comp ref="C502">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59E/" tstamps="/5CA4DC1F/5CA5A5C0/"/>
+      <tstamp>5A00899A</tstamp>
+    </comp>
+    <comp ref="D501">
+      <value>LL4148</value>
+      <footprint>Diode_SMD:D_MiniMELF_Handsoldering</footprint>
+      <datasheet>https://www.vishay.com/docs/85557/ll4148.pdf</datasheet>
+      <libsource lib="Diode" part="LL4148" description="100V 0.15A standard switching diode, MiniMELF"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59E/" tstamps="/5CA4DC1F/5CA5A5C0/"/>
+      <tstamp>5A009BD5</tstamp>
+    </comp>
+    <comp ref="C503">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59E/" tstamps="/5CA4DC1F/5CA5A5C0/"/>
+      <tstamp>5A00B18A</tstamp>
+    </comp>
+    <comp ref="C504">
+      <value>1uF</value>
+      <footprint>Capacitor_Tantalum_SMD:CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder</footprint>
+      <libsource lib="Device" part="CP1_Small" description="Polarized capacitor, small US symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59E/" tstamps="/5CA4DC1F/5CA5A5C0/"/>
+      <tstamp>5AAD0D5C</tstamp>
+    </comp>
+    <comp ref="F501">
+      <value>500mA</value>
+      <footprint>Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/643/0ZCJ_Nov2016-1132002.pdf</datasheet>
+      <libsource lib="Device" part="Fuse_Small" description="Fuse, small symbol"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59E/" tstamps="/5CA4DC1F/5CA5A5C0/"/>
+      <tstamp>5AB12173</tstamp>
+    </comp>
+    <comp ref="J704">
+      <value>8P8C_Shielded</value>
+      <footprint>KicadZeniteSolarLibrary18:RJ45_YH59_01</footprint>
+      <libsource lib="Connector" part="RJ45_Shielded" description="RJ connector, 8P8C (8 positions 8 connected), Shielded"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59F/" tstamps="/5CA4DC1F/5CA5A5C7/"/>
+      <tstamp>5C9C7D3B</tstamp>
+    </comp>
+    <comp ref="J703">
+      <value>8P8C_Shielded</value>
+      <footprint>KicadZeniteSolarLibrary18:RJ45_YH59_01</footprint>
+      <libsource lib="Connector" part="RJ45_Shielded" description="RJ connector, 8P8C (8 positions 8 connected), Shielded"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59F/" tstamps="/5CA4DC1F/5CA5A5C7/"/>
+      <tstamp>5C9C7D58</tstamp>
+    </comp>
+    <comp ref="J702">
+      <value>8P8C_Shielded</value>
+      <footprint>KicadZeniteSolarLibrary18:RJ45_YH59_01</footprint>
+      <libsource lib="Connector" part="RJ45_Shielded" description="RJ connector, 8P8C (8 positions 8 connected), Shielded"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59F/" tstamps="/5CA4DC1F/5CA5A5C7/"/>
+      <tstamp>5A01AFBA</tstamp>
+    </comp>
+    <comp ref="J701">
+      <value>8P8C_Shielded</value>
+      <footprint>KicadZeniteSolarLibrary18:RJ45_YH59_01</footprint>
+      <libsource lib="Connector" part="RJ45_Shielded" description="RJ connector, 8P8C (8 positions 8 connected), Shielded"/>
+      <sheetpath names="/CONTROLLER/sheet5CA5A59F/" tstamps="/5CA4DC1F/5CA5A5C7/"/>
+      <tstamp>5BE6C2F7</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Amplifier_Operational" part="LM2902">
+      <aliases>
+        <alias>LM324</alias>
+        <alias>TLC274</alias>
+        <alias>TLC279</alias>
+        <alias>TL074</alias>
+        <alias>LM324A</alias>
+        <alias>MCP6004</alias>
+        <alias>TL084</alias>
+        <alias>TL064</alias>
+        <alias>LMV324</alias>
+        <alias>LMC6484</alias>
+        <alias>MCP604</alias>
+        <alias>MC33079</alias>
+        <alias>MC33174</alias>
+        <alias>MC33179</alias>
+        <alias>OPA1604</alias>
+        <alias>OPA4134</alias>
+        <alias>OPA4340UA</alias>
+        <alias>OPA4376</alias>
+        <alias>MCP6L94</alias>
+        <alias>TSV914</alias>
+        <alias>ADA4807-4</alias>
+      </aliases>
+      <description>Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm2902-n.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x8.7mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
+        <fp>SSOP*5.3x6.2mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM2902</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V+" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="-" type="input"/>
+        <pin num="10" name="+" type="input"/>
+        <pin num="11" name="V-" type="power_in"/>
+        <pin num="12" name="+" type="input"/>
+        <pin num="13" name="-" type="input"/>
+        <pin num="14" name="~" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="8P8C_Shielded">
+      <aliases>
+        <alias>RJ31_Shielded</alias>
+        <alias>RJ32_Shielded</alias>
+        <alias>RJ33_Shielded</alias>
+        <alias>RJ34_Shielded</alias>
+        <alias>RJ35_Shielded</alias>
+        <alias>RJ41_Shielded</alias>
+        <alias>RJ45_Shielded</alias>
+        <alias>RJ49_Shielded</alias>
+        <alias>RJ61_Shielded</alias>
+      </aliases>
+      <description>RJ connector, 8P8C (8 positions 8 connected), RJ31/RJ32/RJ33/RJ34/RJ35/RJ41/RJ45/RJ49/RJ61, Shielded</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>8P8C*</fp>
+        <fp>RJ31*</fp>
+        <fp>RJ32*</fp>
+        <fp>RJ33*</fp>
+        <fp>RJ34*</fp>
+        <fp>RJ35*</fp>
+        <fp>RJ41*</fp>
+        <fp>RJ45*</fp>
+        <fp>RJ49*</fp>
+        <fp>RJ61*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">8P8C_Shielded</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+        <pin num="SH" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x11">
+      <description>Generic connector, single row, 01x11, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x11</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP1_Small">
+      <description>Polarized capacitor, small US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP1_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Crystal_Small">
+      <description>Two pin crystal, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_TVS_x2_AAC">
+      <description>Bidirectional dual transient-voltage-suppression diode, center on pin 3</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_TVS_x2_AAC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="A2" type="passive"/>
+        <pin num="3" name="common" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener_Small">
+      <description>Zener diode, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Fuse">
+      <description>Fuse</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*Fuse*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Fuse_Small">
+      <description>Fuse, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Jumper_NC_Small">
+      <description>Jumper, normally closed, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Bridged*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_NC_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED_Small">
+      <description>Light emitting diode, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Net-Tie_2">
+      <description>Net tie, 2 pins</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Net*Tie*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">NT</field>
+        <field name="Value">Net-Tie_2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_NPN_BEC">
+      <description>NPN transistor, base/emitter/collector</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BEC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small">
+      <description>Resistor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small_US">
+      <description>Resistor, small US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small_US</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Thermistor_NTC">
+      <description>Temperature dependent resistor, negative temperature coefficient</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*NTC*</fp>
+        <fp>*Thermistor*</fp>
+        <fp>PIN?ARRAY*</fp>
+        <fp>bornier*</fp>
+        <fp>*Terminal?Block*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TH</field>
+        <field name="Value">Thermistor_NTC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="LL4148">
+      <aliases>
+        <alias>LL4448</alias>
+      </aliases>
+      <description>100V 0.15A standard switching diode, MiniMELF</description>
+      <docs>http://www.vishay.com/docs/85557/ll4148.pdf</docs>
+      <footprints>
+        <fp>D*MiniMELF*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LL4148</field>
+        <field name="Footprint">Diode_SMD:D_MiniMELF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Graphic" part="Logo_Open_Hardware_Small">
+      <description>Open Hardware logo, small</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">#LOGO</field>
+        <field name="Value">Logo_Open_Hardware_Small</field>
+      </fields>
+    </libpart>
+    <libpart lib="Interface_CAN_LIN" part="MCP2561-E-SN">
+      <aliases>
+        <alias>MCP2561-H-SN</alias>
+      </aliases>
+      <description>High-Speed CAN Transceiver, 1Mbps, 5V supply, SPLIT pin, -40C to +125C, SOIC8 package</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf</docs>
+      <footprints>
+        <fp>SOIC*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP2561-E-SN</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TXD" type="input"/>
+        <pin num="2" name="VSS" type="power_in"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="RXD" type="output"/>
+        <pin num="5" name="SPLIT" type="passive"/>
+        <pin num="6" name="CANL" type="BiDi"/>
+        <pin num="7" name="CANH" type="BiDi"/>
+        <pin num="8" name="STBY" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="K100" part="K100A">
+      <description>Standex Meder SIL reed relay, SPST, Closing Contact</description>
+      <docs>https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_SIL.pdf</docs>
+      <footprints>
+        <fp>Relay*SPST*StandexMeder*SIL*Form1A*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">K100A</field>
+        <field name="Footprint">Relay_THT:Relay_SPST_StandexMeder_SIL_Form1A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="power_in"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Microchip_ATmega" part="ATmega48PV-10PU">
+      <aliases>
+        <alias>ATmega48P-20PU</alias>
+        <alias>ATmega48A-PU</alias>
+        <alias>ATmega48PA-PU</alias>
+        <alias>ATmega88PV-10PU</alias>
+        <alias>ATmega88P-20PU</alias>
+        <alias>ATmega88A-PU</alias>
+        <alias>ATmega88PA-PU</alias>
+        <alias>ATmega168PV-10PU</alias>
+        <alias>ATmega168P-20PU</alias>
+        <alias>ATmega168A-PU</alias>
+        <alias>ATmega168PA-PU</alias>
+        <alias>ATmega328-PU</alias>
+        <alias>ATmega328P-PU</alias>
+      </aliases>
+      <description>10MHz, 4kB Flash, 512B SRAM, 256B EEPROM, DIP-28</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8025-8-bit-AVR-Microcontroller-ATmega48P-88P-168P_Datasheet.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATmega48PV-10PU</field>
+        <field name="Footprint">Package_DIP:DIP-28_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~RESET~/PC6" type="3state"/>
+        <pin num="2" name="PD0" type="3state"/>
+        <pin num="3" name="PD1" type="3state"/>
+        <pin num="4" name="PD2" type="3state"/>
+        <pin num="5" name="PD3" type="3state"/>
+        <pin num="6" name="PD4" type="3state"/>
+        <pin num="7" name="VCC" type="power_in"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="XTAL1/PB6" type="3state"/>
+        <pin num="10" name="XTAL2/PB7" type="3state"/>
+        <pin num="11" name="PD5" type="3state"/>
+        <pin num="12" name="PD6" type="3state"/>
+        <pin num="13" name="PD7" type="3state"/>
+        <pin num="14" name="PB0" type="3state"/>
+        <pin num="15" name="PB1" type="3state"/>
+        <pin num="16" name="PB2" type="3state"/>
+        <pin num="17" name="PB3" type="3state"/>
+        <pin num="18" name="PB4" type="3state"/>
+        <pin num="19" name="PB5" type="3state"/>
+        <pin num="20" name="AVCC" type="power_in"/>
+        <pin num="21" name="AREF" type="passive"/>
+        <pin num="22" name="GND" type="passive"/>
+        <pin num="23" name="PC0" type="3state"/>
+        <pin num="24" name="PC1" type="3state"/>
+        <pin num="25" name="PC2" type="3state"/>
+        <pin num="26" name="PC3" type="3state"/>
+        <pin num="27" name="PC4" type="3state"/>
+        <pin num="28" name="PC5" type="3state"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+      </fields>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole_Pad">
+      <description>Mounting Hole with connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*Pad*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole_Pad</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LM7805_TO220">
+      <aliases>
+        <alias>LM7806_TO220</alias>
+        <alias>LM7808_TO220</alias>
+        <alias>LM7809_TO220</alias>
+        <alias>LM7810_TO220</alias>
+        <alias>LM7812_TO220</alias>
+        <alias>LM7815_TO220</alias>
+        <alias>LM7818_TO220</alias>
+        <alias>LM7824_TO220</alias>
+        <alias>LM78M05_TO220</alias>
+        <alias>SPX2920U-3.3_TO220</alias>
+        <alias>SPX2920U-5.0_TO220</alias>
+        <alias>LF15_TO220</alias>
+        <alias>LF18_TO220</alias>
+        <alias>LF25_TO220</alias>
+        <alias>LF33_TO220</alias>
+        <alias>LF50_TO220</alias>
+        <alias>LF60_TO220</alias>
+        <alias>LF80_TO220</alias>
+        <alias>LF85_TO220</alias>
+        <alias>LF120_TO220</alias>
+        <alias>LF47_TO220</alias>
+        <alias>LF90_TO220</alias>
+        <alias>LM341T-05_TO220</alias>
+        <alias>LM341T-12_TO220</alias>
+        <alias>LM341T-15_TO220</alias>
+        <alias>LM2937xT</alias>
+      </aliases>
+      <description>Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220</description>
+      <docs>http://www.fairchildsemi.com/ds/LM/LM7805.pdf</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7805_TO220</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="k100A" part="K100B">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">K100B</field>
+      </fields>
+      <pins>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="main-rescue" part="MCP2515-xSO-Interface_CAN_LIN-MAB19-rescue">
+      <footprints>
+        <fp>SOIC*7.5x11.6mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP2515-xSO-Interface_CAN_LIN-MAB19-rescue</field>
+        <field name="Footprint">Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TXCAN" type="output"/>
+        <pin num="2" name="RXCAN" type="input"/>
+        <pin num="3" name="CLKOUT/SOF" type="output"/>
+        <pin num="4" name="~TX0RTS" type="input"/>
+        <pin num="5" name="~TX1RTS" type="input"/>
+        <pin num="6" name="~TX2RTS" type="input"/>
+        <pin num="7" name="OSC2" type="output"/>
+        <pin num="8" name="OSC1" type="input"/>
+        <pin num="9" name="VSS" type="power_in"/>
+        <pin num="10" name="~RX1BF" type="output"/>
+        <pin num="11" name="~RX0BF" type="output"/>
+        <pin num="12" name="~INT" type="output"/>
+        <pin num="13" name="SCK" type="input"/>
+        <pin num="14" name="SI" type="input"/>
+        <pin num="15" name="SO" type="output"/>
+        <pin num="16" name="~CS" type="input"/>
+        <pin num="17" name="~RESET" type="input"/>
+        <pin num="18" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="main-rescue" part="SANYOU_SRD_Form_C-Relay">
+      <footprints>
+        <fp>Relay*SPDT*SANYOU*SRD*Series*Form*C*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">SANYOU_SRD_Form_C-Relay</field>
+        <field name="Footprint">Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Amplifier_Operational">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Amplifier_Operational.lib</uri>
+    </library>
+    <library logical="Connector">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Device.lib</uri>
+    </library>
+    <library logical="Diode">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Diode.lib</uri>
+    </library>
+    <library logical="Graphic">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Graphic.lib</uri>
+    </library>
+    <library logical="Interface_CAN_LIN">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Interface_CAN_LIN.lib</uri>
+    </library>
+    <library logical="K100">
+      <uri>/home/alejopm/Documents/zenite/MCS19/hardware/main/KicadZeniteSolarLibrary18.pretty/K100.lib</uri>
+    </library>
+    <library logical="MCU_Microchip_ATmega">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/MCU_Microchip_ATmega.lib</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Mechanical.lib</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/home/alejopm/kicad/library/kicad-symbols/Regulator_Linear.lib</uri>
+    </library>
+    <library logical="k100A">
+      <uri>/home/alejopm/Documents/zenite/MCS19/hardware/main/KicadZeniteSolarLibrary18.pretty/k100A.lib</uri>
+    </library>
+    <library logical="main-rescue">
+      <uri>/home/alejopm/Documents/zenite/MCS19/hardware/main/main-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/CHARGER/Charge">
+      <node ref="R802" pin="2"/>
+      <node ref="TP802" pin="1"/>
+      <node ref="J1" pin="6"/>
+    </net>
+    <net code="2" name="/CHARGER/RL_ON">
+      <node ref="R801" pin="2"/>
+      <node ref="TP801" pin="1"/>
+      <node ref="J1" pin="10"/>
+    </net>
+    <net code="3" name="/CHARGER/+18V_IN">
+      <node ref="J1" pin="1"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="4" name="/CONTROLLER/sig_bat+">
+      <node ref="J2" pin="4"/>
+      <node ref="U401" pin="24"/>
+    </net>
+    <net code="5" name="/CONTROLLER/sig_cap+">
+      <node ref="U401" pin="23"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="6" name="/CONTROLLER/RL_ON">
+      <node ref="U401" pin="27"/>
+      <node ref="J2" pin="10"/>
+    </net>
+    <net code="7" name="/CHARGER/RL_OFF">
+      <node ref="R811" pin="2"/>
+      <node ref="J1" pin="8"/>
+      <node ref="TP812" pin="1"/>
+    </net>
+    <net code="8" name="GNDPWR">
+      <node ref="C810" pin="2"/>
+      <node ref="Q802" pin="2"/>
+      <node ref="H804" pin="1"/>
+      <node ref="Q803" pin="2"/>
+      <node ref="R804" pin="2"/>
+      <node ref="U301" pin="11"/>
+      <node ref="D302" pin="2"/>
+      <node ref="D806" pin="1"/>
+      <node ref="D805" pin="1"/>
+      <node ref="C812" pin="2"/>
+      <node ref="Q801" pin="2"/>
+      <node ref="R810" pin="2"/>
+      <node ref="C801" pin="2"/>
+      <node ref="R803" pin="2"/>
+      <node ref="J1" pin="3"/>
+      <node ref="D808" pin="1"/>
+      <node ref="J1" pin="5"/>
+      <node ref="J1" pin="7"/>
+      <node ref="F802" pin="1"/>
+      <node ref="C802" pin="2"/>
+      <node ref="J1" pin="11"/>
+      <node ref="C809" pin="2"/>
+      <node ref="D301" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="NT801" pin="2"/>
+      <node ref="R309" pin="1"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C304" pin="2"/>
+      <node ref="C303" pin="2"/>
+      <node ref="J1" pin="9"/>
+      <node ref="C301" pin="2"/>
+      <node ref="C808" pin="2"/>
+      <node ref="C305" pin="2"/>
+      <node ref="C804" pin="1"/>
+      <node ref="R318" pin="1"/>
+      <node ref="C307" pin="2"/>
+    </net>
+    <net code="9" name="/CHARGER/sig_cap+">
+      <node ref="C302" pin="2"/>
+      <node ref="U301" pin="9"/>
+      <node ref="U301" pin="8"/>
+      <node ref="D301" pin="1"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="10" name="/CONTROLLER/+18V_OUT">
+      <node ref="J701" pin="5"/>
+      <node ref="J701" pin="4"/>
+      <node ref="J702" pin="5"/>
+      <node ref="J702" pin="4"/>
+      <node ref="J703" pin="5"/>
+      <node ref="J703" pin="4"/>
+      <node ref="J704" pin="5"/>
+      <node ref="J704" pin="4"/>
+      <node ref="J2" pin="1"/>
+      <node ref="D501" pin="2"/>
+    </net>
+    <net code="11" name="GND">
+      <node ref="J2" pin="11"/>
+      <node ref="J2" pin="3"/>
+      <node ref="J2" pin="5"/>
+      <node ref="J2" pin="9"/>
+      <node ref="C202" pin="2"/>
+      <node ref="J2" pin="7"/>
+      <node ref="D402" pin="1"/>
+      <node ref="C406" pin="1"/>
+      <node ref="D403" pin="1"/>
+      <node ref="U401" pin="8"/>
+      <node ref="J703" pin="7"/>
+      <node ref="J702" pin="8"/>
+      <node ref="J702" pin="7"/>
+      <node ref="J702" pin="6"/>
+      <node ref="J702" pin="3"/>
+      <node ref="J703" pin="SH"/>
+      <node ref="J703" pin="8"/>
+      <node ref="C402" pin="1"/>
+      <node ref="U401" pin="22"/>
+      <node ref="J702" pin="SH"/>
+      <node ref="C403" pin="2"/>
+      <node ref="C404" pin="2"/>
+      <node ref="C502" pin="2"/>
+      <node ref="C503" pin="2"/>
+      <node ref="C501" pin="2"/>
+      <node ref="C504" pin="2"/>
+      <node ref="U501" pin="2"/>
+      <node ref="C201" pin="2"/>
+      <node ref="C204" pin="2"/>
+      <node ref="U201" pin="2"/>
+      <node ref="J704" pin="SH"/>
+      <node ref="J704" pin="8"/>
+      <node ref="R202" pin="2"/>
+      <node ref="C203" pin="2"/>
+      <node ref="J704" pin="7"/>
+      <node ref="D201" pin="3"/>
+      <node ref="J704" pin="3"/>
+      <node ref="J401" pin="1"/>
+      <node ref="C205" pin="2"/>
+      <node ref="U202" pin="9"/>
+      <node ref="J701" pin="6"/>
+      <node ref="J703" pin="6"/>
+      <node ref="J703" pin="3"/>
+      <node ref="J704" pin="6"/>
+      <node ref="C401" pin="2"/>
+      <node ref="J701" pin="SH"/>
+      <node ref="J701" pin="8"/>
+      <node ref="J701" pin="3"/>
+      <node ref="J701" pin="7"/>
+    </net>
+    <net code="12" name="/CONTROLLER/Charge">
+      <node ref="J2" pin="6"/>
+      <node ref="U401" pin="25"/>
+    </net>
+    <net code="13" name="/CONTROLLER/RL_OFF">
+      <node ref="U401" pin="26"/>
+      <node ref="J2" pin="8"/>
+    </net>
+    <net code="14" name="/CHARGER/sig_bat+">
+      <node ref="C306" pin="2"/>
+      <node ref="D302" pin="1"/>
+      <node ref="U301" pin="13"/>
+      <node ref="U301" pin="14"/>
+      <node ref="J1" pin="4"/>
+    </net>
+    <net code="15" name="GNDA">
+      <node ref="R302" pin="2"/>
+      <node ref="R311" pin="2"/>
+      <node ref="NT801" pin="1"/>
+    </net>
+    <net code="16" name="/CHARGER/sheet5CBAED96/in2+">
+      <node ref="R317" pin="2"/>
+      <node ref="JP802" pin="2"/>
+      <node ref="R313" pin="1"/>
+    </net>
+    <net code="17" name="/CHARGER/U_BAT+">
+      <node ref="U2" pin="5"/>
+      <node ref="R807" pin="2"/>
+      <node ref="R813" pin="1"/>
+      <node ref="JP802" pin="1"/>
+      <node ref="H801" pin="1"/>
+      <node ref="K802" pin="1"/>
+      <node ref="C806" pin="1"/>
+    </net>
+    <net code="18" name="/CHARGER/sheet5CBAED96/in1+">
+      <node ref="R308" pin="2"/>
+      <node ref="R304" pin="1"/>
+      <node ref="JP801" pin="2"/>
+    </net>
+    <net code="19" name="/CHARGER/+CAP">
+      <node ref="H802" pin="1"/>
+      <node ref="U2" pin="4"/>
+      <node ref="R814" pin="1"/>
+      <node ref="R812" pin="1"/>
+      <node ref="C807" pin="1"/>
+      <node ref="JP801" pin="1"/>
+    </net>
+    <net code="20" name="Net-(C807-Pad2)">
+      <node ref="C807" pin="2"/>
+      <node ref="R807" pin="1"/>
+    </net>
+    <net code="21" name="/CHARGER/+12V">
+      <node ref="K1" pin="2"/>
+      <node ref="D802" pin="1"/>
+      <node ref="D803" pin="1"/>
+      <node ref="R816" pin="1"/>
+      <node ref="K802" pin="5"/>
+      <node ref="D804" pin="1"/>
+      <node ref="TP808" pin="1"/>
+      <node ref="C812" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C810" pin="1"/>
+      <node ref="R815" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="C808" pin="1"/>
+      <node ref="JP803" pin="1"/>
+      <node ref="C804" pin="2"/>
+    </net>
+    <net code="22" name="+12VA">
+      <node ref="JP803" pin="2"/>
+      <node ref="U301" pin="4"/>
+      <node ref="C304" pin="1"/>
+    </net>
+    <net code="23" name="/CHARGER/U_BAT-">
+      <node ref="F802" pin="2"/>
+      <node ref="H803" pin="1"/>
+    </net>
+    <net code="24" name="Net-(R812-Pad2)">
+      <node ref="R812" pin="2"/>
+      <node ref="TP811" pin="1"/>
+      <node ref="TH801" pin="1"/>
+    </net>
+    <net code="26" name="Net-(K1-Pad3)">
+      <node ref="R809" pin="1"/>
+      <node ref="K1" pin="3"/>
+      <node ref="TP807" pin="1"/>
+    </net>
+    <net code="27" name="Net-(K1-Pad1)">
+      <node ref="TP805" pin="1"/>
+      <node ref="K1" pin="1"/>
+      <node ref="R805" pin="1"/>
+    </net>
+    <net code="28" name="Net-(C806-Pad2)">
+      <node ref="C806" pin="2"/>
+      <node ref="R808" pin="1"/>
+    </net>
+    <net code="29" name="Net-(D808-Pad2)">
+      <node ref="R816" pin="2"/>
+      <node ref="D808" pin="2"/>
+    </net>
+    <net code="30" name="Net-(C801-Pad1)">
+      <node ref="R801" pin="1"/>
+      <node ref="TP804" pin="1"/>
+      <node ref="C801" pin="1"/>
+      <node ref="Q801" pin="1"/>
+      <node ref="R803" pin="1"/>
+    </net>
+    <net code="31" name="Net-(D802-Pad2)">
+      <node ref="D802" pin="2"/>
+      <node ref="Q801" pin="3"/>
+      <node ref="R805" pin="2"/>
+    </net>
+    <net code="32" name="Net-(C809-Pad1)">
+      <node ref="R810" pin="1"/>
+      <node ref="R811" pin="1"/>
+      <node ref="Q803" pin="1"/>
+      <node ref="TP809" pin="1"/>
+      <node ref="C809" pin="1"/>
+    </net>
+    <net code="33" name="Net-(D804-Pad2)">
+      <node ref="D804" pin="2"/>
+      <node ref="Q803" pin="3"/>
+      <node ref="R809" pin="2"/>
+    </net>
+    <net code="34" name="/CHARGER/CH">
+      <node ref="K802" pin="3"/>
+      <node ref="TP810" pin="1"/>
+      <node ref="TH801" pin="2"/>
+      <node ref="R808" pin="2"/>
+    </net>
+    <net code="35" name="Net-(K802-Pad4)">
+      <node ref="K802" pin="4"/>
+    </net>
+    <net code="36" name="Net-(D803-Pad2)">
+      <node ref="D803" pin="2"/>
+      <node ref="TP806" pin="1"/>
+      <node ref="K802" pin="2"/>
+      <node ref="R806" pin="1"/>
+    </net>
+    <net code="37" name="Net-(C802-Pad1)">
+      <node ref="C802" pin="1"/>
+      <node ref="R802" pin="1"/>
+      <node ref="R804" pin="1"/>
+      <node ref="TP803" pin="1"/>
+      <node ref="Q802" pin="1"/>
+    </net>
+    <net code="38" name="Net-(D807-Pad2)">
+      <node ref="D807" pin="2"/>
+      <node ref="R815" pin="2"/>
+    </net>
+    <net code="39" name="/CHARGER/S_RL_ON">
+      <node ref="R806" pin="2"/>
+      <node ref="Q802" pin="3"/>
+      <node ref="D807" pin="1"/>
+    </net>
+    <net code="40" name="Net-(D806-Pad2)">
+      <node ref="R814" pin="2"/>
+      <node ref="D806" pin="2"/>
+    </net>
+    <net code="41" name="Net-(D805-Pad2)">
+      <node ref="R813" pin="2"/>
+      <node ref="D805" pin="2"/>
+    </net>
+    <net code="42" name="/CONTROLLER/sheet5CA5A59C/CAN_H">
+      <node ref="J703" pin="1"/>
+      <node ref="J704" pin="1"/>
+      <node ref="TP207" pin="1"/>
+      <node ref="J701" pin="1"/>
+      <node ref="U201" pin="7"/>
+      <node ref="J702" pin="1"/>
+      <node ref="D201" pin="1"/>
+      <node ref="R201" pin="2"/>
+    </net>
+    <net code="43" name="/CONTROLLER/sheet5CA5A59C/INT">
+      <node ref="U401" pin="15"/>
+      <node ref="TP209" pin="1"/>
+      <node ref="U202" pin="12"/>
+    </net>
+    <net code="44" name="/CONTROLLER/sheet5CA5A59C/CS">
+      <node ref="TP205" pin="1"/>
+      <node ref="U401" pin="14"/>
+      <node ref="U202" pin="16"/>
+    </net>
+    <net code="45" name="/CONTROLLER/MOSI">
+      <node ref="TP201" pin="1"/>
+      <node ref="U202" pin="14"/>
+      <node ref="U401" pin="17"/>
+    </net>
+    <net code="46" name="/CONTROLLER/MISO">
+      <node ref="U401" pin="18"/>
+      <node ref="U202" pin="15"/>
+      <node ref="TP202" pin="1"/>
+    </net>
+    <net code="47" name="/CONTROLLER/SCK">
+      <node ref="U202" pin="13"/>
+      <node ref="U401" pin="19"/>
+      <node ref="TP206" pin="1"/>
+    </net>
+    <net code="48" name="/CONTROLLER/sheet5CA5A59C/CAN_L">
+      <node ref="J702" pin="2"/>
+      <node ref="J701" pin="2"/>
+      <node ref="J704" pin="2"/>
+      <node ref="J703" pin="2"/>
+      <node ref="D201" pin="2"/>
+      <node ref="TP208" pin="1"/>
+      <node ref="R201" pin="1"/>
+      <node ref="U201" pin="6"/>
+    </net>
+    <net code="49" name="+5V">
+      <node ref="U501" pin="3"/>
+      <node ref="U202" pin="18"/>
+      <node ref="C201" pin="1"/>
+      <node ref="U401" pin="21"/>
+      <node ref="C205" pin="1"/>
+      <node ref="U401" pin="20"/>
+      <node ref="R203" pin="1"/>
+      <node ref="U401" pin="7"/>
+      <node ref="C503" pin="1"/>
+      <node ref="R401" pin="1"/>
+      <node ref="U201" pin="3"/>
+      <node ref="C504" pin="1"/>
+      <node ref="C202" pin="1"/>
+      <node ref="D401" pin="1"/>
+      <node ref="C401" pin="1"/>
+      <node ref="C402" pin="2"/>
+    </net>
+    <net code="50" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1"/>
+      <node ref="F1" pin="1"/>
+    </net>
+    <net code="51" name="Net-(C1-Pad1)">
+      <node ref="U1" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="F1" pin="2"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="52" name="Net-(R302-Pad1)">
+      <node ref="R303" pin="2"/>
+      <node ref="R304" pin="2"/>
+      <node ref="R302" pin="1"/>
+    </net>
+    <net code="53" name="Net-(C301-Pad1)">
+      <node ref="C301" pin="1"/>
+      <node ref="R306" pin="2"/>
+      <node ref="R305" pin="1"/>
+    </net>
+    <net code="54" name="Net-(R301-Pad1)">
+      <node ref="R305" pin="2"/>
+      <node ref="R301" pin="1"/>
+      <node ref="U301" pin="7"/>
+    </net>
+    <net code="55" name="Net-(R301-Pad2)">
+      <node ref="U301" pin="6"/>
+      <node ref="R301" pin="2"/>
+      <node ref="R303" pin="1"/>
+    </net>
+    <net code="56" name="Net-(C303-Pad1)">
+      <node ref="R307" pin="1"/>
+      <node ref="U301" pin="10"/>
+      <node ref="C303" pin="1"/>
+    </net>
+    <net code="57" name="Net-(C302-Pad1)">
+      <node ref="R307" pin="2"/>
+      <node ref="C302" pin="1"/>
+      <node ref="R306" pin="1"/>
+    </net>
+    <net code="58" name="Net-(R308-Pad1)">
+      <node ref="U301" pin="5"/>
+      <node ref="R309" pin="2"/>
+      <node ref="R308" pin="1"/>
+    </net>
+    <net code="59" name="Net-(R311-Pad1)">
+      <node ref="R313" pin="2"/>
+      <node ref="R311" pin="1"/>
+      <node ref="R312" pin="2"/>
+    </net>
+    <net code="60" name="Net-(R310-Pad2)">
+      <node ref="R310" pin="2"/>
+      <node ref="R312" pin="1"/>
+      <node ref="U301" pin="2"/>
+    </net>
+    <net code="61" name="Net-(R317-Pad1)">
+      <node ref="R318" pin="2"/>
+      <node ref="R317" pin="1"/>
+      <node ref="U301" pin="3"/>
+    </net>
+    <net code="62" name="Net-(C307-Pad1)">
+      <node ref="R316" pin="1"/>
+      <node ref="C307" pin="1"/>
+      <node ref="U301" pin="12"/>
+    </net>
+    <net code="64" name="Net-(R310-Pad1)">
+      <node ref="U301" pin="1"/>
+      <node ref="R310" pin="1"/>
+      <node ref="R314" pin="2"/>
+    </net>
+    <net code="65" name="Net-(C305-Pad1)">
+      <node ref="R315" pin="2"/>
+      <node ref="C305" pin="1"/>
+      <node ref="R314" pin="1"/>
+    </net>
+    <net code="66" name="Net-(C306-Pad1)">
+      <node ref="R315" pin="1"/>
+      <node ref="R316" pin="2"/>
+      <node ref="C306" pin="1"/>
+    </net>
+    <net code="67" name="Net-(C204-Pad1)">
+      <node ref="Y201" pin="2"/>
+      <node ref="U202" pin="8"/>
+      <node ref="C204" pin="1"/>
+    </net>
+    <net code="68" name="Net-(C203-Pad1)">
+      <node ref="C203" pin="1"/>
+      <node ref="U202" pin="7"/>
+      <node ref="Y201" pin="1"/>
+    </net>
+    <net code="69" name="Net-(U201-Pad5)">
+      <node ref="U201" pin="5"/>
+    </net>
+    <net code="70" name="Net-(U202-Pad5)">
+      <node ref="U202" pin="5"/>
+    </net>
+    <net code="71" name="Net-(U202-Pad6)">
+      <node ref="U202" pin="6"/>
+    </net>
+    <net code="72" name="Net-(U202-Pad3)">
+      <node ref="U202" pin="3"/>
+    </net>
+    <net code="73" name="Net-(U202-Pad10)">
+      <node ref="U202" pin="10"/>
+    </net>
+    <net code="74" name="Net-(U202-Pad11)">
+      <node ref="U202" pin="11"/>
+    </net>
+    <net code="75" name="Net-(R203-Pad2)">
+      <node ref="U202" pin="17"/>
+      <node ref="R203" pin="2"/>
+    </net>
+    <net code="76" name="Net-(U202-Pad4)">
+      <node ref="U202" pin="4"/>
+    </net>
+    <net code="77" name="Net-(R202-Pad1)">
+      <node ref="R202" pin="1"/>
+      <node ref="U201" pin="8"/>
+    </net>
+    <net code="78" name="/CONTROLLER/sheet5CA5A59C/TXCAN">
+      <node ref="TP203" pin="1"/>
+      <node ref="U202" pin="1"/>
+      <node ref="U201" pin="1"/>
+    </net>
+    <net code="79" name="/CONTROLLER/sheet5CA5A59C/RXCAN">
+      <node ref="U201" pin="4"/>
+      <node ref="TP204" pin="1"/>
+      <node ref="U202" pin="2"/>
+    </net>
+    <net code="80" name="Net-(U401-Pad13)">
+      <node ref="U401" pin="13"/>
+    </net>
+    <net code="81" name="Net-(J401-Pad2)">
+      <node ref="J401" pin="2"/>
+      <node ref="R403" pin="2"/>
+    </net>
+    <net code="82" name="Net-(J401-Pad3)">
+      <node ref="R402" pin="2"/>
+      <node ref="J401" pin="3"/>
+    </net>
+    <net code="83" name="Net-(C405-Pad2)">
+      <node ref="J401" pin="4"/>
+      <node ref="C405" pin="2"/>
+    </net>
+    <net code="84" name="Net-(D403-Pad2)">
+      <node ref="R405" pin="2"/>
+      <node ref="D403" pin="2"/>
+    </net>
+    <net code="85" name="/CONTROLLER/sheet5CA5A59D/LED1">
+      <node ref="U401" pin="11"/>
+      <node ref="R405" pin="1"/>
+    </net>
+    <net code="86" name="Net-(U401-Pad16)">
+      <node ref="U401" pin="16"/>
+    </net>
+    <net code="87" name="Net-(U401-Pad4)">
+      <node ref="U401" pin="4"/>
+    </net>
+    <net code="88" name="/CONTROLLER/sheet5CA5A59D/USART_RX">
+      <node ref="R402" pin="1"/>
+      <node ref="U401" pin="2"/>
+    </net>
+    <net code="89" name="Net-(U401-Pad28)">
+      <node ref="U401" pin="28"/>
+    </net>
+    <net code="90" name="/CONTROLLER/sheet5CA5A59D/USART_TX">
+      <node ref="R403" pin="1"/>
+      <node ref="U401" pin="3"/>
+    </net>
+    <net code="91" name="Net-(U401-Pad5)">
+      <node ref="U401" pin="5"/>
+    </net>
+    <net code="92" name="Net-(U401-Pad6)">
+      <node ref="U401" pin="6"/>
+    </net>
+    <net code="93" name="Net-(C403-Pad1)">
+      <node ref="Y401" pin="1"/>
+      <node ref="U401" pin="10"/>
+      <node ref="C403" pin="1"/>
+    </net>
+    <net code="94" name="Net-(C404-Pad1)">
+      <node ref="C404" pin="1"/>
+      <node ref="Y401" pin="2"/>
+      <node ref="U401" pin="9"/>
+    </net>
+    <net code="95" name="/CONTROLLER/sheet5CA5A59D/RESET">
+      <node ref="C406" pin="2"/>
+      <node ref="U401" pin="1"/>
+      <node ref="R401" pin="2"/>
+      <node ref="C405" pin="1"/>
+      <node ref="D401" pin="2"/>
+    </net>
+    <net code="96" name="/CONTROLLER/sheet5CA5A59D/LED2">
+      <node ref="U401" pin="12"/>
+      <node ref="R404" pin="1"/>
+    </net>
+    <net code="97" name="Net-(D402-Pad2)">
+      <node ref="R404" pin="2"/>
+      <node ref="D402" pin="2"/>
+    </net>
+    <net code="98" name="Net-(D501-Pad1)">
+      <node ref="F501" pin="1"/>
+      <node ref="D501" pin="1"/>
+    </net>
+    <net code="99" name="Net-(C501-Pad1)">
+      <node ref="F501" pin="2"/>
+      <node ref="C502" pin="1"/>
+      <node ref="C501" pin="1"/>
+      <node ref="U501" pin="1"/>
+    </net>
+  </nets>
+</export>
