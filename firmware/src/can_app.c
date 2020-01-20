@@ -78,7 +78,7 @@ inline void can_app_send_state(void)
 inline void can_app_send_relay(void)
 {
     can_t msg;
-    msg.id                                  = CAN_MSG_MCS19_RELAY;
+    msg.id                                  = CAN_MSG_MCS19_START_STAGES_ID;
     msg.length                              = CAN_LENGTH_MSG_MCS19_RELAY;
     msg.flags.rtr = 0;
 
@@ -91,9 +91,9 @@ inline void can_app_send_relay(void)
         msg.data[CAN_MSG_MCS19_CHARGE_RELAY_BYTE] = 0x00;
 
     if(system_flags.boat_running)
-        msg.data[CAN_MSG_MCS19_MAIN_RELAY_BYTE] = 0xFF; 
+        msg.data[CAN_MSG_MCS19_START_STAGES_MAIN_RELAY_BYTE] = 0xFF; 
     else
-        msg.data[CAN_MSG_MCS19_MAIN_RELAY_BYTE] = 0x00; 
+        msg.data[CAN_MSG_MCS19_START_STAGES_MAIN_RELAY_BYTE] = 0x00; 
 
     can_send_message(&msg); 
 #ifdef VERBOSE_MSG_CAN_APP
