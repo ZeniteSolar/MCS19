@@ -79,7 +79,7 @@ inline void can_app_send_relay(void)
 {
     can_t msg;
     msg.id                                  = CAN_MSG_MCS19_START_STAGES_ID;
-    msg.length                              = CAN_LENGTH_MSG_MCS19_RELAY;
+    msg.length                              = CAN_MSG_MCS19_START_STAGES_LENGTH;
     msg.flags.rtr = 0;
 
     for(uint8_t i = msg.length; i; i--)     msg.data[i-1] = 0;
@@ -107,8 +107,8 @@ inline void can_app_send_relay(void)
 inline void can_app_send_bat(void)
 {
     can_t msg;
-    msg.id                                  = CAN_MSG_MSC19_x_ADC_ID;
-    msg.length                              = CAN_MSG_MSC19_x_ADC_ID;
+    msg.id                                  = CAN_MSG_MCS19_BAT_ID;
+    msg.length                              = CAN_MSG_MCS19_BAT_LENGTH;
     msg.flags.rtr = 0;
     
     uint16_t avg_adc0 = 
@@ -136,8 +136,8 @@ inline void can_app_send_bat(void)
 inline void can_app_send_cap(void)
 {
     can_t msg;
-    msg.id                                  = CAN_MSG_MSC19_x_ADC_ID;
-    msg.length                              = CAN_MSG_MSC19_x_ADC_ID;
+    msg.id                                  = CAN_MSG_MCS19_CAP_ID;
+    msg.length                              = CAN_MSG_MCS19_CAP_LENGTH;
     msg.flags.rtr = 0;
     
     uint16_t avg_adc1 = 
@@ -214,7 +214,7 @@ inline void can_app_msg_extractors_switch(can_t *msg)
 {
     if(msg->data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC19){
         switch(msg->id){
-            case CAN_MSG_MIC19_MCS:
+            case CAN_MSG_MIC19_MCS_ID:
                 //VERBOSE_MSG_CAN_APP(usart_send_string("got a boat_on msg: "));
                 //VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 can_app_extractor_mic17_mcs(msg);
