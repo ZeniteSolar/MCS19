@@ -61,12 +61,12 @@ inline void can_app_send_state(void)
 {
     can_t msg;
     msg.id                                  = CAN_MSG_MCS19_STATE_ID;
-    msg.length                              = CAN_LENGTH_MSG_STATE;
+    msg.length                              = CAN_MSG_GENERIC_STATE_LENGTH;
     msg.flags.rtr = 0;
 
-    msg.data[CAN_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
-    msg.data[CAN_STATE_MSG_STATE_BYTE]      = (uint8_t) state_machine;
-    msg.data[CAN_STATE_MSG_ERROR_BYTE]      = error_flags.all;
+    msg.data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
+    msg.data[CAN_MSG_GENERIC_STATE_STATE_BYTE]      = (uint8_t) state_machine;
+    msg.data[CAN_MSG_GENERIC_STATE_ERROR_BYTE]      = error_flags.all;
 
     can_send_message(&msg);
 #ifdef VERBOSE_MSG_CAN_APP
@@ -84,7 +84,7 @@ inline void can_app_send_relay(void)
 
     for(uint8_t i = msg.length; i; i--)     msg.data[i-1] = 0;
 
-    msg.data[CAN_SIGNATURE_BYTE]                = CAN_SIGNATURE_SELF;
+    msg.data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE]                = CAN_SIGNATURE_SELF;
     if(system_flags.boat_charging)
         msg.data[CAN_MSG_MCS19_START_STAGES_CHARGE_RELAY_BYTE] = 0xFF;
     else
@@ -115,7 +115,7 @@ inline void can_app_send_bat(void)
         measurements.adc0_avg_sum / measurements.adc0_avg_sum_count;
 
 
-    msg.data[CAN_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
+    msg.data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
     msg.data[CAN_MSG_MCS19_BAT_AVG_L_BYTE] = LOW(avg_adc0);
     msg.data[CAN_MSG_MCS19_BAT_AVG_H_BYTE] = HIGH(avg_adc0);
     msg.data[CAN_MSG_MCS19_BAT_MIN_L_BYTE]  = LOW(measurements.adc0_min);
@@ -143,7 +143,7 @@ inline void can_app_send_cap(void)
     uint16_t avg_adc1 = 
         measurements.adc1_avg_sum / measurements.adc1_avg_sum_count;
 
-    msg.data[CAN_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
+    msg.data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
     msg.data[CAN_MSG_MCS19_CAP_AVG_L_BYTE] = LOW(avg_adc1);
     msg.data[CAN_MSG_MCS19_CAP_AVG_H_BYTE] = HIGH(avg_adc1);
     msg.data[CAN_MSG_MCS19_CAP_MIN_L_BYTE]  = LOW(measurements.adc1_min);
@@ -163,7 +163,7 @@ inline void can_app_send_cap(void)
 
 inline void can_app_extractor_mic17_mcs(can_t *msg)
 {
-    if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC19){
+    if(msg->data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC19){
         
         // can_app_checks_without_mic17_msg = 0;
 
@@ -195,9 +195,9 @@ inline void can_app_extractor_mic17_state(can_t *msg)
 {
     // TODO:
     //  - se tiver em erro, desligar acionamento
-    if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC19){
+    if(msg->data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC19){
         // zerar contador
-        if(msg->data[CAN_STATE_MSG_ERROR_BYTE]){
+        if(msg->data[CAN_MSG_GENERIC_STATE_ERROR_BYTE]){
             //ERROR!!!
         }
         /*if(contador == maximo)*/{
@@ -212,7 +212,7 @@ inline void can_app_extractor_mic17_state(can_t *msg)
  */
 inline void can_app_msg_extractors_switch(can_t *msg)
 {
-    if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC19){
+    if(msg->data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC19){
         switch(msg->id){
             case CAN_MSG_MIC19_MCS:
                 //VERBOSE_MSG_CAN_APP(usart_send_string("got a boat_on msg: "));
