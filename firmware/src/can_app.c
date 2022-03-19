@@ -1,5 +1,9 @@
 #include "can_app.h"
 
+uint32_t can_app_send_state_clk_div;
+uint32_t can_app_send_adc_clk_div;
+uint32_t can_app_send_relay_clk_div;
+
 /**
  * @brief Prints a can message via usart
  */

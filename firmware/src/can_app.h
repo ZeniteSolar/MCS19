@@ -38,8 +38,8 @@ void check_can(void);
 #define CAN_APP_SEND_ADC_CLK_DIV    1
 #endif
 
-uint32_t can_app_send_state_clk_div;
-uint32_t can_app_send_adc_clk_div;
-uint32_t can_app_send_relay_clk_div;
+extern uint32_t can_app_send_state_clk_div;
+extern uint32_t can_app_send_adc_clk_div;
+extern uint32_t can_app_send_relay_clk_div;
 
 #endif /* ifndef CAN_APP_H */

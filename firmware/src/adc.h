@@ -44,7 +44,7 @@ typedef struct adc{
     uint8_t ready;
 } adc_t;
 
-volatile adc_t adc;
+extern volatile adc_t adc;
 
 uint8_t adc_select_channel(adc_channels_t __ch);
 void adc_init(void);

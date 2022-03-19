@@ -1,5 +1,18 @@
 #include "machine.h"
 
+volatile state_machine_t state_machine;
+volatile system_flags_t system_flags;
+volatile error_flags_t error_flags;
+volatile measurements_t measurements;
+volatile uint16_t charge_count_error;
+volatile uint8_t relay_clk;
+volatile uint8_t first_boat_off;
+volatile uint8_t machine_clk;
+volatile uint8_t machine_clk_divider;
+volatile uint8_t total_errors;           // Contagem de ERROS
+volatile uint8_t reset_clk;
+volatile uint8_t led_clk_div;
+
 /**
  * @brief 
  */

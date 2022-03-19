@@ -1,5 +1,7 @@
 #include "adc.h"
 
+volatile adc_t adc;
+
 /**
  * @brief Changes ADC channel
  * @param __ch is the channel to be switched to
