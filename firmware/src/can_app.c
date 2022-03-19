@@ -222,6 +222,7 @@ inline void can_app_msg_extractors_switch(can_t *msg)
                 //VERBOSE_MSG_CAN_APP(usart_send_string("got a boat_on msg: "));
                 //VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 can_app_extractor_mic17_mcs(msg);
+                break;
 
             case CAN_MSG_MIC19_STATE_ID:
 #ifdef USART_ON
