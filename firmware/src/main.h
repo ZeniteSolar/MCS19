@@ -22,6 +22,8 @@
 #include "conf.h"
 #include "dbg_vrb.h"
 
+void init(void);
+
 #ifdef USART_ON
 #include "usart.h"
 #pragma message "USART: ON!"
