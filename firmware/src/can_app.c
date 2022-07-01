@@ -178,9 +178,9 @@ inline void can_app_extractor_mic17_mcs(can_t *msg)
             CAN_MSG_MIC17_MCS_BOAT_ON_BIT);*/
 
 
-        VERBOSE_MSG_CAN_APP(usart_send_string("boat on bit: "));
-        VERBOSE_MSG_CAN_APP(usart_send_uint16(system_flags.boat_on));
-        VERBOSE_MSG_CAN_APP(usart_send_char('\n'));
+        //VERBOSE_MSG_CAN_APP(usart_send_string("boat on bit: "));
+        //VERBOSE_MSG_CAN_APP(usart_send_uint16(system_flags.boat_on));
+        //VERBOSE_MSG_CAN_APP(usart_send_char('\n'));
 
 
     }

@@ -20,9 +20,9 @@
 #define VERBOSE_ON
 //#define VERBOSE_ON_CAN_APP
 #define VERBOSE_ON_MACHINE
-//#define VERBOSE_ON_ADC
+#define VERBOSE_ON_ADC
 #define VERBOSE_ON_INIT
-#define VERBOSE_ON_ERROR
+//#define VERBOSE_ON_ERROR
 #define VERBOSE_ON_RELAY
 
 
@@ -62,12 +62,12 @@
 
 #endif //ADC_ON
 
-#define CHARGING_TIME_CAPACITOR_ms 2500
-#define CHARGING_TIME_CAPACITOR CHARGING_TIME_CAPACITOR_ms/100
+#define CHARGING_TIME_CAPACITOR_ms (11000)
+#define CHARGING_TIME_CAPACITOR (CHARGING_TIME_CAPACITOR_ms/100)
 #define CAPACITOR_CHARGE_PERCENTAGE 98	
 
 //if isn't possible charge the sistem, wait user turn off the boat for TIME_TO_RESET_ms ms 
-#define TIME_TO_RESET_ms 20000
+#define TIME_TO_RESET_ms 25000
 #define TIME_TO_RESET TIME_TO_RESET_ms/100
 
 #ifdef MACHINE_ON
@@ -121,9 +121,9 @@
 
 #ifdef CAN_ON
 #define SPI_ON
-#define CAN_APP_SEND_STATE_FREQ     40//36000     //<! state msg frequency in Hz
+#define CAN_APP_SEND_STATE_FREQ     30//36000     //<! state msg frequency in Hz
 #define CAN_APP_SEND_ADC_FREQ       15//6000      //<! adc msg frequency in Hz
-#define CAN_APP_SEND_RELAY_FREQ       15//6000      //<! adc msg frequency in Hz
+#define CAN_APP_SEND_RELAY_FREQ     12//6000      //<! adc msg frequency in Hz
 
 // CANBUS DEFINITONS
 // ----------------------------------------------------------------------------

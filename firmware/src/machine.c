@@ -274,8 +274,13 @@ inline void task_idle(void)
         VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_BAT].avg));
 
             //secure time and mesure cap voltage 
-        if(relay_clk++ <= CHARGING_TIME_CAPACITOR || ((100 * adc.channel[V_CAP].avg) <= (CAPACITOR_CHARGE_PERCENTAGE * adc.channel[V_BAT].avg))){
-            _delay_ms(100);
+        //usart_send_string("relay_clk");
+        //usart_send_uint16(relay_clk);
+        if(relay_clk++ <= CHARGING_TIME_CAPACITOR || ((uint32_t)(100 * (adc.channel[V_CAP].avg >> 2)) <= (uint32_t)(CAPACITOR_CHARGE_PERCENTAGE * adc.channel[V_BAT].avg >> 2))){
+            //_delay_ms(100);
+            //Nao tire as proximas duas linhas por favor, se não vai mudar o tempo de carga ;)
+            usart_send_string("\nrelay_error_clk:");
+            usart_send_uint16(charge_count_error);
 
             if(++charge_count_error > 2 * CHARGING_TIME_CAPACITOR){ 
                 error_flags.no_charge = 1;
@@ -391,10 +396,10 @@ inline void task_error(void)
  */
 inline void task_waiting_reset(void)
 {
-    _delay_ms(100);
+    _delay_ms(50);
     if(!system_flags.boat_on){
         if (reset_clk++ < TIME_TO_RESET){
-            _delay_ms(500);
+            _delay_ms(50);
         VERBOSE_MSG_ERROR(usart_send_uint16(reset_clk));
         VERBOSE_MSG_ERROR(usart_send_char('\n'));
         }
@@ -516,9 +521,7 @@ inline void machine_run(void)
                     #ifdef CAN_ON
                         can_app_task();
                     #endif /* CAN_ON */   
-
                     break;
-
                 case STATE_RESET:
                 default:
                     task_reset();
