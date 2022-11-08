@@ -75,8 +75,7 @@
 // The machine frequency may not be superior of ADC_FREQUENCY/ADC_AVG_SIZE_10
 #define MACHINE_TIMER_FREQUENCY             120           //<! machine timer frequency in Hz
 #define MACHINE_TIMER_PRESCALER             1024          //<! machine timer prescaler
-#define MACHINE_CLK_DIVIDER_VALUE           ((uint64_t)(uint32_t)MACHINE_TIMER_FREQUENCY*(uint32_t)ADC_AVG_SIZE_10)/(ADC_FREQUENCY)           //<! machine_run clock divider
-#define MACHINE_FREQUENCY                   (MACHINE_TIMER_FREQUENCY)/(MACHINE_CLK_DIVIDER_VALUE)
+#define MACHINE_FREQUENCY                   (MACHINE_TIMER_FREQUENCY)
 
 // SCALE TO CONVERT ADC DEFINITIONS
 #define VSCALE                              (uint16_t)1000
@@ -122,9 +121,9 @@
 
 #ifdef CAN_ON
 #define SPI_ON
-#define CAN_APP_SEND_STATE_FREQ     40//36000     //<! state msg frequency in Hz
-#define CAN_APP_SEND_ADC_FREQ       15//6000      //<! adc msg frequency in Hz
-#define CAN_APP_SEND_RELAY_FREQ       15//6000      //<! adc msg frequency in Hz
+#define CAN_APP_SEND_STATE_FREQ     1     //<! state msg frequency in Hz
+#define CAN_APP_SEND_ADC_FREQ       10      //<! adc msg frequency in Hz
+#define CAN_APP_SEND_RELAY_FREQ     50      //<! adc msg frequency in Hz
 
 // CANBUS DEFINITONS
 // ----------------------------------------------------------------------------

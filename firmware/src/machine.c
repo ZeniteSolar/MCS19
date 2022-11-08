@@ -287,14 +287,15 @@ inline void task_idle(void)
         VERBOSE_MSG_MACHINE(usart_send_uint16(adc.channel[V_BAT].avg));
 
             //secure time and mesure cap voltage 
-        if(relay_clk++ <= CHARGING_TIME_CAPACITOR || ((100 * adc.channel[V_CAP].avg) <= (CAPACITOR_CHARGE_PERCENTAGE * adc.channel[V_BAT].avg))){
+        if(relay_clk++ <= CHARGING_TIME_CAPACITOR/* || ((100 * adc.channel[V_CAP].avg) <= (CAPACITOR_CHARGE_PERCENTAGE * adc.channel[V_BAT].avg))*/){
             _delay_ms(100);
-
+/*
             if(++charge_count_error > 2 * CHARGING_TIME_CAPACITOR){ 
                 error_flags.no_charge = 1;
                 turn_charge_boat_off();
                 set_state_error();
             }   
+*/
         }
         else{
             VERBOSE_MSG_MACHINE(usart_send_string("\t\tIDLE STATE ===> BOAT ON!!!\n"));
@@ -547,15 +548,6 @@ inline void machine_run(void)
 */
 ISR(TIMER2_COMPA_vect)
 {
-    if(machine_clk_divider++ == MACHINE_CLK_DIVIDER_VALUE){
-        /*if(machine_clk){
-            for(;;){
-                pwm_reset();
-                VERBOSE_MSG_ERROR(if(machine_clk) usart_send_string("\nERROR: CLOCK CONFLICT!!!\n"));
-            }
-        }*/
-        machine_clk = 1;
-        machine_clk_divider = 0;
-    }
+    machine_clk = 1;
 }
 
