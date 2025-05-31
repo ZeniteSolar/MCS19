@@ -27,7 +27,7 @@
 #define ATTENTION_CLK_DIV       ATTENTION_LED_TIME * 2 * MACHINE_FREQUENCY //  
 
 // PRINT INFOS CONSTANTS
-#define PRINT_INFOS_TIME        1 // seconds 
+#define PRINT_INFOS_TIME        0.2 // seconds 
 #define PRINT_INFOS_CLK_DIV     PRINT_INFOS_TIME * 2 * MACHINE_FREQUENCY
 
 #ifdef ADC_ON
