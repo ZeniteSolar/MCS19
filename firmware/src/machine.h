@@ -17,9 +17,18 @@
 
 #include "conf.h"
 
-// Equations for mode 2 (CTC with TOP OCR2A)
-// Note the resolution. For example.. at 150hz, ICR1 = PWM_TOP = 159, so it
-#define MACHINE_TIMER_TOP ((F_CPU/(2*MACHINE_TIMER_PRESCALER))/(MACHINE_TIMER_FREQUENCY) -1)
+#define MA_CAP_VOLTAGE      ma_adc0()
+#define MA_BATTERY_VOLTAGE      ma_adc1()
+
+// LED CONSTANTS
+#define IDLE_LED_TIME           1 // half a period...time that the LED stays on
+#define IDLE_LED_CLK_DIV        IDLE_LED_TIME * 2 * MACHINE_FREQUENCY //  
+#define ATTENTION_LED_TIME      0.1 // half a period...time that the LED stays on
+#define ATTENTION_CLK_DIV       ATTENTION_LED_TIME * 2 * MACHINE_FREQUENCY //  
+
+// PRINT INFOS CONSTANTS
+#define PRINT_INFOS_TIME        1 // seconds 
+#define PRINT_INFOS_CLK_DIV     PRINT_INFOS_TIME * 2 * MACHINE_FREQUENCY
 
 #ifdef ADC_ON
 #include "adc.h"
@@ -61,23 +70,14 @@ typedef union error_flags{
 }error_flags_t;
 
 typedef struct measurements{
-    uint16_t    adc0_avg;       // average value of ADC0
-    uint16_t    adc0_avg_sum_count;
-    uint64_t    adc0_avg_sum;   // average value of ADC0
-    uint16_t    adc0_min;       // period minimum value of ADC0
-    uint16_t    adc0_max;       // period maximum value of ADC0
-
-    uint16_t    adc1_avg;       // average value of ADC1
-    uint16_t    adc1_avg_sum_count;
-    uint64_t    adc1_avg_sum;   // average value of ADC1
-    uint16_t    adc1_min;       // period minimum value of ADC1
-    uint16_t    adc1_max;       // period maximum value of ADC1
+    uint16_t    cap_voltage;       // period maximum value of ADC1
+    uint16_t    bat_voltage;       // period maximum value of ADC1
 }measurements_t;
 
 
 // machine checks
 void check_buffers(void);
-void reset_measurements(void);
+void read_and_check_adcs(void);
 
 // debug functions
 void print_configurations(void);
@@ -127,5 +127,6 @@ extern volatile uint8_t reset_clk;
 
 // other variables
 extern volatile uint8_t led_clk_div;
+extern volatile uint16_t print_clk_div;
 
 #endif /* ifndef MACHINE_H */
