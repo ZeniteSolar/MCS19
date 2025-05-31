@@ -115,17 +115,13 @@ inline void can_app_send_bat(void)
     msg.length                              = CAN_MSG_MCS19_BAT_LENGTH;
     msg.flags.rtr = 0;
     
-    uint16_t avg_adc0 = 
-        measurements.adc0_avg_sum / measurements.adc0_avg_sum_count;
-
-
     msg.data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
-    msg.data[CAN_MSG_MCS19_BAT_AVG_L_BYTE] = LOW(avg_adc0);
-    msg.data[CAN_MSG_MCS19_BAT_AVG_H_BYTE] = HIGH(avg_adc0);
-    msg.data[CAN_MSG_MCS19_BAT_MIN_L_BYTE]  = LOW(measurements.adc0_min);
-    msg.data[CAN_MSG_MCS19_BAT_MIN_H_BYTE]  = HIGH(measurements.adc0_min);
-    msg.data[CAN_MSG_MCS19_BAT_MAX_L_BYTE]  = LOW(measurements.adc0_max);
-    msg.data[CAN_MSG_MCS19_BAT_MAX_H_BYTE]  = HIGH(measurements.adc0_max);
+    msg.data[CAN_MSG_MCS19_BAT_AVG_L_BYTE] = LOW(measurements.cap_voltage);
+    msg.data[CAN_MSG_MCS19_BAT_AVG_H_BYTE] = HIGH(measurements.cap_voltage);
+    msg.data[CAN_MSG_MCS19_BAT_MIN_L_BYTE]  = LOW(measurements.cap_voltage); // TODO adc0_min
+    msg.data[CAN_MSG_MCS19_BAT_MIN_H_BYTE]  = HIGH(measurements.cap_voltage); // TODO adc0_min
+    msg.data[CAN_MSG_MCS19_BAT_MAX_L_BYTE]  = LOW(measurements.cap_voltage); // TODO  adc0_max
+    msg.data[CAN_MSG_MCS19_BAT_MAX_H_BYTE]  = HIGH(measurements.cap_voltage); // TODO  adc0_max
 
     can_send_message(&msg); 
 #ifdef VERBOSE_MSG_CAN_APP
@@ -133,7 +129,7 @@ inline void can_app_send_bat(void)
 //    VERBOSE_MSG_CAN_APP(can_app_print_msg(&msg));
 #endif
 
-    reset_measurements();
+    // reset_measurements(); // XXX remove
 }
 
 
@@ -143,17 +139,14 @@ inline void can_app_send_cap(void)
     msg.id                                  = CAN_MSG_MCS19_CAP_ID;
     msg.length                              = CAN_MSG_MCS19_CAP_LENGTH;
     msg.flags.rtr = 0;
-    
-    uint16_t avg_adc1 = 
-        measurements.adc1_avg_sum / measurements.adc1_avg_sum_count;
 
     msg.data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
-    msg.data[CAN_MSG_MCS19_CAP_AVG_L_BYTE] = LOW(avg_adc1);
-    msg.data[CAN_MSG_MCS19_CAP_AVG_H_BYTE] = HIGH(avg_adc1);
-    msg.data[CAN_MSG_MCS19_CAP_MIN_L_BYTE]  = LOW(measurements.adc1_min);
-    msg.data[CAN_MSG_MCS19_CAP_MIN_H_BYTE]  = HIGH(measurements.adc1_min);
-    msg.data[CAN_MSG_MCS19_CAP_MAX_L_BYTE]  = LOW(measurements.adc1_max);
-    msg.data[CAN_MSG_MCS19_CAP_MAX_H_BYTE]  = HIGH(measurements.adc1_max);
+    msg.data[CAN_MSG_MCS19_CAP_AVG_L_BYTE] = LOW(measurements.bat_voltage);
+    msg.data[CAN_MSG_MCS19_CAP_AVG_H_BYTE] = HIGH(measurements.bat_voltage);
+    msg.data[CAN_MSG_MCS19_CAP_MIN_L_BYTE]  = LOW(measurements.bat_voltage); // TODO adc1_min
+    msg.data[CAN_MSG_MCS19_CAP_MIN_H_BYTE]  = HIGH(measurements.bat_voltage); // TODO adc1_min
+    msg.data[CAN_MSG_MCS19_CAP_MAX_L_BYTE]  = LOW(measurements.bat_voltage); // TODO  adc1_max
+    msg.data[CAN_MSG_MCS19_CAP_MAX_H_BYTE]  = HIGH(measurements.bat_voltage); // TODO  adc1_max
 
     can_send_message(&msg); 
 #ifdef VERBOSE_MSG_CAN_APP
@@ -161,7 +154,7 @@ inline void can_app_send_cap(void)
 //    VERBOSE_MSG_CAN_APP(can_app_print_msg(&msg));
 #endif
 
-    reset_measurements();
+    // reset_measurements(); // XXX remove
 }
 
 
@@ -219,8 +212,8 @@ inline void can_app_msg_extractors_switch(can_t *msg)
     if(msg->data[CAN_MSG_GENERIC_STATE_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC19){
         switch(msg->id){
             case CAN_MSG_MIC19_MCS_ID:
-                //VERBOSE_MSG_CAN_APP(usart_send_string("got a boat_on msg: "));
-                //VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
+                VERBOSE_MSG_CAN_APP(usart_send_string("got a boat_on msg: "));
+                VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 can_app_extractor_mic17_mcs(msg);
                 break;
 
