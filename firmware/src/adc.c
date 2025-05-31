@@ -16,10 +16,10 @@ volatile adc_cbuf_adc1_t cbuf_adc1;
 volatile uint16_t adc_debug_clk_div = 0; 
 
 // Coefficients for linearization, example coefficients
-static const int16_t adc0_a = 1;
-static const int16_t adc0_b = 1;
-static const int16_t adc1_a = 0;   
-static const int16_t adc1_b = 0;
+static const int16_t adc0_a = 59; // 0.05957181 * 100 --> use all 5 bits for uint16 print and can msg
+static const int16_t adc0_b = 61; // 0.06195544 * 100 --> use all 5 bits for uint16 print and can msg
+static const int16_t adc1_a = adc0_a;
+static const int16_t adc1_b = adc0_b;
 
 // Define the linearization polynomial as a macro or function
 
@@ -69,11 +69,11 @@ uint16_t ma_adc0(void)
         // }
         sum += linearized_value;
     }
-    // if(adc_debug_clk_div++ >= ADC_DEBUG_CLK_DIV/50){
-        // usart_send_string("\ntestando SUM: ");
-        // usart_send_uint16(sum);
-        // adc_debug_clk_div = 0;
-    // } 
+    if(adc_debug_clk_div++ >= ADC_DEBUG_CLK_DIV){
+        usart_send_string("\ntestando SUM: ");
+        usart_send_uint16(sum);
+        adc_debug_clk_div = 0;
+    } 
     avg_adc0 = sum >> cbuf_adc0_SIZE_LOG2;
     return avg_adc0;
 }
