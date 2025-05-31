@@ -18,7 +18,7 @@
 // CONFIGURACOES DE COMPILACAO
 #define DEBUG_ON
 #define VERBOSE_ON
-//#define VERBOSE_ON_CAN_APP
+// #define VERBOSE_ON_CAN_APP
 #define VERBOSE_ON_MACHINE
 //#define VERBOSE_ON_ADC
 #define VERBOSE_ON_INIT
@@ -35,25 +35,44 @@
 #define LED_ON
 #define WATCHDOG_ON
 #define SLEEP_ON	
-//#define RELAY_TEST_MODE
+// #define RELAY_TEST_MODE
+#define PRINT_INFOS
+
 
 #define CAN_SIGNATURE_SELF      CAN_SIGNATURE_MCS19
 
 #ifdef ADC_ON
 // ADC CONFIGURATION
 // note that changing ADC_FREQUENCY may cause problems with avg_sum_samples
+// #define ADC_8BITS
 #define ADC_FREQUENCY                       10000 // 20000
-#define ADC_TIMER_PRESCALER                 8
-#define ADC0_AVG                            adc.channel[ADC0].avg
-#define ADC0_ANGULAR_COEF                   10000 //(40000/((4/5)*1024))
-#define ADC0_LINEAR_COEF                    0
-#define ADC1_AVG                            adc.channel[ADC1].avg
-#define ADC1_ANGULAR_COEF                   10000 //(40000/((4/5)*1024))
-#define ADC1_LINEAR_COEF                    0
-#define ADC_AVG_SIZE_2                      7                  // in base 2
-#define ADC_AVG_SIZE_10                     128                // in base 10
+#define ADC_TIMER_PRESCALER                 64
+#define ADC_TOP_CTC                         F_CPU/(ADC_TIMER_PRESCALER * 2UL * ADC_FREQUENCY) -1
+
+#if ADC_TOP_CTC >= 256
+    #error "Value for ADC timer top is greater than 8 bits"
+#elif ADC_TOP_CTC < 2
+    #error "Value for ADC timer top is too low, increase the prescaler"
+#endif
+
+// #define VSCALE_FACTOR                       10000L  // Scaling to maintain precision, result uint16 for can msg
+
+/** @brief Circular buffer size definitions 
+ * Using equal size for adc structures...
+ * one could replicate the structure delacartion with different sizes
+ * or even, % TODO use dynamic allocation for strucutres 
+ */
+#define ADC_AVG_SIZE_10                     64
+#if (ADC_AVG_SIZE_10 == 0 || (ADC_AVG_SIZE_10 & (ADC_AVG_SIZE_10 - 1)) != 0)
+    #error "ADC_AVG_SIZE_10 must be a power of 2!"
+#endif
+#define cbuf_adc0_SIZE                      ADC_AVG_SIZE_10  /**< Buffer size for ADC0 */
+#define cbuf_adc0_SIZE_LOG2                 6; //log2_function(cbuf_adc0_SIZE)   /**< Log2 of buffer size */
+#define cbuf_adc1_SIZE                      ADC_AVG_SIZE_10  /**< Buffer size for ADC1 */
+#define cbuf_adc1_SIZE_LOG2                 6; //log2_function(cbuf_adc1_SIZE)    /**< Log2 of buffer size */
+
 #define V_BAT 								1	//Battery adc channel 1
-#define V_CAP 								0	//Capacitor adc channel 1
+#define V_CAP 								0	//Capacitor adc channel 0
 
 
 //#define FAKE_ADC_ON
@@ -61,7 +80,10 @@
 #define FAKE_ADC                            1
 #endif // FAKE_ADC_ON
 
+
 #endif //ADC_ON
+
+
 
 #define CHARGING_TIME_CAPACITOR_ms 2500
 #define CHARGING_TIME_CAPACITOR CHARGING_TIME_CAPACITOR_ms/100
@@ -73,9 +95,17 @@
 
 #ifdef MACHINE_ON
 // The machine frequency may not be superior of ADC_FREQUENCY/ADC_AVG_SIZE_10
-#define MACHINE_TIMER_FREQUENCY             120           //<! machine timer frequency in Hz
+#define MACHINE_FREQUENCY             100           //<! machine timer frequency in Hz
 #define MACHINE_TIMER_PRESCALER             1024          //<! machine timer prescaler
-#define MACHINE_FREQUENCY                   (MACHINE_TIMER_FREQUENCY)
+// Equations for mode 2 (CTC with TOP OCR2A)
+// Note the resolution. For example.. at 150hz, ICR1 = PWM_TOP = 159, so it
+#define MACHINE_TIMER_TOP       (F_CPU/(MACHINE_TIMER_PRESCALER * 2UL * MACHINE_FREQUENCY)) -1
+#if MACHINE_TIMER_TOP >= 256
+    #error "Value for Machine timer top is greater than 8 bits"
+#elif MACHINE_TIMER_TOP < 2
+    #error "Value for Machine timer top is too low, increase the prescaler"
+#endif
+
 
 // SCALE TO CONVERT ADC DEFINITIONS
 #define VSCALE                              (uint16_t)1000
