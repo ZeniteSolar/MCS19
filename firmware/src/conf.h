@@ -151,10 +151,20 @@
 
 #ifdef CAN_ON
 #define SPI_ON
-#define CAN_APP_SEND_STATE_FREQ     1     //<! state msg frequency in Hz
-#define CAN_APP_SEND_ADC_FREQ       10      //<! adc msg frequency in Hz
-#define CAN_APP_SEND_RELAY_FREQ     50      //<! adc msg frequency in Hz
+#define CAN_APP_SEND_STATE_FREQ     10//36000     //<! state msg frequency in Hz
+#define CAN_APP_SEND_ADC_FREQ       50//6000      //<! adc msg frequency in Hz
+#define CAN_APP_SEND_RELAY_FREQ       50//6000      //<! adc msg frequency in Hz
+#if MACHINE_FREQUENCY % CAN_APP_SEND_STATE_FREQ != 0
+    #warning "CAN_APP_SEND_STATE_FREQ doesn't have a multiple equal to MACHINE_FREQUENCY, this frequency will be truncated"
+#endif
 
+#if MACHINE_FREQUENCY % CAN_APP_SEND_ADC_FREQ != 0
+    #warning "CAN_APP_SEND_ADC_FREQ doesn't have a multiple equal to MACHINE_FREQUENCY, this frequency will be truncated"
+#endif
+
+#if MACHINE_FREQUENCY % CAN_APP_SEND_RELAY_FREQ != 0
+    #warning "CAN_APP_SEND_RELAY_FREQ doesn't have a multiple equal to MACHINE_FREQUENCY, this frequency will be truncated"
+#endif
 // CANBUS DEFINITONS
 // ----------------------------------------------------------------------------
 /* Global settings for building the can-lib and application program.
