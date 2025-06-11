@@ -27,6 +27,7 @@
 
 
 // MODULES ACTIVATION
+// #define RELAY_TEST_MODE
 #define USART_ON
 #define CAN_ON
 #define CAN_DEPENDENT
@@ -35,7 +36,6 @@
 #define LED_ON
 #define WATCHDOG_ON
 #define SLEEP_ON	
-// #define RELAY_TEST_MODE
 #define PRINT_INFOS
 
 
